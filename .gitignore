@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# GitBook local preview output
+_book/
+node_modules/
+
+# Environment files (never commit secrets into docs)
+.env
+.env.local

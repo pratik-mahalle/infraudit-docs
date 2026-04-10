@@ -1,0 +1,152 @@
+# Table of contents
+
+* [Introduction](README.md)
+
+## Getting started
+
+* [Overview](getting-started/README.md)
+* [What is InfraAudit?](getting-started/what-is-infraudit.md)
+* [Core concepts](getting-started/core-concepts.md)
+* [Quickstart: SaaS](getting-started/quickstart-saas.md)
+* [Quickstart: CLI](getting-started/quickstart-cli.md)
+* [Quickstart: Self-host](getting-started/quickstart-self-host.md)
+
+## Platform guide
+
+* [Overview](platform/README.md)
+* [Dashboard](platform/dashboard.md)
+* [Connecting cloud accounts](platform/connecting-cloud-accounts.md)
+* [Resources and inventory](platform/resources-and-inventory.md)
+* [Drift detection](platform/drift-detection.md)
+* [Vulnerabilities](platform/vulnerabilities.md)
+* [Cost optimization](platform/cost-optimization.md)
+* [Compliance](platform/compliance.md)
+* [Recommendations](platform/recommendations.md)
+* [Alerts](platform/alerts.md)
+* [Remediation](platform/remediation.md)
+* [Automation and jobs](platform/automation-and-jobs.md)
+* [Kubernetes](platform/kubernetes.md)
+
+## CLI
+
+* [Overview](cli/README.md)
+* [Installation](cli/installation.md)
+* [Configuration](cli/configuration.md)
+* [Authentication](cli/authentication.md)
+* [Commands](cli/commands/README.md)
+  * [provider](cli/commands/provider.md)
+  * [resource](cli/commands/resource.md)
+  * [drift](cli/commands/drift.md)
+  * [alert](cli/commands/alert.md)
+  * [vulnerability](cli/commands/vulnerability.md)
+  * [cost](cli/commands/cost.md)
+  * [compliance](cli/commands/compliance.md)
+  * [kubernetes](cli/commands/kubernetes.md)
+  * [iac](cli/commands/iac.md)
+  * [job](cli/commands/job.md)
+  * [remediation](cli/commands/remediation.md)
+  * [recommendation](cli/commands/recommendation.md)
+  * [notification](cli/commands/notification.md)
+  * [webhook](cli/commands/webhook.md)
+* [Shell completion](cli/shell-completion.md)
+* [CI/CD usage](cli/ci-cd-usage.md)
+* [Examples](cli/examples.md)
+
+## API reference
+
+* [Overview](api/README.md)
+* [Authentication](api/authentication.md)
+* [Errors](api/errors.md)
+* [Pagination](api/pagination.md)
+* [Rate limiting](api/rate-limiting.md)
+* [OpenAPI spec](api/openapi.md)
+* [Endpoint reference](api/reference/README.md)
+  * [Auth](api/reference/auth.md)
+  * [Providers](api/reference/providers.md)
+  * [Resources](api/reference/resources.md)
+  * [Drifts](api/reference/drifts.md)
+  * [Baselines](api/reference/baselines.md)
+  * [Vulnerabilities](api/reference/vulnerabilities.md)
+  * [IaC](api/reference/iac.md)
+  * [Costs](api/reference/costs.md)
+  * [Compliance](api/reference/compliance.md)
+  * [Kubernetes](api/reference/kubernetes.md)
+  * [Recommendations](api/reference/recommendations.md)
+  * [Alerts](api/reference/alerts.md)
+  * [Anomalies](api/reference/anomalies.md)
+  * [Jobs](api/reference/jobs.md)
+  * [Remediation](api/reference/remediation.md)
+  * [Notifications](api/reference/notifications.md)
+  * [Webhooks](api/reference/webhooks.md)
+  * [Reports](api/reference/reports.md)
+  * [Billing](api/reference/billing.md)
+  * [Settings](api/reference/settings.md)
+* [Webhooks](api/webhooks/README.md)
+  * [Event types](api/webhooks/events.md)
+  * [Signature verification](api/webhooks/signing.md)
+  * [Retries and delivery](api/webhooks/retries.md)
+* [Examples](api/examples/README.md)
+  * [Connect an AWS account](api/examples/connect-aws.md)
+  * [Run a drift scan](api/examples/run-drift-scan.md)
+  * [Fetch a cost report](api/examples/fetch-cost-report.md)
+  * [Subscribe to webhook events](api/examples/subscribe-to-webhooks.md)
+
+## Integrations
+
+* [Overview](integrations/README.md)
+* [AWS](integrations/aws.md)
+* [GCP](integrations/gcp.md)
+* [Azure](integrations/azure.md)
+* [Kubernetes](integrations/kubernetes.md)
+* [Terraform](integrations/terraform.md)
+* [CloudFormation](integrations/cloudformation.md)
+* [Slack](integrations/slack.md)
+* [Email](integrations/email.md)
+* [Webhooks](integrations/webhooks.md)
+* [Trivy and NVD](integrations/trivy-and-nvd.md)
+
+## Self-hosting
+
+* [Overview](self-hosting/README.md)
+* [Prerequisites](self-hosting/prerequisites.md)
+* [Supabase setup](self-hosting/supabase-setup.md)
+* [Docker Compose](self-hosting/docker-compose.md)
+* [Kubernetes](self-hosting/kubernetes.md)
+* [Configuration reference](self-hosting/configuration.md)
+* [Database](self-hosting/database.md)
+* [Secrets and encryption](self-hosting/secrets-and-encryption.md)
+* [Monitoring](self-hosting/monitoring.md)
+* [Backups](self-hosting/backups.md)
+* [Upgrades](self-hosting/upgrades.md)
+* [Troubleshooting](self-hosting/troubleshooting.md)
+
+## Concepts
+
+* [Overview](concepts/README.md)
+* [Architecture](concepts/architecture.md)
+* [Drift detection](concepts/drift-detection.md)
+* [Baselines](concepts/baselines.md)
+* [Compliance frameworks](concepts/compliance-frameworks.md)
+* [AI recommendations](concepts/ai-recommendations.md)
+* [Cost forecasting](concepts/cost-forecasting.md)
+* [Anomaly detection](concepts/anomaly-detection.md)
+* [Remediation workflow](concepts/remediation-workflow.md)
+* [Job scheduler](concepts/job-scheduler.md)
+
+## Contributing
+
+* [Overview](contributing/README.md)
+* [Repo structure](contributing/repo-structure.md)
+* [Local development](contributing/local-development.md)
+* [Testing](contributing/testing.md)
+* [Adding a cloud provider](contributing/adding-a-cloud-provider.md)
+* [Adding a compliance framework](contributing/adding-a-compliance-framework.md)
+* [Updating Swagger docs](contributing/updating-swagger.md)
+* [Pull request process](contributing/pull-request-process.md)
+
+## Resources
+
+* [Glossary](resources/glossary.md)
+* [FAQ](resources/faq.md)
+* [Changelog](resources/changelog.md)
+* [Support](resources/support.md)
