@@ -1,3 +1,9 @@
+---
+title: "Recommendations"
+description: "AI-powered recommendations for cost savings, security hardening, and compliance fixes."
+icon: "lightbulb"
+---
+
 # Recommendations
 
 AI-powered recommendations for cost, security, and performance. Review estimated savings, apply fixes, or dismiss suggestions that don't apply.

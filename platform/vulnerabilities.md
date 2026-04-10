@@ -1,3 +1,9 @@
+---
+title: "Vulnerabilities"
+description: "Scan your cloud resources for known CVEs and misconfigurations using Trivy and NVD."
+icon: "bug"
+---
+
 # Vulnerabilities
 
 Run Trivy vulnerability scans, review CVE findings enriched with NVD metadata, filter by severity, and mark vulnerabilities as fixed or ignored.

@@ -1,3 +1,9 @@
+---
+title: "Connecting Cloud Accounts"
+description: "Connect your AWS, GCP, Azure, or Kubernetes accounts to InfraAudit."
+icon: "plug"
+---
+
 # Connecting cloud accounts
 
 How to connect AWS, GCP, Azure, and Kubernetes accounts from the Cloud Providers page. Covers credential requirements, IAM permissions, the connect flow, and sync status.

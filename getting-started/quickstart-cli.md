@@ -1,3 +1,9 @@
+---
+title: "Quickstart: CLI"
+description: "Install the InfraAudit CLI and run your first scan from the terminal."
+icon: "terminal"
+---
+
 # Quickstart: CLI
 
 Install the `infraudit` CLI, log in, connect a cloud provider, and run your first drift scan without leaving the terminal.

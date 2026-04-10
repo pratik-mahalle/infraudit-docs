@@ -1,3 +1,9 @@
+---
+title: "Quickstart: SaaS"
+description: "Sign up for InfraAudit and connect your first cloud account in minutes."
+icon: "cloud"
+---
+
 # Quickstart: SaaS
 
 A five-minute walkthrough for signing up to the hosted version of InfraAudit, connecting a cloud account, and running your first scan.

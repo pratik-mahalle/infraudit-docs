@@ -1,3 +1,9 @@
+---
+title: "Installation"
+description: "Install the infraudit CLI binary on macOS, Linux, or Windows."
+icon: "download"
+---
+
 # Installation
 
 The CLI is distributed as a single static Go binary with no runtime dependencies. Install it from source or via `go install`.

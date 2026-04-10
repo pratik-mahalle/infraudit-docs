@@ -1,3 +1,9 @@
+---
+title: "Remediation"
+description: "Approve and execute AI-suggested fixes with rollback support."
+icon: "wrench"
+---
+
 # Remediation
 
 Review suggested fixes, approve them, execute against cloud APIs, and roll back if needed.

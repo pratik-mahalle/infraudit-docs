@@ -1,0 +1,248 @@
+{
+  "$schema": "https://mintlify.com/schema.json",
+  "theme": "mint",
+  "name": "InfraAudit",
+  "logo": {
+    "dark": "/logo/dark.svg",
+    "light": "/logo/light.svg"
+  },
+  "favicon": "/favicon.svg",
+  "colors": {
+    "primary": "#6366f1",
+    "light": "#818cf8",
+    "dark": "#4f46e5"
+  },
+  "topbarLinks": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/pratik-mahalle/infraudit-go"
+    }
+  ],
+  "topbarCtaButton": {
+    "name": "Get Started",
+    "url": "https://infraaudit.dev"
+  },
+  "anchors": [
+    {
+      "name": "GitHub",
+      "icon": "github",
+      "url": "https://github.com/pratik-mahalle/infraudit-go"
+    },
+    {
+      "name": "Support",
+      "icon": "headset",
+      "url": "resources/support"
+    }
+  ],
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Docs",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "getting-started/overview",
+              "getting-started/what-is-infraudit",
+              "getting-started/core-concepts",
+              "getting-started/quickstart-saas",
+              "getting-started/quickstart-cli",
+              "getting-started/quickstart-self-host"
+            ]
+          },
+          {
+            "group": "Platform Guide",
+            "pages": [
+              "platform/overview",
+              "platform/dashboard",
+              "platform/connecting-cloud-accounts",
+              "platform/resources-and-inventory",
+              "platform/drift-detection",
+              "platform/vulnerabilities",
+              "platform/cost-optimization",
+              "platform/compliance",
+              "platform/recommendations",
+              "platform/alerts",
+              "platform/remediation",
+              "platform/automation-and-jobs",
+              "platform/kubernetes"
+            ]
+          },
+          {
+            "group": "Integrations",
+            "pages": [
+              "integrations/overview",
+              "integrations/aws",
+              "integrations/gcp",
+              "integrations/azure",
+              "integrations/kubernetes",
+              "integrations/terraform",
+              "integrations/cloudformation",
+              "integrations/slack",
+              "integrations/email",
+              "integrations/webhooks",
+              "integrations/trivy-and-nvd"
+            ]
+          },
+          {
+            "group": "Self-Hosting",
+            "pages": [
+              "self-hosting/overview",
+              "self-hosting/prerequisites",
+              "self-hosting/supabase-setup",
+              "self-hosting/docker-compose",
+              "self-hosting/kubernetes",
+              "self-hosting/configuration",
+              "self-hosting/database",
+              "self-hosting/secrets-and-encryption",
+              "self-hosting/monitoring",
+              "self-hosting/backups",
+              "self-hosting/upgrades",
+              "self-hosting/troubleshooting"
+            ]
+          },
+          {
+            "group": "Concepts",
+            "pages": [
+              "concepts/overview",
+              "concepts/architecture",
+              "concepts/drift-detection",
+              "concepts/baselines",
+              "concepts/compliance-frameworks",
+              "concepts/ai-recommendations",
+              "concepts/cost-forecasting",
+              "concepts/anomaly-detection",
+              "concepts/remediation-workflow",
+              "concepts/job-scheduler"
+            ]
+          },
+          {
+            "group": "Contributing",
+            "pages": [
+              "contributing/overview",
+              "contributing/repo-structure",
+              "contributing/local-development",
+              "contributing/testing",
+              "contributing/adding-a-cloud-provider",
+              "contributing/adding-a-compliance-framework",
+              "contributing/updating-swagger",
+              "contributing/pull-request-process"
+            ]
+          },
+          {
+            "group": "Resources",
+            "pages": [
+              "resources/glossary",
+              "resources/faq",
+              "resources/changelog",
+              "resources/support"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "CLI Reference",
+        "groups": [
+          {
+            "group": "CLI",
+            "pages": [
+              "cli/overview",
+              "cli/installation",
+              "cli/configuration",
+              "cli/authentication",
+              "cli/shell-completion",
+              "cli/ci-cd-usage",
+              "cli/examples"
+            ]
+          },
+          {
+            "group": "Commands",
+            "pages": [
+              "cli/commands/overview",
+              "cli/commands/provider",
+              "cli/commands/resource",
+              "cli/commands/drift",
+              "cli/commands/alert",
+              "cli/commands/vulnerability",
+              "cli/commands/cost",
+              "cli/commands/compliance",
+              "cli/commands/kubernetes",
+              "cli/commands/iac",
+              "cli/commands/job",
+              "cli/commands/remediation",
+              "cli/commands/recommendation",
+              "cli/commands/notification",
+              "cli/commands/webhook"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "API Overview",
+            "pages": [
+              "api/overview",
+              "api/authentication",
+              "api/errors",
+              "api/pagination",
+              "api/rate-limiting",
+              "api/openapi"
+            ]
+          },
+          {
+            "group": "Endpoints",
+            "pages": [
+              "api/reference/overview",
+              "api/reference/auth",
+              "api/reference/providers",
+              "api/reference/resources",
+              "api/reference/drifts",
+              "api/reference/baselines",
+              "api/reference/vulnerabilities",
+              "api/reference/iac",
+              "api/reference/costs",
+              "api/reference/compliance",
+              "api/reference/kubernetes",
+              "api/reference/recommendations",
+              "api/reference/alerts",
+              "api/reference/anomalies",
+              "api/reference/jobs",
+              "api/reference/remediation",
+              "api/reference/notifications",
+              "api/reference/webhooks",
+              "api/reference/reports",
+              "api/reference/billing",
+              "api/reference/settings"
+            ]
+          },
+          {
+            "group": "Webhooks",
+            "pages": [
+              "api/webhooks/overview",
+              "api/webhooks/events",
+              "api/webhooks/signing",
+              "api/webhooks/retries"
+            ]
+          },
+          {
+            "group": "API Examples",
+            "pages": [
+              "api/examples/overview",
+              "api/examples/connect-aws",
+              "api/examples/run-drift-scan",
+              "api/examples/fetch-cost-report",
+              "api/examples/subscribe-to-webhooks"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "footerSocials": {
+    "github": "https://github.com/pratik-mahalle/infraudit-go",
+    "x": "https://x.com/infraaudit"
+  }
+}

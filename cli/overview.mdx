@@ -1,0 +1,86 @@
+---
+title: "CLI Overview"
+description: "The infraudit CLI covers every feature of the web platform from your terminal."
+icon: "terminal"
+---
+
+# CLI overview
+
+The `infraudit` CLI is a command-line client for the InfraAudit API. It covers every feature the web UI does: cloud account management, drift detection, vulnerability scans, cost analysis, compliance assessments, remediation, and more.
+
+## What you can do with it
+
+- Log in once; scripts use the stored token for subsequent runs
+- Trigger scans and fetch results with JSON, YAML, or table output
+- Wire cloud security checks into CI/CD pipelines (the JSON output works with `jq`)
+- Manage multiple InfraAudit instances by pointing `--server` at each one
+
+## Command groups
+
+| Group | Purpose |
+|---|---|
+| [`auth`](/cli/authentication) | Login, register, logout, whoami |
+| [`config`](/cli/configuration) | Manage CLI configuration |
+| `status` | Print a dashboard summary |
+| [`provider`](/cli/commands/provider) | Connect, sync, disconnect cloud accounts |
+| [`resource`](/cli/commands/resource) | List and inspect discovered resources |
+| [`drift`](/cli/commands/drift) | Detect, list, and resolve configuration drift |
+| [`alert`](/cli/commands/alert) | List, acknowledge, and resolve alerts |
+| [`vulnerability`](/cli/commands/vulnerability) | Run vuln scans and review findings |
+| [`cost`](/cli/commands/cost) | Cost overview, trends, forecasts, anomalies |
+| [`compliance`](/cli/commands/compliance) | Enable frameworks and run assessments |
+| [`kubernetes`](/cli/commands/kubernetes) | Register clusters, list workloads |
+| [`iac`](/cli/commands/iac) | Upload Terraform/CloudFormation, detect IaC drift |
+| [`job`](/cli/commands/job) | Manage scheduled jobs |
+| [`remediation`](/cli/commands/remediation) | Suggest, approve, execute, rollback fixes |
+| [`recommendation`](/cli/commands/recommendation) | AI-powered cost and security suggestions |
+| [`notification`](/cli/commands/notification) | Configure notification channels |
+| [`webhook`](/cli/commands/webhook) | Manage outbound webhooks |
+
+## Global flags
+
+These work on every command:
+
+| Flag | Short | Default | Description |
+|---|---|---|---|
+| `--server` | | from config | Override the server URL for one request |
+| `--output` | `-o` | `table` | Output format: `table`, `json`, `yaml` |
+| `--config` | | `~/.infraudit/config.yaml` | Path to config file |
+| `--no-color` | | `false` | Disable colored output |
+| `--help` | `-h` | | Show help for any command |
+
+## Output formats
+
+### Table (default)
+Human-readable aligned columns. Good for interactive use:
+
+```
+ID  NAME            TYPE     REGION      STATUS         PROVIDER
+--  ----            ----     ------      ------         --------
+1   web-server-01   ec2      us-east-1   [+] active     1
+2   api-gateway     lambda   us-west-2   [+] active     1
+3   data-bucket     s3       us-east-1   [+] active     1
+```
+
+### JSON
+Machine-readable. Pipe to `jq` for filtering:
+
+```bash
+infraudit resource list -o json | jq '.[].name'
+```
+
+### YAML
+Readable alternative to JSON:
+
+```bash
+infraudit drift get 1 -o yaml
+```
+
+## Next steps
+
+- [Install the CLI](/cli/installation)
+- [Configure the CLI](/cli/configuration)
+- [Authentication](/cli/authentication)
+- [Browse commands](/cli/commands/overview)
+- [CI/CD usage](/cli/ci-cd-usage)
+- [Examples](/cli/examples)

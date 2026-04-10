@@ -1,3 +1,9 @@
+---
+title: "Configuration"
+description: "Configure the InfraAudit CLI with server URL, output format, and credentials."
+icon: "sliders"
+---
+
 # Configuration
 
 The CLI reads its settings from a YAML config file, environment variables, and flags, in that order of precedence:
