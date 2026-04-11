@@ -4,7 +4,6 @@ description: "How InfraAudit works under the hood: drift detection, compliance, 
 icon: "book-open"
 ---
 
-# Concepts
 
 Deep-dives into how the major systems in InfraAudit work.
 

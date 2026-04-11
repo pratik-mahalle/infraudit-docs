@@ -4,7 +4,6 @@ description: "Ready-to-use CLI examples for common InfraAudit workflows."
 icon: "code"
 ---
 
-# CLI examples
 
 ## Security audit
 

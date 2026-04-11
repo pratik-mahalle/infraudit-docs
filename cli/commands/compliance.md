@@ -4,7 +4,6 @@ description: "Enable frameworks and run compliance assessments from the CLI."
 icon: "square-terminal"
 ---
 
-# `infraudit compliance`
 
 Compliance framework management and assessment.
 

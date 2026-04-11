@@ -4,7 +4,6 @@ description: "List, acknowledge, and resolve alerts from the CLI."
 icon: "square-terminal"
 ---
 
-# `infraudit alert`
 
 Manage security and operational alerts.
 

@@ -4,7 +4,6 @@ description: "How list endpoints handle pagination in the InfraAudit API."
 icon: "list-ordered"
 ---
 
-# Pagination
 
 List endpoints return paginated results using `page` and `pageSize` (or `limit`/`offset`) query parameters.
 

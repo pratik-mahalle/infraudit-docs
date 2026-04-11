@@ -4,7 +4,6 @@ description: "Detect, list, and resolve configuration drift from the CLI."
 icon: "square-terminal"
 ---
 
-# `infraudit drift`
 
 Detect and manage infrastructure configuration drift.
 

@@ -4,7 +4,6 @@ description: "Run InfraAudit on your own infrastructure with Docker Compose or K
 icon: "server"
 ---
 
-# Self-hosting
 
 The InfraAudit Community edition is MIT-licensed and designed to run on your own infrastructure. You can deploy it with Docker Compose for a quick start or with Kubernetes for production.
 

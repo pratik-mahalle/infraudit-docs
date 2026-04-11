@@ -4,7 +4,6 @@ description: "Manage outbound webhooks from the CLI."
 icon: "square-terminal"
 ---
 
-# `infraudit webhook`
 
 Manage outbound webhooks.
 

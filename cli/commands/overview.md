@@ -4,7 +4,6 @@ description: "Full reference for all infraudit CLI command groups."
 icon: "square-terminal"
 ---
 
-# Commands
 
 Full reference for every `infraudit` command group.
 

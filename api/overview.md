@@ -4,7 +4,6 @@ description: "Base URL, versioning, authentication, and conventions for the Infr
 icon: "code"
 ---
 
-# API overview
 
 InfraAudit exposes a REST API over HTTP. All responses are JSON. The API is served by the Go backend (`cmd/api`) using the [Chi](https://github.com/go-chi/chi) router.
 

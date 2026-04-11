@@ -4,7 +4,6 @@ description: "How to set up a local dev environment, run tests, and submit a pul
 icon: "git-pull-request"
 ---
 
-# Contributing
 
 InfraAudit is open source (MIT license). Contributions are welcome.
 

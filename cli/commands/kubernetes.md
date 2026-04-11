@@ -4,7 +4,6 @@ description: "Register clusters and list Kubernetes workloads from the CLI."
 icon: "square-terminal"
 ---
 
-# `infraudit kubernetes`
 
 Alias: `k8s`
 

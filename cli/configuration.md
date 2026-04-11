@@ -4,7 +4,6 @@ description: "Configure the InfraAudit CLI with server URL, output format, and c
 icon: "sliders"
 ---
 
-# Configuration
 
 The CLI reads its settings from a YAML config file, environment variables, and flags, in that order of precedence:
 

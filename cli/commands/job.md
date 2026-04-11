@@ -4,7 +4,6 @@ description: "Manage scheduled jobs from the CLI."
 icon: "square-terminal"
 ---
 
-# `infraudit job`
 
 Manage scheduled automation jobs.
 

@@ -4,7 +4,6 @@ description: "Learn the key vocabulary: providers, resources, drifts, baselines,
 icon: "graduation-cap"
 ---
 
-# Core concepts
 
 This page defines the vocabulary used across the UI, CLI, and API. If you've read the introduction and want to know what a "baseline" or a "job execution" is before touching the product, start here.
 

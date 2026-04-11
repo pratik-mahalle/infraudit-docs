@@ -4,7 +4,6 @@ description: "Configure notification channels from the CLI."
 icon: "square-terminal"
 ---
 
-# `infraudit notification`
 
 Alias: `notif`
 

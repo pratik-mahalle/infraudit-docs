@@ -4,7 +4,6 @@ description: "Suggest, approve, execute, and rollback fixes from the CLI."
 icon: "square-terminal"
 ---
 
-# `infraudit remediation`
 
 Manage automated remediation actions.
 

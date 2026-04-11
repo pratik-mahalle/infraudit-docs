@@ -4,7 +4,6 @@ description: "Upload Terraform and CloudFormation manifests and detect IaC drift
 icon: "square-terminal"
 ---
 
-# `infraudit iac`
 
 Infrastructure as Code management. Supports Terraform, CloudFormation, and Kubernetes manifests.
 

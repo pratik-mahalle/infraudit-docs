@@ -4,7 +4,6 @@ description: "End-to-end code examples for common InfraAudit API workflows."
 icon: "play"
 ---
 
-# API examples
 
 Worked examples showing how to complete common tasks with the InfraAudit REST API. Each example includes the full request sequence with curl and a brief explanation.
 

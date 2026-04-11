@@ -4,7 +4,6 @@ description: "A multi-cloud operations platform combining security scanning, cos
 icon: "shield-halved"
 ---
 
-# What is InfraAudit?
 
 InfraAudit is a multi-cloud operations platform that combines three things most teams currently buy separately: a security posture scanner, a cost management tool, and a compliance assessor. It connects to your AWS, GCP, Azure, and Kubernetes accounts, pulls inventory and billing data, then runs scheduled scans to surface drift, vulnerabilities, overspend, and control failures in one place.
 

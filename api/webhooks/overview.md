@@ -4,7 +4,6 @@ description: "Subscribe to InfraAudit events and receive real-time HTTP callback
 icon: "webhook"
 ---
 
-# Webhooks
 
 InfraAudit can POST a JSON payload to any HTTP endpoint when an event fires — a detected drift, a cost anomaly, a compliance violation, and more.
 

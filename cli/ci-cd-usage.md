@@ -4,7 +4,6 @@ description: "Integrate InfraAudit CLI into GitHub Actions, GitLab CI, and other
 icon: "arrows-rotate"
 ---
 
-# CI/CD usage
 
 The CLI works well as a security gate in CI. Use `--output json` with `jq` to parse results and fail the build on critical findings.
 

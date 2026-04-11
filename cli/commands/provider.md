@@ -4,7 +4,6 @@ description: "Connect, sync, and disconnect cloud provider accounts with the CLI
 icon: "square-terminal"
 ---
 
-# `infraudit provider`
 
 Manage cloud provider connections: AWS, GCP, and Azure.
 

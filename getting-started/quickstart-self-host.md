@@ -4,7 +4,6 @@ description: "Run InfraAudit on your own infrastructure using Docker Compose."
 icon: "server"
 ---
 
-# Quickstart: Self-host
 
 This guide gets InfraAudit running on your own machine using Docker Compose. Expected time: 15 to 30 minutes, most of which is the Supabase setup.
 

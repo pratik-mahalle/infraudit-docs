@@ -1,16 +1,21 @@
 {
-  "$schema": "https://mintlify.com/schema.json",
+  "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
   "name": "InfraAudit",
   "logo": {
     "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
+    "light": "/logo/light.svg",
+    "height": 60
   },
   "favicon": "/favicon.svg",
   "colors": {
     "primary": "#6366f1",
-    "light": "#818cf8",
-    "dark": "#4f46e5"
+    "light": "#a5b4fc",
+    "dark": "#4338ca"
+  },
+  "modeToggle": {
+    "default": "dark",
+    "isHidden": false
   },
   "topbarLinks": [
     {
@@ -19,14 +24,33 @@
     }
   ],
   "topbarCtaButton": {
-    "name": "Get Started",
+    "name": "Get Started Free",
     "url": "https://infraaudit.dev"
   },
+  "tabs": [
+    {
+      "name": "Documentation",
+      "url": "/"
+    },
+    {
+      "name": "CLI Reference",
+      "url": "/cli/overview"
+    },
+    {
+      "name": "API Reference",
+      "url": "/api/overview"
+    }
+  ],
   "anchors": [
     {
       "name": "GitHub",
       "icon": "github",
       "url": "https://github.com/pratik-mahalle/infraudit-go"
+    },
+    {
+      "name": "Changelog",
+      "icon": "list-check",
+      "url": "resources/changelog"
     },
     {
       "name": "Support",
@@ -241,8 +265,88 @@
       }
     ]
   },
-  "footerSocials": {
-    "github": "https://github.com/pratik-mahalle/infraudit-go",
-    "x": "https://x.com/infraaudit"
+  "feedback": {
+    "thumbsRating": true,
+    "suggestEdit": true,
+    "raiseIssue": true
+  },
+  "search": {
+    "prompt": "Search InfrAudit docs..."
+  },
+  "footer": {
+    "socials": {
+      "x": "https://x.com/infraudit",
+      "github": "https://github.com/pratik-mahalle/infraudit-go",
+      "linkedin": "https://linkedin.com/company/infraudit"
+    },
+    "links": [
+      {
+        "title": "Company",
+        "items": [
+          {
+            "label": "Pricing",
+            "href": "https://infraudit.com/pricing"
+          },
+          {
+            "label": "About Us",
+            "href": "https://infraudit.com/about"
+          },
+          {
+            "label": "Contact Us",
+            "href": "https://infraudit.com/contact"
+          },
+          {
+            "label": "Careers",
+            "href": "https://infraudit.com/careers"
+          }
+        ]
+      },
+      {
+        "title": "Social",
+        "items": [
+          {
+            "label": "Twitter",
+            "href": "https://x.com/infraudit"
+          },
+          {
+            "label": "GitHub",
+            "href": "https://github.com/pratik-mahalle/infraudit-go"
+          },
+          {
+            "label": "LinkedIn",
+            "href": "https://linkedin.com/company/infraudit"
+          }
+        ]
+      },
+      {
+        "title": "Resources",
+        "items": [
+          {
+            "label": "Documentation",
+            "href": "/introduction"
+          },
+          {
+            "label": "Privacy policy",
+            "href": "https://infraudit.com/privacy"
+          },
+          {
+            "label": "Terms of service",
+            "href": "https://infraudit.com/terms"
+          },
+          {
+            "label": "API",
+            "href": "/api/overview"
+          }
+        ]
+      }
+    ]
+  },
+  "seo": {
+    "indexHiddenPages": false
+  },
+  "metadata": {
+    "og:site_name": "InfrAudit Docs",
+    "og:type": "website",
+    "twitter:card": "summary_large_image"
   }
 }

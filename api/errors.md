@@ -4,7 +4,6 @@ description: "HTTP status codes and error response format for the InfraAudit API
 icon: "triangle-alert"
 ---
 
-# Errors
 
 All errors return a JSON body with a consistent structure.
 

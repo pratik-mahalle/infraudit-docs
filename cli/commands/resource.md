@@ -4,7 +4,6 @@ description: "List and inspect discovered cloud resources."
 icon: "square-terminal"
 ---
 
-# `infraudit resource`
 
 List and inspect cloud resources discovered by provider syncs.
 

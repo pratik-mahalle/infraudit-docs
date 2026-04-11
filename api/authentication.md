@@ -4,7 +4,6 @@ description: "How to authenticate requests to the InfraAudit REST API using Supa
 icon: "lock"
 ---
 
-# Authentication
 
 All protected API endpoints require a Bearer token in the `Authorization` header.
 

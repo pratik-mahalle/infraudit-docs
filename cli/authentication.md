@@ -4,7 +4,6 @@ description: "Log in to InfraAudit from the CLI and manage your session token."
 icon: "key"
 ---
 
-# Authentication
 
 The CLI stores a JWT access token in `~/.infraudit/config.yaml` after login. All subsequent commands use it automatically.
 

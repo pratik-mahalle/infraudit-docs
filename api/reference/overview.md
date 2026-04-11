@@ -4,7 +4,6 @@ description: "All InfraAudit REST API endpoints grouped by feature area."
 icon: "list"
 ---
 
-# Endpoint reference
 
 All endpoints require `Authorization: Bearer <token>` unless noted. See [Authentication](/api/authentication) for how to get a token.
 

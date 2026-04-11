@@ -4,7 +4,6 @@ description: "Enable tab completion for the infraudit CLI in bash, zsh, or fish.
 icon: "sparkles"
 ---
 
-# Shell completion
 
 The CLI generates tab-completion scripts for bash, zsh, fish, and PowerShell.
 

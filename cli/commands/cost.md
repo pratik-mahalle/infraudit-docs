@@ -4,7 +4,6 @@ description: "View cost overviews, trends, forecasts, and anomalies from the CLI
 icon: "square-terminal"
 ---
 
-# `infraudit cost`
 
 Cloud cost analytics, forecasting, and optimization.
 

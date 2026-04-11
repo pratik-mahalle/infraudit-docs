@@ -4,7 +4,6 @@ description: "View AI-powered cost and security recommendations from the CLI."
 icon: "square-terminal"
 ---
 
-# `infraudit recommendation`
 
 Alias: `rec`
 

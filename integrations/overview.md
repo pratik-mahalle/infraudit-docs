@@ -4,7 +4,6 @@ description: "Connect InfraAudit to your cloud accounts, IaC tooling, and notifi
 icon: "plug"
 ---
 
-# Integrations
 
 InfraAudit connects to cloud providers, IaC tools, vulnerability scanners, and notification systems.
 
