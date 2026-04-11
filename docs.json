@@ -50,12 +50,12 @@
     {
       "name": "Changelog",
       "icon": "list-check",
-      "url": "resources/changelog"
+      "url": "/resources/changelog"
     },
     {
       "name": "Support",
       "icon": "headset",
-      "url": "resources/support"
+      "url": "/resources/support"
     }
   ],
   "navigation": {
