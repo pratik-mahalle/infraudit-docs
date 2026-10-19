@@ -49,3 +49,59 @@ This documentation applies to both the SaaS editions and the Community OSS editi
 - Backend (Go): [pratik-mahalle/infraudit-go](https://github.com/pratik-mahalle/infraudit-go)
 - Frontend (React): [pratik-mahalle/InfraAudit](https://github.com/pratik-mahalle/InfraAudit)
 - Documentation (this repo): [pratik-mahalle/infraudit-docs](https://github.com/pratik-mahalle/infraudit-docs)
+
+## Working on these docs
+
+The site at [docs.infraudit.com](https://docs.infraudit.com) is built from this repo with [Astro Starlight](https://starlight.astro.build) and an "Editorial" look of our own. Pushing to `main` builds, checks, and deploys it (`.github/workflows/deploy.yml`).
+
+### Run locally
+
+```bash
+npm ci
+npm run dev        # open the URL it prints; edits to pages and theme.json show up live
+npm test           # unit tests
+npm run build && npm run test:site   # build, then check every page, link, and the theme
+```
+
+Needs Node 22.22 or newer.
+
+### Add a page
+
+1. Write the page as a `.md` (or `.mdx`) file with `title` and `description` frontmatter. The description is shown as the page's opening paragraph.
+2. Add its path, without the extension, to a group in `docs.json` → `navigation`. Only pages listed there are published.
+3. Link to other pages by site path, for example `[Baselines](/concepts/baselines)`, not `baselines.md`. The build fails on broken links.
+
+A side note in the margin:
+
+```md
+:::margin
+Drift is anything changed outside your IaC.
+:::
+```
+
+### Change the theme
+
+Everything lives in `theme.json`. Leave a key out to keep the Editorial default.
+
+| Key | What it does | Example |
+|---|---|---|
+| `background` | Page background | `{ "type": "paper", "color": "#f3ede1" }` — paper texture on a color |
+| | | `{ "type": "color", "color": "#f7f7f5" }` — flat color |
+| | | `{ "type": "gradient", "value": "linear-gradient(135deg, #fde3d1, #e5defc)" }` |
+| | | `{ "type": "image", "src": "/backgrounds/hero.jpg" }` — put the file in `public/backgrounds/` |
+| `accent` | Links, active tab, numbers, drop cap, button | `"#2b3a8c"` |
+| `accent2` | Breadcrumb color | `"#9b3d26"` |
+| `fonts` | Google Fonts by name | `{ "heading": "Newsreader", "body": "Newsreader", "ui": "Inter", "code": "JetBrains Mono" }` |
+| `mode` | `"toggle"` (light first, readers can switch), `"light"`, or `"dark"` | `"toggle"` |
+
+`background`, `accent` and `accent2` take one value (dark mode is worked out for you) or separate values: `{ "light": …, "dark": … }`.
+
+With a gradient or image, text sits on a paper-colored panel so it stays readable.
+
+If a color makes text too hard to read (below WCAG AA, 4.5:1), the preview and the build stop with a message like:
+
+```
+theme.json (light mode): accent #6366f1 on background #f3ede1 is 3.83:1, needs 4.5:1. Try accent #5054ef.
+```
+
+Use the suggested color, or pick another one that passes.

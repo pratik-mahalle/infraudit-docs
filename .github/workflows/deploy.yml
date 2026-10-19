@@ -22,27 +22,29 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "24"
+          cache: npm
 
-      - name: Install Mintlify CLI
-        run: npm install -g mintlify
+      - name: Install
+        run: npm ci
 
-      - name: Export static site
-        run: mintlify export
+      - name: Unit tests
+        run: npm test
 
-      - name: List export output (debug)
-        run: ls -la out/ 2>/dev/null || ls -la .mintlify/ 2>/dev/null || echo "checking..." && find . -maxdepth 2 -name "index.html" | head -5
+      - name: Build site
+        run: npm run build
+
+      - name: Check built site (pages, links, theme)
+        run: npm run test:site
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: out/
+          path: dist/
 
   deploy:
     name: Deploy
