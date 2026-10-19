@@ -85,6 +85,16 @@ While the old Mintlify site still builds from this repo, it shows `:::margin` li
 
 Colors, background, fonts and light/dark live in `theme.json`. The full reference is in Tessa's README. If a color makes text hard to read, the build stops and suggests one that works.
 
+### Build access to Tessa
+
+Tessa is private, so the deploy workflow fetches it with a read-only **deploy key**:
+
+1. `ssh-keygen -t ed25519 -N '' -C infraudit-docs-ci -f tessa_deploy`
+2. Public half on Tessa: `gh repo deploy-key add tessa_deploy.pub -R pratik-mahalle/tessa --title infraudit-docs-ci` (read-only).
+3. Private half as this repo's secret: `gh secret set TESSA_DEPLOY_KEY -R pratik-mahalle/infraudit-docs < tessa_deploy`, then delete both files.
+
+To rotate, repeat the steps and remove the old key under Tessa → Settings → Deploy keys.
+
 ### Hosting (docs.infraudit.com)
 
 GitHub Pages serves the site; `public/CNAME` holds the domain. One-time setup:
