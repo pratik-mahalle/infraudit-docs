@@ -1,0 +1,9 @@
+{
+  "background": {
+    "light": { "type": "paper", "color": "#f3ede1" },
+    "dark": { "type": "paper", "color": "#1b1813" }
+  },
+  "accent": { "light": "#2b3a8c", "dark": "#9fb0ff" },
+  "fonts": { "heading": "Newsreader", "body": "Newsreader", "ui": "Inter", "code": "JetBrains Mono" },
+  "mode": "toggle"
+}
