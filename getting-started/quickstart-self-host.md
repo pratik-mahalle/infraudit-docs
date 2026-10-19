@@ -90,7 +90,7 @@ Two values you must change before anything beyond a toy deployment:
 - `ENCRYPTION_KEY` — used to encrypt cloud provider credentials in the database. Generate with `openssl rand -hex 32`.
 - `DB_PASSWORD` — the default is a well-known string and should never reach production.
 
-For the full environment variable reference, see [Configuration reference](../self-hosting/configuration.md).
+For the full environment variable reference, see [Configuration reference](/self-hosting/configuration).
 
 ### 3. Start the stack
 
@@ -146,7 +146,7 @@ The fastest path is AWS with read-only credentials.
 
 ### Option B: CLI
 
-If you prefer the command line, install the CLI first ([CLI installation](../cli/installation.md)), then:
+If you prefer the command line, install the CLI first ([CLI installation](/cli/installation)), then:
 
 ```bash
 infraudit config init
@@ -173,7 +173,7 @@ curl -X POST http://localhost:8080/api/v1/providers/aws/connect \
   }'
 ```
 
-The Bearer token is the Supabase `access_token` you get from signing in. See [API: Authentication](../api/authentication.md) for details.
+The Bearer token is the Supabase `access_token` you get from signing in. See [API: Authentication](/api/authentication) for details.
 
 ## Run your first scan
 
@@ -203,7 +203,7 @@ Or open **Drift Detection** in the web UI.
 - **Set up Slack alerts.** Add `SLACK_WEBHOOK_URL` to `.env`, restart the API, and configure notification preferences.
 - **Enable a compliance framework.** Run `infraudit compliance enable cis-aws` and then `infraudit compliance assess`.
 - **Review cost data.** Billing data syncs on a daily schedule by default. Force an immediate sync with `infraudit cost sync`.
-- **Harden the deployment.** Read [Secrets and encryption](../self-hosting/secrets-and-encryption.md) and [Monitoring](../self-hosting/monitoring.md).
+- **Harden the deployment.** Read [Secrets and encryption](/self-hosting/secrets-and-encryption) and [Monitoring](/self-hosting/monitoring).
 
 ## Troubleshooting
 
@@ -219,4 +219,4 @@ Another service is bound to that port. Change `SERVER_PORT` in `.env` and also u
 **Drift detection runs but never finds anything.**
 Drift detection compares against baselines, and a fresh install has none. The first sync captures baselines automatically; subsequent scans will find drift. Make a manual change to a resource in your cloud account and scan again.
 
-For more, see [Self-hosting troubleshooting](../self-hosting/troubleshooting.md).
+For more, see [Self-hosting troubleshooting](/self-hosting/troubleshooting).

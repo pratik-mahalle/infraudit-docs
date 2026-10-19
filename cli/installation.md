@@ -77,7 +77,7 @@ You're done. Try `infraudit status` to verify you can talk to the server.
 
 ## Shell completion
 
-Tab completion works in bash, zsh, fish, and PowerShell. See [Shell completion](shell-completion.md) for setup.
+Tab completion works in bash, zsh, fish, and PowerShell. See [Shell completion](/cli/shell-completion) for setup.
 
 ## Uninstall
 

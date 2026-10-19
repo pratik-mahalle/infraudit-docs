@@ -1,0 +1,6 @@
+src/
+public/
+docs/
+tests/
+dist/
+node_modules/

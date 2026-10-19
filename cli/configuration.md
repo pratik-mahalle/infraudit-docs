@@ -90,4 +90,4 @@ A lightweight alternative: set `INFRAUDIT_SERVER_URL` per shell session.
 
 - The config file is `0600` by default. Do not `chmod` it back to world-readable — the access token is a Bearer credential equivalent to a password.
 - Do not check `~/.infraudit/config.yaml` into source control.
-- For CI/CD, use `infraudit auth login --email "$CI_EMAIL" --password "$CI_PASSWORD"` from secrets rather than copying the config file into the build environment. See [CI/CD usage](ci-cd-usage.md).
+- For CI/CD, use `infraudit auth login --email "$CI_EMAIL" --password "$CI_PASSWORD"` from secrets rather than copying the config file into the build environment. See [CI/CD usage](/cli/ci-cd-usage).

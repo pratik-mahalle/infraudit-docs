@@ -86,6 +86,6 @@ The Community edition is MIT-licensed and self-hosted. It includes every feature
 
 ## Next steps
 
-- New to the product? Read [Core concepts](core-concepts.md) to learn the vocabulary (resource, provider, drift, baseline, assessment, remediation).
-- Want to try it? Jump to [Quickstart: SaaS](quickstart-saas.md) or [Quickstart: Self-host](quickstart-self-host.md).
-- Building an integration? Start with the [API overview](../api/README.md).
+- New to the product? Read [Core concepts](/getting-started/core-concepts) to learn the vocabulary (resource, provider, drift, baseline, assessment, remediation).
+- Want to try it? Jump to [Quickstart: SaaS](/getting-started/quickstart-saas) or [Quickstart: Self-host](/getting-started/quickstart-self-host).
+- Building an integration? Start with the [API overview](/api/overview).
