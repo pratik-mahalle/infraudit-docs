@@ -1,8 +1,10 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import { satteri } from '@astrojs/markdown-satteri';
 import docs from './docs.json' with { type: 'json' };
 import { tabs, starlightSidebar } from './src/lib/nav.ts';
 import { REPO_URL } from './src/lib/site.ts';
+import { marginNotesPlugin } from './src/lib/margin-notes.ts';
 
 const head = Object.entries(docs.metadata ?? {}).map(([key, content]) => ({
 	tag: 'meta',
@@ -12,6 +14,7 @@ const head = Object.entries(docs.metadata ?? {}).map(([key, content]) => ({
 export default defineConfig({
 	site: 'https://docs.infraudit.com',
 	redirects: { '/': tabs(docs)[0].href },
+	markdown: { processor: satteri({ mdastPlugins: [marginNotesPlugin] }) },
 	integrations: [
 		starlight({
 			title: docs.name,
@@ -27,6 +30,8 @@ export default defineConfig({
 				Header: './src/components/Header.astro',
 				Sidebar: './src/components/Sidebar.astro',
 				PageTitle: './src/components/PageTitle.astro',
+				TableOfContents: './src/components/TableOfContents.astro',
+				Footer: './src/components/Footer.astro',
 			},
 			// Code reads as dark ink in both modes, like the mockup.
 			expressiveCode: {

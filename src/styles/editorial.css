@@ -292,3 +292,90 @@ h1#_top {
 	display: block;
 	clear: both;
 }
+
+/* ---------- Right column: "In this chapter" + margin notes ---------- */
+.right-sidebar-panel h2 {
+	font-size: 0.95rem;
+	font-weight: 500;
+	color: var(--ed-muted);
+}
+.right-sidebar-panel a {
+	font-family: var(--ed-font-heading);
+	font-size: 0.98rem;
+	color: var(--ed-text-2);
+}
+.right-sidebar-panel a[aria-current='true'] {
+	color: var(--ed-accent);
+}
+.margin-note,
+.margin-notes p {
+	margin-block: 1rem;
+	padding-top: 0.6rem;
+	border-top: 1px solid var(--ed-rule);
+	font-family: var(--ed-font-heading);
+	font-style: italic;
+	font-size: 1rem;
+	line-height: 1.45;
+	color: var(--ed-text-2);
+}
+.margin-notes {
+	padding-inline: var(--sl-sidebar-pad-x);
+}
+/* The right column only exists from 72rem; below that the inline copy is the one you see. */
+@media (min-width: 72rem) {
+	.sl-markdown-content .margin-note {
+		display: none;
+	}
+}
+@media (max-width: 71.99rem) {
+	.margin-notes {
+		display: none;
+	}
+}
+
+/* ---------- Page end ---------- */
+.ed-footer {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+.ed-page-meta {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem 1.5rem;
+	font-family: var(--ed-font-ui);
+	font-size: 0.9rem;
+}
+.ed-page-meta a {
+	color: var(--ed-text-2);
+}
+.ed-footer-links {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+	gap: 1.25rem;
+	padding-top: 1.5rem;
+	border-top: 3px double var(--ed-header-rule);
+}
+.ed-footer-links h2 {
+	margin: 0 0 0.4rem;
+	font-family: var(--ed-font-ui);
+	font-variant: small-caps;
+	text-transform: lowercase;
+	letter-spacing: 0.07em;
+	font-size: 0.95rem;
+	font-weight: 500;
+	color: var(--ed-muted);
+}
+.ed-footer-links ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.ed-footer-links a {
+	font-family: var(--ed-font-heading);
+	color: var(--ed-text-2);
+	text-decoration: none;
+}
+.ed-footer-links a:hover {
+	color: var(--ed-accent);
+}

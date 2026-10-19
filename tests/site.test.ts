@@ -126,6 +126,21 @@ test('the mobile drawer carries the tabs and header links', () => {
 	}
 });
 
+test('the right column is headed "In this chapter"', () => {
+	assert.match(drift(), /<h2 id="starlight__on-this-page"[^>]*>In this chapter<\/h2>/);
+});
+
+test('each page ends with edit and report-an-issue links', () => {
+	const html = drift();
+	assert.ok(linkTexts(html, 'https://github.com/pratik-mahalle/infraudit-docs/edit/main/platform/drift-detection.md').some((t) => t.includes('Edit this page on GitHub')));
+	assert.match(html, /<a[^>]*href="https:\/\/github\.com\/pratik-mahalle\/infraudit-docs\/issues\/new\?title=[^"]*"[^>]*>Report an issue<\/a>/);
+});
+
+test('the footer carries docs.json footer links', () => {
+	const footer = between(drift(), '<div class="ed-footer-links"', '</footer>');
+	for (const col of docs.footer.links) for (const item of col.items) assert.ok(footer.includes(`>${item.label}</a>`), item.label);
+});
+
 test('pages link to their source on GitHub for editing', () => {
 	assert.ok(
 		page('/platform/drift-detection/').includes(

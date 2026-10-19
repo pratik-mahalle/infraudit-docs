@@ -1,0 +1,18 @@
+---
+import Default from '@astrojs/starlight/components/TableOfContents.astro';
+import { extractMarginNotes } from '../lib/margin-notes.ts';
+
+const notes = extractMarginNotes(Astro.locals.starlightRoute.entry.body ?? '');
+---
+
+<Default />
+{/* ponytail: notes render as plain text in the margin column; inline copies render full markdown. */}
+{
+	notes.length > 0 && (
+		<div class="margin-notes">
+			{notes.map((n) => (
+				<p>{n}</p>
+			))}
+		</div>
+	)
+}
