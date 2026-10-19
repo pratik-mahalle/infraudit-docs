@@ -52,24 +52,24 @@ This documentation applies to both the SaaS editions and the Community OSS editi
 
 ## Working on these docs
 
-The site at [docs.infraudit.com](https://docs.infraudit.com) is built from this repo with [Astro Starlight](https://starlight.astro.build) and an "Editorial" look of our own. Pushing to `main` builds, checks, and deploys it (`.github/workflows/deploy.yml`).
+This repo holds only content. The site at [docs.infraudit.com](https://docs.infraudit.com) is built by [Tessa](https://github.com/pratik-mahalle/tessa), our private docs engine, with its "Editorial" look. Pushing to `main` fetches Tessa, builds, checks every page and link, and deploys (`.github/workflows/deploy.yml`).
 
-### Run locally
+### Preview locally
+
+You need read access to `pratik-mahalle/tessa`. Clone it next to this repo, then:
 
 ```bash
+cd ../tessa
 npm ci
-npm run dev        # open the URL it prints; edits to pages and theme.json show up live
-npm test           # unit tests
-npm run build && npm run test:site   # build, then check every page, link, and the theme
+DOCS_DIR=../infraudit-docs npm run dev        # live preview; restart after editing docs.json navigation
+DOCS_DIR=../infraudit-docs npm run build && DOCS_DIR=../infraudit-docs npm run test:site   # what CI runs
 ```
-
-Needs Node 22.22 or newer.
 
 ### Add a page
 
 1. Write the page as a `.md` (or `.mdx`) file with `title` and `description` frontmatter. The description is shown as the page's opening paragraph.
 2. Add its path, without the extension, to a group in `docs.json` → `navigation`. Only pages listed there are published.
-3. Link to other pages by site path, for example `[Baselines](/concepts/baselines)`, not `baselines.md`. `npm run test:site` (run in CI before every deploy) fails on broken links.
+3. Link to other pages by site path, for example `[Baselines](/concepts/baselines)`, not `baselines.md`. The check before every deploy fails on broken links.
 
 A side note in the margin:
 
@@ -83,30 +83,7 @@ While the old Mintlify site still builds from this repo, it shows `:::margin` li
 
 ### Change the theme
 
-Everything lives in `theme.json`. Leave a key out to keep the Editorial default.
-
-| Key | What it does | Example |
-|---|---|---|
-| `background` | Page background | `{ "type": "paper", "color": "#f3ede1" }` — paper texture on a color |
-| | | `{ "type": "color", "color": "#f7f7f5" }` — flat color |
-| | | `{ "type": "gradient", "value": "linear-gradient(135deg, #fde3d1, #e5defc)" }` |
-| | | `{ "type": "image", "src": "/backgrounds/hero.jpg" }` — put the file in `public/backgrounds/` |
-| `accent` | Links, active tab, numbers, drop cap, button | `"#2b3a8c"` |
-| `accent2` | Breadcrumb color | `"#9b3d26"` |
-| `fonts` | Google Fonts by name | `{ "heading": "Newsreader", "body": "Newsreader", "ui": "Inter", "code": "JetBrains Mono" }` |
-| `mode` | `"toggle"` (light first, readers can switch), `"light"`, or `"dark"` | `"toggle"` |
-
-`background`, `accent` and `accent2` take one value (dark mode is worked out for you) or separate values: `{ "light": …, "dark": … }`.
-
-With a gradient or image, text sits on a paper-colored panel so it stays readable.
-
-If a color makes text too hard to read (below WCAG AA, 4.5:1), the preview and the build stop with a message like:
-
-```
-theme.json (light mode): accent #6366f1 on background #f3ede1 is 3.83:1, needs 4.5:1. Try accent #5054ef.
-```
-
-Use the suggested color, or pick another one that passes.
+Colors, background, fonts and light/dark live in `theme.json`. The full reference is in Tessa's README. If a color makes text hard to read, the build stops and suggests one that works.
 
 ### Hosting (docs.infraudit.com)
 

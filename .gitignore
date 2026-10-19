@@ -16,7 +16,3 @@ node_modules/
 .env
 .env.local
 
-# Astro site
-dist/
-.astro/
-.superpowers/
