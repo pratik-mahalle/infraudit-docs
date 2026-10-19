@@ -15,3 +15,8 @@ node_modules/
 # Environment files (never commit secrets into docs)
 .env
 .env.local
+
+# Astro site
+dist/
+.astro/
+.superpowers/
