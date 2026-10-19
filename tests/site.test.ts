@@ -121,7 +121,7 @@ test('CLI pages mark the CLI tab and show CLI groups', () => {
 
 test('the mobile drawer carries the tabs and header links', () => {
 	const m = between(drift(), '<div class="ed-mobile-nav"', '<div class="ed-sidebar"');
-	for (const href of ['/introduction', '/cli/overview', '/api/overview', '/resources/changelog', 'https://github.com/pratik-mahalle/infraudit-go', '/resources/support']) {
+	for (const href of ['/introduction', '/cli/overview', '/api/overview', '/resources/changelog', 'https://github.com/pratik-mahalle/infraudit-go', '/resources/support', 'https://infraaudit.dev']) {
 		assert.ok(m.includes(`href="${href}"`), href);
 	}
 });

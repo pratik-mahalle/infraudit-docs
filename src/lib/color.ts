@@ -34,15 +34,20 @@ function fromHsl([h, s, l]: Rgb): Rgb {
 	return [r + m, g + m, b + m];
 }
 
-/** Moves `change` lighter or darker (whichever pulls away from `against`) until it reaches `min`. */
-export function nearestPassing(change: string, against: string, min = 4.5): string {
+/** Nearest shade of `change` (by lightness, either way) that reaches `min` against every color in `against`. */
+export function nearestPassing(change: string, against: string | string[], min = 4.5): string {
+	const others = [against].flat();
+	const worst = (hex: string) => Math.min(...others.map((o) => contrast(hex, o)));
 	const [h, s, l] = toHsl(toRgb(change));
-	const step = luminance(change) >= luminance(against) ? 0.01 : -0.01;
-	for (let x = l; x >= 0 && x <= 1; x += step) {
-		const hex = toHex(fromHsl([h, s, x]));
-		if (contrast(hex, against) >= min) return hex;
+	for (let d = 0; d <= 1; d += 0.01) {
+		for (const x of [l + d, l - d]) {
+			if (x < 0 || x > 1) continue;
+			const hex = toHex(fromHsl([h, s, x]));
+			if (worst(hex) >= min) return hex;
+		}
 	}
-	return step > 0 ? '#ffffff' : '#000000';
+	// No shade of this hue works against all of them; offer whichever extreme comes closest.
+	return worst('#000000') > worst('#ffffff') ? '#000000' : '#ffffff';
 }
 
 export function darkSurfaceFrom(hex: string): string {

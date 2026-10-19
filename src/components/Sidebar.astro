@@ -6,7 +6,7 @@ import { tabs, chapterFor, headerLinks } from '../lib/nav.ts';
 const route = Astro.locals.starlightRoute;
 const all = tabs(docs);
 const active = chapterFor(docs, route.id)?.tab.label ?? all[0].label;
-const { beside, right } = headerLinks(docs);
+const { beside, right, cta } = headerLinks(docs);
 
 // starlightSidebar() makes one top-level group per tab; show only the active tab's groups.
 const tab = route.sidebar.find((e) => e.type === 'group' && e.label === active);
@@ -19,6 +19,13 @@ const num = () => String(++n).padStart(2, '0');
 	{all.map((t) => <a class="ed-tab" href={t.href} aria-current={t.label === active ? 'page' : undefined}>{t.short}</a>)}
 	{[...beside, ...right].map((l) => <a href={l.href}>{l.label}</a>)}
 </div>
+{
+	cta && (
+		<div class="ed-mobile-cta">
+			<a class="ed-cta" href={cta.href}>{cta.label}</a>
+		</div>
+	)
+}
 
 <div class="ed-sidebar">
 	{

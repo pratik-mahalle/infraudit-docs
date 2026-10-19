@@ -69,7 +69,7 @@ Needs Node 22.22 or newer.
 
 1. Write the page as a `.md` (or `.mdx`) file with `title` and `description` frontmatter. The description is shown as the page's opening paragraph.
 2. Add its path, without the extension, to a group in `docs.json` → `navigation`. Only pages listed there are published.
-3. Link to other pages by site path, for example `[Baselines](/concepts/baselines)`, not `baselines.md`. The build fails on broken links.
+3. Link to other pages by site path, for example `[Baselines](/concepts/baselines)`, not `baselines.md`. `npm run test:site` (run in CI before every deploy) fails on broken links.
 
 A side note in the margin:
 
@@ -78,6 +78,8 @@ A side note in the margin:
 Drift is anything changed outside your IaC.
 :::
 ```
+
+While the old Mintlify site still builds from this repo, it shows `:::margin` lines as plain text.
 
 ### Change the theme
 
@@ -105,3 +107,11 @@ theme.json (light mode): accent #6366f1 on background #f3ede1 is 3.83:1, needs 4
 ```
 
 Use the suggested color, or pick another one that passes.
+
+### Hosting (docs.infraudit.com)
+
+GitHub Pages serves the site; `public/CNAME` holds the domain. One-time setup:
+
+1. Repo **Settings → Pages**: Source **GitHub Actions**, custom domain `docs.infraudit.com`.
+2. DNS for `infraudit.com`: add a **CNAME** record, name `docs`, value `pratik-mahalle.github.io`.
+3. Once the domain resolves, tick **Enforce HTTPS** in the same Pages settings.

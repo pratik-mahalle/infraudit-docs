@@ -16,6 +16,7 @@ export const marginNotesPlugin = {
 	},
 };
 
-export function extractMarginNotes(body: string): string[] {
-	return [...body.matchAll(/^:::margin[ \t]*\n([\s\S]*?)\n:::[ \t]*$/gm)].map((m) => m[1].trim());
+/** The rendered <aside class="margin-note"> blocks of a page, so the margin copy keeps links and code. */
+export function extractMarginNotes(html: string): string[] {
+	return [...html.matchAll(/<aside class="margin-note">[\s\S]*?<\/aside>/g)].map((m) => m[0]);
 }

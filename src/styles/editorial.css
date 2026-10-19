@@ -201,7 +201,7 @@ header.header {
 }
 @media (max-width: 49.99rem) {
 	.ed-tabs,
-	.ed-cta {
+	.ed-header .ed-cta {
 		display: none;
 	}
 }
@@ -215,8 +215,12 @@ header.header {
 	margin-bottom: 1rem;
 	border-bottom: 1px solid var(--ed-rule);
 }
+.ed-mobile-cta {
+	margin-bottom: 1.25rem;
+}
 @media (min-width: 50rem) {
-	.ed-mobile-nav {
+	.ed-mobile-nav,
+	.ed-mobile-cta {
 		display: none;
 	}
 }
@@ -307,8 +311,8 @@ h1#_top {
 .right-sidebar-panel a[aria-current='true'] {
 	color: var(--ed-accent);
 }
-.margin-note,
-.margin-notes p {
+.margin-note {
+	display: block;
 	margin-block: 1rem;
 	padding-top: 0.6rem;
 	border-top: 1px solid var(--ed-rule);
