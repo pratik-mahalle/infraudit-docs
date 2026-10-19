@@ -1,0 +1,42 @@
+---
+import { Icon } from '@astrojs/starlight/components';
+import themeJson from '../../theme.json';
+import { resolveTheme, type ThemeInput } from '../lib/theme.ts';
+
+const { mode } = resolveTheme(themeJson as ThemeInput);
+---
+
+{
+	mode === 'toggle' && (
+		<ed-theme-toggle>
+			<button type="button" class="ed-theme-toggle" aria-label="Switch to dark theme">
+				<Icon name="moon" class="to-dark" />
+				<Icon name="sun" class="to-light" />
+			</button>
+		</ed-theme-toggle>
+	)
+}
+
+<script>
+	const label = () =>
+		document.documentElement.dataset.theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme';
+	const syncAll = () =>
+		document.querySelectorAll('.ed-theme-toggle').forEach((b) => b.setAttribute('aria-label', label()));
+
+	customElements.define(
+		'ed-theme-toggle',
+		class extends HTMLElement {
+			connectedCallback() {
+				syncAll();
+				this.querySelector('button')?.addEventListener('click', () => {
+					const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+					document.documentElement.dataset.theme = next;
+					try {
+						localStorage.setItem('starlight-theme', next);
+					} catch {}
+					syncAll();
+				});
+			}
+		},
+	);
+</script>

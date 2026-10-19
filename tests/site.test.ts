@@ -56,6 +56,21 @@ test('sidebarTitle is used as the sidebar label', () => {
 	assert.ok(!texts.includes('InfraAudit Documentation'));
 });
 
+test('theme.json is applied in the head with its fonts', () => {
+	const html = page('/introduction/');
+	const head = html.slice(0, html.indexOf('</head>'));
+	assert.ok(head.includes('--ed-accent:#2b3a8c'));
+	assert.match(head, /<link[^>]+fonts\.googleapis\.com\/css2\?family=Newsreader/);
+	const scripts = [...head.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script>/g)].map((m) => m[1]);
+	assert.ok(scripts.some((s) => s.includes('starlight-theme') && s.includes('"toggle"')), 'initialTheme is inlined');
+});
+
+test('light/dark is a two-state toggle, not Starlight’s auto select', () => {
+	const html = page('/introduction/');
+	assert.ok(html.includes('aria-label="Switch to dark theme"'));
+	assert.ok(!html.includes('<starlight-theme-select'));
+});
+
 test('pages link to their source on GitHub for editing', () => {
 	assert.ok(
 		page('/platform/drift-detection/').includes(

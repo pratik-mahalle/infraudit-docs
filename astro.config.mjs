@@ -19,6 +19,25 @@ export default defineConfig({
 			editLink: { baseUrl: REPO_URL + '/edit/main/' },
 			sidebar: starlightSidebar(docs),
 			head,
+			customCss: ['./src/styles/editorial.css'],
+			components: {
+				Head: './src/components/Head.astro',
+				ThemeProvider: './src/components/ThemeProvider.astro',
+				ThemeSelect: './src/components/ThemeSelect.astro',
+			},
+			// Code reads as dark ink in both modes, like the mockup.
+			expressiveCode: {
+				themes: ['github-dark'],
+				shiki: { langAlias: { env: 'dotenv' } },
+				styleOverrides: {
+					borderRadius: '4px',
+					codeBackground: '#221d17',
+					codeForeground: '#e9e3d8',
+					codeFontFamily: 'var(--ed-font-code)',
+					uiFontFamily: 'var(--ed-font-ui)',
+					frames: { editorBackground: '#221d17', terminalBackground: '#221d17' },
+				},
+			},
 		}),
 	],
 });

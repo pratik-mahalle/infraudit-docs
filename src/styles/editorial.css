@@ -1,0 +1,98 @@
+/* Editorial look. Colors and fonts come from theme.json as --ed-* (see src/lib/theme.ts).
+   Unlayered on purpose: it beats Starlight's @layer starlight rules without specificity games. */
+
+/* ---------- Starlight tokens → Editorial tokens ---------- */
+:root,
+:root[data-theme='light'],
+:root[data-theme='dark'] {
+	--sl-color-white: var(--ed-text);
+	--sl-color-gray-1: var(--ed-text);
+	--sl-color-gray-2: var(--ed-text-2);
+	--sl-color-gray-3: var(--ed-muted);
+	--sl-color-gray-4: var(--ed-faint);
+	--sl-color-gray-5: var(--ed-rule);
+	--sl-color-gray-6: color-mix(in srgb, var(--ed-rule) 50%, var(--ed-surface));
+	--sl-color-gray-7: color-mix(in srgb, var(--ed-rule) 20%, var(--ed-surface));
+	--sl-color-black: var(--ed-surface);
+	--sl-color-text: var(--ed-text);
+	--sl-color-text-invert: var(--ed-surface);
+	--sl-color-text-accent: var(--ed-accent);
+	--sl-color-accent: var(--ed-accent);
+	--sl-color-accent-high: var(--ed-accent);
+	--sl-color-accent-low: color-mix(in srgb, var(--ed-accent) 12%, transparent);
+	--sl-color-hairline: var(--ed-rule);
+	--sl-color-hairline-light: var(--ed-rule);
+	--sl-color-hairline-shade: var(--ed-rule);
+	--sl-color-bg: var(--ed-surface);
+	--sl-color-bg-nav: var(--ed-reading);
+	--sl-color-bg-sidebar: var(--ed-reading);
+	--sl-color-bg-inline-code: color-mix(in srgb, var(--ed-rule) 55%, transparent);
+	--sl-font: var(--ed-font-body);
+	--sl-font-mono: var(--ed-font-code);
+	--sl-text-body: 1.125rem;
+	--sl-line-height: 1.6;
+}
+
+/* ---------- Surfaces: page background, paper grain, reading surfaces ---------- */
+body {
+	background: var(--ed-grain), var(--ed-bg);
+}
+header.header,
+.sidebar-pane,
+.main-frame {
+	background-color: var(--ed-reading);
+	background-image: var(--ed-grain);
+}
+
+/* ---------- Type ---------- */
+.sl-markdown-content :is(h1, h2, h3, h4, h5, h6),
+h1 {
+	font-family: var(--ed-font-heading);
+	font-weight: 400;
+	letter-spacing: -0.01em;
+}
+button,
+input,
+kbd,
+.sl-badge {
+	font-family: var(--ed-font-ui);
+}
+.sl-markdown-content a {
+	color: var(--ed-accent);
+	text-underline-offset: 0.18em;
+}
+
+/* Notes like "> **Warning:** …" read as an aside in the margin of a book, not a callout box. */
+.sl-markdown-content blockquote {
+	border-inline-start: 1px solid var(--ed-accent);
+	padding-inline-start: 1.1rem;
+	font-family: var(--ed-font-heading);
+	font-style: italic;
+	color: var(--ed-text-2);
+	background: none;
+}
+
+.sl-markdown-content ol > li::marker {
+	font-family: var(--ed-font-heading);
+	font-style: italic;
+	color: var(--ed-accent);
+}
+
+/* ---------- Light/dark toggle ---------- */
+.ed-theme-toggle {
+	display: grid;
+	place-items: center;
+	inline-size: 2rem;
+	block-size: 2rem;
+	border: 0;
+	background: none;
+	color: var(--ed-text-2);
+	cursor: pointer;
+}
+.ed-theme-toggle:hover {
+	color: var(--ed-accent);
+}
+:root[data-theme='dark'] .ed-theme-toggle .to-dark,
+:root:not([data-theme='dark']) .ed-theme-toggle .to-light {
+	display: none;
+}
