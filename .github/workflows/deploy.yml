@@ -26,13 +26,13 @@ jobs:
           path: content
           persist-credentials: false
 
-      # Tessa (private) is the engine that turns this content into the site.
-      - name: Checkout Tessa
+      # Specly (private) is the engine that turns this content into the site.
+      - name: Checkout Specly
         uses: actions/checkout@v4
         with:
-          repository: pratik-mahalle/tessa
+          repository: pratik-mahalle/specly
           ssh-key: ${{ secrets.TESSA_DEPLOY_KEY }}
-          path: tessa
+          path: specly
           # Don't leave the key on disk while npm packages install and run.
           persist-credentials: false
 
@@ -41,20 +41,20 @@ jobs:
         with:
           node-version: "24"
           cache: npm
-          cache-dependency-path: tessa/package-lock.json
+          cache-dependency-path: specly/package-lock.json
 
-      - name: Install Tessa
-        working-directory: tessa
+      - name: Install Specly
+        working-directory: specly
         run: npm ci
 
       - name: Build site
-        working-directory: tessa
+        working-directory: specly
         env:
           DOCS_DIR: ${{ github.workspace }}/content
         run: npm run build
 
       - name: Check built site (pages, links, theme)
-        working-directory: tessa
+        working-directory: specly
         env:
           DOCS_DIR: ${{ github.workspace }}/content
         run: npm run test:site
@@ -62,7 +62,7 @@ jobs:
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: tessa/dist/
+          path: specly/dist/
 
   deploy:
     name: Deploy

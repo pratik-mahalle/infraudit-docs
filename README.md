@@ -52,14 +52,14 @@ This documentation applies to both the SaaS editions and the Community OSS editi
 
 ## Working on these docs
 
-This repo holds only content. The site at [docs.infraudit.com](https://docs.infraudit.com) is built by [Tessa](https://github.com/pratik-mahalle/tessa), our private docs engine, with its "Editorial" look. Pushing to `main` fetches Tessa, builds, checks every page and link, and deploys (`.github/workflows/deploy.yml`).
+This repo holds only content. The site at [docs.infraudit.com](https://docs.infraudit.com) is built by [Specly](https://github.com/pratik-mahalle/specly), our private docs engine, with its "Editorial" look. Pushing to `main` fetches Specly, builds, checks every page and link, and deploys (`.github/workflows/deploy.yml`).
 
 ### Preview locally
 
-You need read access to `pratik-mahalle/tessa`. Clone it next to this repo, then:
+You need read access to `pratik-mahalle/specly`. Clone it next to this repo, then:
 
 ```bash
-cd ../tessa
+cd ../specly
 npm ci
 DOCS_DIR=../infraudit-docs npm run dev        # live preview; restart after editing docs.json navigation
 DOCS_DIR=../infraudit-docs npm run build && DOCS_DIR=../infraudit-docs npm run test:site   # what CI runs
@@ -83,17 +83,17 @@ While the old Mintlify site still builds from this repo, it shows `:::margin` li
 
 ### Change the theme
 
-Colors, background, fonts and light/dark live in `theme.json`. The full reference is in Tessa's README. If a color makes text hard to read, the build stops and suggests one that works.
+Colors, background, fonts and light/dark live in `theme.json`. The full reference is in Specly's README. If a color makes text hard to read, the build stops and suggests one that works.
 
-### Build access to Tessa
+### Build access to Specly
 
-Tessa is private, so the deploy workflow fetches it with a read-only **deploy key**:
+Specly is private, so the deploy workflow fetches it with a read-only **deploy key**:
 
 1. `ssh-keygen -t ed25519 -N '' -C infraudit-docs-ci -f tessa_deploy`
-2. Public half on Tessa: `gh repo deploy-key add tessa_deploy.pub -R pratik-mahalle/tessa --title infraudit-docs-ci` (read-only).
+2. Public half on Specly: `gh repo deploy-key add tessa_deploy.pub -R pratik-mahalle/specly --title infraudit-docs-ci` (read-only).
 3. Private half as this repo's secret: `gh secret set TESSA_DEPLOY_KEY -R pratik-mahalle/infraudit-docs < tessa_deploy`, then delete both files.
 
-To rotate, repeat the steps and remove the old key under Tessa → Settings → Deploy keys.
+To rotate, repeat the steps and remove the old key under Specly → Settings → Deploy keys.
 
 ### Hosting (docs.infraudit.com)
 
