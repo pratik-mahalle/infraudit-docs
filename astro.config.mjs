@@ -24,6 +24,9 @@ export default defineConfig({
 				Head: './src/components/Head.astro',
 				ThemeProvider: './src/components/ThemeProvider.astro',
 				ThemeSelect: './src/components/ThemeSelect.astro',
+				Header: './src/components/Header.astro',
+				Sidebar: './src/components/Sidebar.astro',
+				PageTitle: './src/components/PageTitle.astro',
 			},
 			// Code reads as dark ink in both modes, like the mockup.
 			expressiveCode: {

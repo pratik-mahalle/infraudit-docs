@@ -13,6 +13,12 @@ export function allHtml(): string[] {
 	return readdirSync(DIST, { recursive: true, encoding: 'utf8' }).filter((f) => f.endsWith('.html'));
 }
 
+/** The slice of html from the first `start` up to the next `end` after it ('' if start is missing). */
+export function between(html: string, start: string, end: string): string {
+	const i = html.indexOf(start);
+	return i < 0 ? '' : html.slice(i, html.indexOf(end, i));
+}
+
 /** Text of every <a> pointing at href, tags stripped. */
 export function linkTexts(html: string, href: string): string[] {
 	const re = new RegExp(`<a\\b[^>]*href="${href.replace(/[.?*+^$[\]\\(){}|]/g, '\\$&')}"[^>]*>([\\s\\S]*?)</a>`, 'g');

@@ -1,0 +1,12 @@
+---
+import docs from '../../docs.json';
+import { chapterFor } from '../lib/nav.ts';
+
+const { id, entry } = Astro.locals.starlightRoute;
+const chapter = chapterFor(docs, id);
+const { title, description } = entry.data;
+---
+
+{chapter && <p class="ed-crumb">{chapter.group} · chapter {chapter.number}</p>}
+<h1 id="_top">{title}</h1>
+{description && <p class="lede">{description}</p>}
