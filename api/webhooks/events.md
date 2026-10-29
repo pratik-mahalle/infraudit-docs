@@ -1,6 +1,6 @@
 ---
 title: "Webhook Events"
-description: "All event types InfraAudit can send to registered webhook endpoints, with payload schemas."
+description: "All event types InfrAudit can send to registered webhook endpoints, with payload schemas."
 icon: "webhook"
 ---
 

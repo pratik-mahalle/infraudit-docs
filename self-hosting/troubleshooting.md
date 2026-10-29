@@ -1,11 +1,11 @@
 ---
 title: "Troubleshooting"
-description: "Common startup and runtime issues when self-hosting InfraAudit, and how to fix them."
+description: "Common startup and runtime issues when self-hosting InfrAudit, and how to fix them."
 icon: "wrench"
 ---
 
 
-Common issues when self-hosting InfraAudit, organized by symptom.
+Common issues when self-hosting InfrAudit, organized by symptom.
 
 ## API won't start
 
@@ -80,7 +80,7 @@ docker compose exec postgres psql -U infraudit infraudit \
 
 ### Drift detection returns zero findings on first run
 
-This is expected. InfraAudit captures baselines during the initial resource sync. The drift scanner compares against those baselines, so on the first scan there is nothing to compare against. Make a change in your cloud account (add a tag, modify a security group rule), wait for or trigger a resource sync, then run drift detection.
+This is expected. InfrAudit captures baselines during the initial resource sync. The drift scanner compares against those baselines, so on the first scan there is nothing to compare against. Make a change in your cloud account (add a tag, modify a security group rule), wait for or trigger a resource sync, then run drift detection.
 
 ### Provider shows "Error" status after connecting
 
@@ -122,6 +122,6 @@ Set `LOG_LEVEL=debug` in `.env` for verbose output during troubleshooting. Remem
 
 If you can't resolve an issue with this page, open an issue on [GitHub](https://github.com/pratik-mahalle/infraudit-go/issues) with:
 
-1. InfraAudit version (`docker compose exec api ./infraudit-api --version`)
+1. InfrAudit version (`docker compose exec api ./infraudit-api --version`)
 2. The full error log output
 3. Your `.env` file contents with secrets redacted

@@ -1,11 +1,11 @@
 ---
 title: "Kubernetes"
-description: "Register Kubernetes clusters with InfraAudit using a kubeconfig and read-only RBAC."
+description: "Register Kubernetes clusters with InfrAudit using a kubeconfig and read-only RBAC."
 icon: "dharmachakra"
 ---
 
 
-InfraAudit connects to Kubernetes clusters via a kubeconfig file. Once connected, it syncs deployments, pods, services, and namespaces, and supports drift detection against uploaded manifests.
+InfrAudit connects to Kubernetes clusters via a kubeconfig file. Once connected, it syncs deployments, pods, services, and namespaces, and supports drift detection against uploaded manifests.
 
 ## Prerequisites
 
@@ -148,5 +148,5 @@ Connect each cluster as a separate provider. All clusters appear in the unified 
 
 ## Notes
 
-- InfraAudit never creates, modifies, or deletes any Kubernetes resources. All operations are read-only.
+- InfrAudit never creates, modifies, or deletes any Kubernetes resources. All operations are read-only.
 - Tokens from service accounts in newer Kubernetes versions (1.24+) are not automatically created as secrets. If the token extraction above fails, use `kubectl create token infraudit -n kube-system` to generate a temporary token.

@@ -1,11 +1,11 @@
 ---
 title: "Integrations"
-description: "Connect InfraAudit to your cloud accounts, IaC tooling, and notification channels."
+description: "Connect InfrAudit to your cloud accounts, IaC tooling, and notification channels."
 icon: "plug"
 ---
 
 
-InfraAudit connects to cloud providers, IaC tools, vulnerability scanners, and notification systems.
+InfrAudit connects to cloud providers, IaC tools, vulnerability scanners, and notification systems.
 
 ## Cloud providers
 

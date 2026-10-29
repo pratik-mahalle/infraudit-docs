@@ -1,11 +1,11 @@
 ---
 title: "Configuration Reference"
-description: "Every environment variable the InfraAudit backend accepts, with defaults and descriptions."
+description: "Every environment variable the InfrAudit backend accepts, with defaults and descriptions."
 icon: "sliders"
 ---
 
 
-InfraAudit is configured entirely through environment variables. Set them in `.env` for Docker Compose or in Kubernetes Secrets and ConfigMaps.
+InfrAudit is configured entirely through environment variables. Set them in `.env` for Docker Compose or in Kubernetes Secrets and ConfigMaps.
 
 ## Required
 

@@ -1,15 +1,15 @@
 ---
 title: "Secrets and Encryption"
-description: "How InfraAudit encrypts cloud credentials, and best practices for managing secrets in production."
+description: "How InfrAudit encrypts cloud credentials, and best practices for managing secrets in production."
 icon: "key"
 ---
 
 
-InfraAudit encrypts cloud provider credentials at rest and uses Supabase for JWT signing. This page explains how encryption works and how to manage secrets safely in production.
+InfrAudit encrypts cloud provider credentials at rest and uses Supabase for JWT signing. This page explains how encryption works and how to manage secrets safely in production.
 
 ## Credential encryption
 
-When you connect a cloud account, InfraAudit encrypts the credentials (access keys, service account JSON, kubeconfig) before storing them in the database.
+When you connect a cloud account, InfrAudit encrypts the credentials (access keys, service account JSON, kubeconfig) before storing them in the database.
 
 **Algorithm:** AES-256-GCM  
 **Key source:** `ENCRYPTION_KEY` environment variable  
@@ -28,7 +28,7 @@ Every credential is encrypted with a unique random nonce prepended to the cipher
 
 ## JWT authentication
 
-InfraAudit validates JWTs issued by your Supabase project using `SUPABASE_JWT_SECRET`. Requests with expired or invalid tokens return `401`.
+InfrAudit validates JWTs issued by your Supabase project using `SUPABASE_JWT_SECRET`. Requests with expired or invalid tokens return `401`.
 
 The `SUPABASE_SERVICE_ROLE_KEY` is used server-side for privileged Supabase operations (e.g., looking up users by ID). It must remain confidential — it bypasses Supabase row-level security.
 
@@ -74,7 +74,7 @@ Use [External Secrets Operator](https://external-secrets.io/) to sync secrets fr
 
 ## Rotating the encryption key
 
-Rotating `ENCRYPTION_KEY` requires re-encrypting all stored credentials. InfraAudit does not auto-rotate credentials automatically.
+Rotating `ENCRYPTION_KEY` requires re-encrypting all stored credentials. InfrAudit does not auto-rotate credentials automatically.
 
 Manual rotation steps:
 
@@ -82,7 +82,7 @@ Manual rotation steps:
 2. Stop the API.
 3. Update `ENCRYPTION_KEY` in your secrets store.
 4. Start the API.
-5. Re-connect each provider — InfraAudit encrypts the new credentials with the new key.
+5. Re-connect each provider — InfrAudit encrypts the new credentials with the new key.
 
 ## Rotating the Supabase JWT secret
 

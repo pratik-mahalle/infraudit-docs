@@ -1,6 +1,6 @@
 ---
 title: "Support"
-description: "How to get help with InfraAudit: GitHub issues, documentation, and commercial support."
+description: "How to get help with InfrAudit: GitHub issues, documentation, and commercial support."
 icon: "headset"
 ---
 
@@ -19,7 +19,7 @@ The primary support channel for the Community edition is GitHub Issues.
 
 Include the following:
 
-- InfraAudit version (`infraudit version` or `docker compose exec api ./infraudit-api --version`)
+- InfrAudit version (`infraudit version` or `docker compose exec api ./infraudit-api --version`)
 - Operating system and deployment method (Docker Compose, Kubernetes, binary)
 - Steps to reproduce
 - Expected behavior vs. actual behavior

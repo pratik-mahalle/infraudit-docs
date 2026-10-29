@@ -1,11 +1,11 @@
 ---
 title: "Contributing"
-description: "How to set up a local dev environment, run tests, and submit a pull request to InfraAudit."
+description: "How to set up a local dev environment, run tests, and submit a pull request to InfrAudit."
 icon: "git-pull-request"
 ---
 
 
-InfraAudit is open source (MIT license). Contributions are welcome.
+InfrAudit is open source (MIT license). Contributions are welcome.
 
 - [Repo structure](/contributing/repo-structure) — how the Go backend, React frontend, and CLI are organized
 - [Local development](/contributing/local-development) — prerequisites, `make run`, hot reload

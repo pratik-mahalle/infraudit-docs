@@ -1,6 +1,6 @@
 ---
 title: "Authentication"
-description: "How to authenticate requests to the InfraAudit REST API using Supabase JWTs."
+description: "How to authenticate requests to the InfrAudit REST API using Supabase JWTs."
 icon: "lock"
 ---
 
@@ -13,7 +13,7 @@ Authorization: Bearer <access_token>
 
 ## Getting a token
 
-InfraAudit uses [Supabase Auth](https://supabase.com/docs/guides/auth). The access token is a signed JWT issued by your Supabase project.
+InfrAudit uses [Supabase Auth](https://supabase.com/docs/guides/auth). The access token is a signed JWT issued by your Supabase project.
 
 ### Option 1: Sign in via the Supabase client
 
@@ -30,7 +30,7 @@ const { data, error } = await supabase.auth.signInWithPassword({
 const token = data.session.access_token
 ```
 
-### Option 2: Sign in via the InfraAudit API
+### Option 2: Sign in via the InfrAudit API
 
 ```bash
 curl -X POST http://localhost:8080/api/login \

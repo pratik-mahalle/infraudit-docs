@@ -5,7 +5,7 @@ icon: "sparkles"
 ---
 
 
-Recommendations are suggestions for improving your infrastructure. InfraAudit generates them from Gemini AI when configured, or from a built-in rule engine otherwise. Both sources cover cost, security, and performance.
+Recommendations are suggestions for improving your infrastructure. InfrAudit generates them from Gemini AI when configured, or from a built-in rule engine otherwise. Both sources cover cost, security, and performance.
 
 ## Types of recommendations
 
@@ -17,13 +17,13 @@ Recommendations are suggestions for improving your infrastructure. InfraAudit ge
 
 ## How they're generated
 
-When `GEMINI_API_KEY` is set, InfraAudit sends each finding (drift, vulnerability, cost anomaly) to the Gemini API along with context about the affected resource — type, configuration, cloud provider, and severity. Gemini returns a structured recommendation with:
+When `GEMINI_API_KEY` is set, InfrAudit sends each finding (drift, vulnerability, cost anomaly) to the Gemini API along with context about the affected resource — type, configuration, cloud provider, and severity. Gemini returns a structured recommendation with:
 
 - A plain-language explanation of the problem
 - Specific remediation steps
 - Estimated cost savings (for cost recommendations) or risk reduction score (for security)
 
-When `GEMINI_API_KEY` is not set, InfraAudit falls back to a rule-based engine that applies pre-written templates. The output is less context-specific but still actionable.
+When `GEMINI_API_KEY` is not set, InfrAudit falls back to a rule-based engine that applies pre-written templates. The output is less context-specific but still actionable.
 
 See [Concepts: AI recommendations](/concepts/ai-recommendations) for more on how this works.
 

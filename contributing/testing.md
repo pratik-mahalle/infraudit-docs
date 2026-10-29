@@ -1,6 +1,6 @@
 ---
 title: "Testing"
-description: "How to run unit tests, integration tests, and end-to-end tests for InfraAudit."
+description: "How to run unit tests, integration tests, and end-to-end tests for InfrAudit."
 icon: "check-circle"
 ---
 

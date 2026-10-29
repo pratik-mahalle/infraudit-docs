@@ -1,11 +1,11 @@
 ---
 title: "Signature Verification"
-description: "Verify the HMAC-SHA256 signature on InfraAudit webhook deliveries."
+description: "Verify the HMAC-SHA256 signature on InfrAudit webhook deliveries."
 icon: "lock"
 ---
 
 
-Every webhook delivery includes an `X-InfraAudit-Signature` header. Verify this header before processing the payload to confirm the request came from InfraAudit and wasn't tampered with.
+Every webhook delivery includes an `X-InfraAudit-Signature` header. Verify this header before processing the payload to confirm the request came from InfrAudit and wasn't tampered with.
 
 ## Header format
 

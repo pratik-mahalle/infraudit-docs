@@ -1,6 +1,6 @@
 ---
 title: "Fetch a Cost Report"
-description: "Pull cost trend data and generate a cost report via the InfraAudit API."
+description: "Pull cost trend data and generate a cost report via the InfrAudit API."
 icon: "circle-dollar-sign"
 ---
 

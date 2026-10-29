@@ -1,6 +1,6 @@
 # Platform guide
 
-A walkthrough of the InfraAudit web UI: dashboards, scans, reports, and configuration. Start here if you're using the product through the browser rather than the CLI or API.
+A walkthrough of the InfrAudit web UI: dashboards, scans, reports, and configuration. Start here if you're using the product through the browser rather than the CLI or API.
 
 - [Dashboard](dashboard.md) — the main landing view
 - [Connecting cloud accounts](connecting-cloud-accounts.md) — AWS, GCP, Azure, Kubernetes

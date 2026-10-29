@@ -1,11 +1,11 @@
 ---
 title: "Rate Limiting"
-description: "Rate limits for the InfraAudit API and how to handle 429 responses."
+description: "Rate limits for the InfrAudit API and how to handle 429 responses."
 icon: "gauge"
 ---
 
 
-The InfraAudit API applies rate limiting per authenticated user to prevent overload.
+The InfrAudit API applies rate limiting per authenticated user to prevent overload.
 
 ## Response headers
 

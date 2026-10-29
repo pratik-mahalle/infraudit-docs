@@ -1,11 +1,11 @@
 ---
 title: "Adding a Compliance Framework"
-description: "How to add a new compliance framework and its controls to InfraAudit."
+description: "How to add a new compliance framework and its controls to InfrAudit."
 icon: "clipboard-plus"
 ---
 
 
-Compliance frameworks in InfraAudit are defined as JSON files. Adding a new framework means writing the control definitions and registering the framework with the engine.
+Compliance frameworks in InfrAudit are defined as JSON files. Adding a new framework means writing the control definitions and registering the framework with the engine.
 
 ## Framework file structure
 

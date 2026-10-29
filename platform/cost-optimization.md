@@ -43,13 +43,13 @@ The **Trends** tab lets you explore historical spend:
 
 ## Forecasting
 
-InfraAudit generates 30-, 60-, and 90-day cost forecasts using the billing history from each cloud provider's native forecasting API. The forecast confidence interval is shown as a shaded range on the chart.
+InfrAudit generates 30-, 60-, and 90-day cost forecasts using the billing history from each cloud provider's native forecasting API. The forecast confidence interval is shown as a shaded range on the chart.
 
 Forecasts are most accurate after 3 to 4 weeks of billing history. On a fresh connection, the forecast uses industry averages as a starting point.
 
 ## Anomaly detection
 
-InfraAudit flags cost anomalies — days where spend significantly exceeds the expected range based on historical patterns.
+InfrAudit flags cost anomalies — days where spend significantly exceeds the expected range based on historical patterns.
 
 An anomaly appears as a spike marker on the trend chart. Click it to see:
 

@@ -1,11 +1,11 @@
 ---
 title: "Resources and Inventory"
-description: "Browse and filter the cloud resources InfraAudit discovers across your connected accounts."
+description: "Browse and filter the cloud resources InfrAudit discovers across your connected accounts."
 icon: "server"
 ---
 
 
-The **Resources** section lists every cloud resource InfraAudit has discovered across your connected providers. It's the inventory layer everything else builds on — drifts, vulnerabilities, costs, and compliance findings all reference a specific resource.
+The **Resources** section lists every cloud resource InfrAudit has discovered across your connected providers. It's the inventory layer everything else builds on — drifts, vulnerabilities, costs, and compliance findings all reference a specific resource.
 
 ## Resource list
 
@@ -18,7 +18,7 @@ The resource table shows:
 | **Provider** | The cloud account it belongs to |
 | **Region** | AWS region, GCP zone, Azure location, or cluster name |
 | **Status** | `active`, `stopped`, or `deleted` |
-| **Last seen** | When InfraAudit last synced this resource |
+| **Last seen** | When InfrAudit last synced this resource |
 
 ## Filtering
 

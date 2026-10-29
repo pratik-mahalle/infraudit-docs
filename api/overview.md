@@ -1,11 +1,11 @@
 ---
 title: "API Overview"
-description: "Base URL, versioning, authentication, and conventions for the InfraAudit REST API."
+description: "Base URL, versioning, authentication, and conventions for the InfrAudit REST API."
 icon: "code"
 ---
 
 
-InfraAudit exposes a REST API over HTTP. All responses are JSON. The API is served by the Go backend (`cmd/api`) using the [Chi](https://github.com/go-chi/chi) router.
+InfrAudit exposes a REST API over HTTP. All responses are JSON. The API is served by the Go backend (`cmd/api`) using the [Chi](https://github.com/go-chi/chi) router.
 
 ## Base URL
 

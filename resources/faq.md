@@ -1,6 +1,6 @@
 ---
 title: "FAQ"
-description: "Frequently asked questions about InfraAudit."
+description: "Frequently asked questions about InfrAudit."
 icon: "circle-question"
 ---
 
@@ -15,7 +15,7 @@ Yes. The Community edition is free, MIT-licensed, and self-hosted. It includes e
 
 The features are identical. SaaS editions (Starter, Professional, Enterprise) add managed hosting, longer data retention, priority support, enterprise SSO, and resource limits that scale with the plan.
 
-**Does InfraAudit write to my cloud accounts?**
+**Does InfrAudit write to my cloud accounts?**
 
 Only through remediation actions, and only when you explicitly approve and execute one. Discovery, drift detection, vulnerability scanning, and compliance assessments are all read-only. No scans modify your infrastructure.
 
@@ -23,9 +23,9 @@ Only through remediation actions, and only when you explicitly approve and execu
 
 **Why does the backend require Supabase?**
 
-Supabase handles authentication — JWT signing, OAuth with Google/GitHub, and user sessions. InfraAudit doesn't maintain its own user database. This makes the auth layer production-ready without custom code.
+Supabase handles authentication — JWT signing, OAuth with Google/GitHub, and user sessions. InfrAudit doesn't maintain its own user database. This makes the auth layer production-ready without custom code.
 
-**Can I use InfraAudit without Supabase?**
+**Can I use InfrAudit without Supabase?**
 
 Not in the current release. A community PR to add an alternative auth backend (e.g. Keycloak, native user table) would be welcome.
 
@@ -39,17 +39,17 @@ Yes, for development and small single-user deployments. Set `DB_DRIVER=sqlite` a
 
 AWS, Google Cloud Platform, Microsoft Azure, and Kubernetes. See the [Integrations](/integrations/overview) section for setup details.
 
-**Does InfraAudit support multiple AWS accounts?**
+**Does InfrAudit support multiple AWS accounts?**
 
 Yes. Connect each account as a separate provider. There's no limit on the number of connected accounts (Community edition), or limits vary by plan (SaaS editions).
 
-**How does InfraAudit handle drift on resources that change frequently?**
+**How does InfrAudit handle drift on resources that change frequently?**
 
-Some resource attributes change on every API call (timestamps, lease tokens, internal IDs). InfraAudit maintains per-resource-type exclusion lists for these fields to avoid false positives. If a specific attribute is causing false drift findings, open a GitHub issue to have it added to the exclusion list.
+Some resource attributes change on every API call (timestamps, lease tokens, internal IDs). InfrAudit maintains per-resource-type exclusion lists for these fields to avoid false positives. If a specific attribute is causing false drift findings, open a GitHub issue to have it added to the exclusion list.
 
 **Does the AI recommendation feature require an internet connection?**
 
-For Gemini-powered recommendations, yes. For the rule-based fallback (when `GEMINI_API_KEY` is not set), no — it runs entirely offline. All other InfraAudit features work without internet access, as long as the API can reach your cloud provider APIs.
+For Gemini-powered recommendations, yes. For the rule-based fallback (when `GEMINI_API_KEY` is not set), no — it runs entirely offline. All other InfrAudit features work without internet access, as long as the API can reach your cloud provider APIs.
 
 ## Security
 
@@ -63,7 +63,7 @@ The stored credentials become unreadable. You'll need to reconnect each provider
 
 **Are API keys and JWTs the same?**
 
-No. JWTs are issued by Supabase and expire (default: 1 hour). API keys are long-lived InfraAudit-generated tokens created under Settings → API Keys — they're useful for CI/CD pipelines. Both authenticate using the same `Authorization: Bearer` header.
+No. JWTs are issued by Supabase and expire (default: 1 hour). API keys are long-lived InfrAudit-generated tokens created under Settings → API Keys — they're useful for CI/CD pipelines. Both authenticate using the same `Authorization: Bearer` header.
 
 ## Troubleshooting
 

@@ -5,7 +5,7 @@ icon: "file-code"
 ---
 
 
-InfraAudit's Go backend auto-generates an OpenAPI 3.0 spec from handler annotations using [swaggo/swag](https://github.com/swaggo/swag).
+InfrAudit's Go backend auto-generates an OpenAPI 3.0 spec from handler annotations using [swaggo/swag](https://github.com/swaggo/swag).
 
 ## Viewing the spec
 

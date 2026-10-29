@@ -42,7 +42,7 @@ infraudit resource get 42
 
 ## `resource delete <id>`
 
-Delete a resource record from InfraAudit. Does not delete the actual cloud resource.
+Delete a resource record from InfrAudit. Does not delete the actual cloud resource.
 
 ```bash
 infraudit resource delete 42

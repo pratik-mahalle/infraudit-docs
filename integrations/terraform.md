@@ -1,17 +1,17 @@
 ---
 title: "Terraform"
-description: "Upload Terraform files to InfraAudit and detect drift between your declared and live infrastructure."
+description: "Upload Terraform files to InfrAudit and detect drift between your declared and live infrastructure."
 icon: "code"
 ---
 
 
-InfraAudit can ingest Terraform configuration files and compare them against the live state of your cloud infrastructure. This catches IaC drift — cases where someone changed a resource in the cloud console without updating the Terraform code.
+InfrAudit can ingest Terraform configuration files and compare them against the live state of your cloud infrastructure. This catches IaC drift — cases where someone changed a resource in the cloud console without updating the Terraform code.
 
 ## How IaC drift works
 
-1. Upload a `.tf` file (or multiple files as a ZIP) to InfraAudit.
-2. InfraAudit parses the file and extracts the resources it declares — their types, names, and configuration attributes.
-3. InfraAudit matches declared resources to live resources discovered by your connected providers.
+1. Upload a `.tf` file (or multiple files as a ZIP) to InfrAudit.
+2. InfrAudit parses the file and extracts the resources it declares — their types, names, and configuration attributes.
+3. InfrAudit matches declared resources to live resources discovered by your connected providers.
 4. For each matched resource, it diffs the declared configuration against the live configuration.
 5. Differences become IaC drift findings.
 
@@ -24,7 +24,7 @@ InfraAudit can ingest Terraform configuration files and compare them against the
 3. Choose **Terraform** as the type.
 4. Upload your `.tf` file or a ZIP containing multiple `.tf` files.
 5. (Optional) tag the upload with a name like "main/vpc" for easy identification.
-6. Click **Upload**. InfraAudit parses the file and immediately runs a drift comparison.
+6. Click **Upload**. InfrAudit parses the file and immediately runs a drift comparison.
 
 ### From the CLI
 
@@ -64,7 +64,7 @@ Click a definition to see the drift detail — a table of declared vs live value
 
 ## Supported resource types for matching
 
-InfraAudit matches Terraform resources by type and identifier:
+InfrAudit matches Terraform resources by type and identifier:
 
 | Terraform resource type | Matched on |
 |---|---|
@@ -100,6 +100,6 @@ Run IaC drift detection in your Terraform pipeline:
 
 ## Notes
 
-- InfraAudit parses `.tf` files statically. It does not run `terraform plan` or interact with your Terraform state backend.
+- InfrAudit parses `.tf` files statically. It does not run `terraform plan` or interact with your Terraform state backend.
 - Variables and dynamic references in `.tf` files are resolved where possible (literal values) and left unmatched otherwise.
 - Sensitive attributes (passwords, secrets) are redacted in drift reports.

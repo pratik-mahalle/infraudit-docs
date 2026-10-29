@@ -6,7 +6,7 @@
 ## Getting started
 
 * [Overview](getting-started/README.md)
-* [What is InfraAudit?](getting-started/what-is-infraudit.md)
+* [What is InfrAudit?](getting-started/what-is-infraudit.md)
 * [Core concepts](getting-started/core-concepts.md)
 * [Quickstart: SaaS](getting-started/quickstart-saas.mdx)
 * [Quickstart: CLI](getting-started/quickstart-cli.mdx)

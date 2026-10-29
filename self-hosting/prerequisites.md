@@ -1,15 +1,15 @@
 ---
 title: "Prerequisites"
-description: "What you need before deploying InfraAudit: Supabase, Docker, and system requirements."
+description: "What you need before deploying InfrAudit: Supabase, Docker, and system requirements."
 icon: "list-check"
 ---
 
 
-Before deploying InfraAudit, you need three things: a Supabase project, Docker, and enough system resources. The Supabase requirement is the most common blocker for new self-hosters.
+Before deploying InfrAudit, you need three things: a Supabase project, Docker, and enough system resources. The Supabase requirement is the most common blocker for new self-hosters.
 
 ## 1. Supabase project (required)
 
-InfraAudit's authentication layer is backed by Supabase. The backend validates every incoming JWT against your Supabase project and will refuse to start without the connection details.
+InfrAudit's authentication layer is backed by Supabase. The backend validates every incoming JWT against your Supabase project and will refuse to start without the connection details.
 
 **Steps:**
 
@@ -26,11 +26,11 @@ Keep all four values. You'll paste them into `.env` during installation.
 
 **Why Supabase?**
 
-Supabase handles user accounts, OAuth flows (Google, GitHub), session management, and JWT signing. InfraAudit does not maintain its own user store — it resolves Supabase UUIDs to internal user IDs on first login.
+Supabase handles user accounts, OAuth flows (Google, GitHub), session management, and JWT signing. InfrAudit does not maintain its own user store — it resolves Supabase UUIDs to internal user IDs on first login.
 
 ## 2. Docker
 
-InfraAudit runs as Docker containers. You need:
+InfrAudit runs as Docker containers. You need:
 
 - **Docker 24.0+**
 - **Docker Compose v2** (`docker compose` subcommand, not the legacy `docker-compose`)
@@ -66,7 +66,7 @@ For AI-generated recommendations, you need a Google Gemini API key:
 2. Create a project and generate an API key.
 3. Add it to `.env` as `GEMINI_API_KEY`.
 
-Without this key, InfraAudit uses the rule-based recommendation fallback. All other features work normally.
+Without this key, InfrAudit uses the rule-based recommendation fallback. All other features work normally.
 
 ## 5. Optional: cloud credentials
 

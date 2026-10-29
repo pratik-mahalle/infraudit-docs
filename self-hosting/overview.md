@@ -1,11 +1,11 @@
 ---
 title: "Self-Hosting"
-description: "Run InfraAudit on your own infrastructure with Docker Compose or Kubernetes."
+description: "Run InfrAudit on your own infrastructure with Docker Compose or Kubernetes."
 icon: "server"
 ---
 
 
-The InfraAudit Community edition is MIT-licensed and designed to run on your own infrastructure. You can deploy it with Docker Compose for a quick start or with Kubernetes for production.
+The InfrAudit Community edition is MIT-licensed and designed to run on your own infrastructure. You can deploy it with Docker Compose for a quick start or with Kubernetes for production.
 
 **Before anything else, read [Prerequisites](/self-hosting/prerequisites).** A Supabase project is required — the backend will not start without `SUPABASE_URL` and `SUPABASE_JWT_SECRET`.
 

@@ -1,11 +1,11 @@
 ---
 title: "Adding a Cloud Provider"
-description: "How to implement a new cloud provider integration in the InfraAudit Go backend."
+description: "How to implement a new cloud provider integration in the InfrAudit Go backend."
 icon: "cloud-plus"
 ---
 
 
-Implementing a new cloud provider in InfraAudit requires four parts: a provider client, a connect endpoint, resource sync logic, and (optionally) cost ingestion.
+Implementing a new cloud provider in InfrAudit requires four parts: a provider client, a connect endpoint, resource sync logic, and (optionally) cost ingestion.
 
 ## Step 1: Define the provider type
 

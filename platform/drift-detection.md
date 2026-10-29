@@ -5,11 +5,11 @@ icon: "radar"
 ---
 
 
-Drift detection compares the current configuration of your cloud resources against a captured baseline. When InfraAudit finds a difference — a security group rule added, an S3 bucket made public, encryption disabled — it creates a drift finding with a severity and timestamps.
+Drift detection compares the current configuration of your cloud resources against a captured baseline. When InfrAudit finds a difference — a security group rule added, an S3 bucket made public, encryption disabled — it creates a drift finding with a severity and timestamps.
 
 ## How it works
 
-1. **Baseline capture.** When a provider is first connected, InfraAudit captures a configuration snapshot of every discovered resource. This becomes the initial baseline.
+1. **Baseline capture.** When a provider is first connected, InfrAudit captures a configuration snapshot of every discovered resource. This becomes the initial baseline.
 2. **Scheduled scans.** The drift scanner runs on a cron schedule (default: every 4 hours). Each run pulls the current state from the cloud provider API and compares it to the active baseline.
 3. **Findings.** Differences that exceed a configurable threshold become drift findings, stored with a severity and status.
 4. **Alerts.** If alert rules are configured, severe drifts trigger notifications to your connected Slack channels, email addresses, or webhooks.
@@ -65,13 +65,13 @@ From the drift detail panel:
 
 ## IaC drift
 
-InfraAudit also detects **IaC drift** — cases where the live resource configuration no longer matches the Terraform or CloudFormation template that originally created it.
+InfrAudit also detects **IaC drift** — cases where the live resource configuration no longer matches the Terraform or CloudFormation template that originally created it.
 
-Upload your IaC files under **IaC** in the sidebar. InfraAudit parses the files, identifies the resources they declare, and runs a comparison.
+Upload your IaC files under **IaC** in the sidebar. InfrAudit parses the files, identifies the resources they declare, and runs a comparison.
 
 ## Baselines
 
-A baseline is the "known good" snapshot for a resource. InfraAudit automatically creates baselines during the initial sync and after a drift is resolved. You can also:
+A baseline is the "known good" snapshot for a resource. InfrAudit automatically creates baselines during the initial sync and after a drift is resolved. You can also:
 
 - Capture a manual baseline from the resource detail panel
 - Promote the current live state to a new baseline (useful after a planned change)

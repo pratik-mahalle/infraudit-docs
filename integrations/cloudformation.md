@@ -1,11 +1,11 @@
 ---
 title: "CloudFormation"
-description: "Upload CloudFormation templates to InfraAudit and detect drift from your declared stack state."
+description: "Upload CloudFormation templates to InfrAudit and detect drift from your declared stack state."
 icon: "aws"
 ---
 
 
-InfraAudit parses CloudFormation templates (YAML or JSON) and compares them against the live state of matched AWS resources. This surfaces cases where someone modified a resource in the console without updating the stack.
+InfrAudit parses CloudFormation templates (YAML or JSON) and compares them against the live state of matched AWS resources. This surfaces cases where someone modified a resource in the console without updating the stack.
 
 ## Uploading a template
 
@@ -40,7 +40,7 @@ curl -X POST http://localhost:8080/api/v1/iac/upload \
 
 ## How resource matching works
 
-InfraAudit matches CloudFormation `Resources` of known types to the corresponding live InfraAudit resources. Matching uses the logical resource ID and the physical resource ID (where resolvable).
+InfrAudit matches CloudFormation `Resources` of known types to the corresponding live InfrAudit resources. Matching uses the logical resource ID and the physical resource ID (where resolvable).
 
 | CloudFormation resource type | Matched on |
 |---|---|
@@ -61,10 +61,10 @@ After upload, click the definition in the **IaC** list. You see:
 
 ## Parameters and intrinsic functions
 
-InfraAudit resolves CloudFormation intrinsic functions (`!Ref`, `!Sub`, `!Join`) where the values are static or can be inferred from the template. Dynamic values (cross-stack references via `!ImportValue`, runtime parameters) are left unresolved and excluded from drift comparison.
+InfrAudit resolves CloudFormation intrinsic functions (`!Ref`, `!Sub`, `!Join`) where the values are static or can be inferred from the template. Dynamic values (cross-stack references via `!ImportValue`, runtime parameters) are left unresolved and excluded from drift comparison.
 
 ## Notes
 
-- InfraAudit does not interact with the CloudFormation service directly. It does not create, update, or delete stacks.
+- InfrAudit does not interact with the CloudFormation service directly. It does not create, update, or delete stacks.
 - Drift detection compares template-declared attributes against live resource configuration — not CloudFormation stack drift detection (which compares stack state to actual resource state).
 - For continuous monitoring, upload updated templates as part of your CI/CD pipeline after each deployment.

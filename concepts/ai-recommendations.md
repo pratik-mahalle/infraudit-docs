@@ -1,15 +1,15 @@
 ---
 title: "AI Recommendations"
-description: "How InfraAudit uses Google Gemini to generate recommendations, and what the rule-based fallback covers."
+description: "How InfrAudit uses Google Gemini to generate recommendations, and what the rule-based fallback covers."
 icon: "sparkles"
 ---
 
 
-InfraAudit generates recommendations for cost savings, security hardening, and performance improvements. When a Gemini API key is configured, it uses `gemini-2.5-pro`. Without it, a rule-based engine runs instead.
+InfrAudit generates recommendations for cost savings, security hardening, and performance improvements. When a Gemini API key is configured, it uses `gemini-2.5-pro`. Without it, a rule-based engine runs instead.
 
 ## Gemini integration
 
-When `GEMINI_API_KEY` is set, InfraAudit sends a structured prompt to Gemini for each finding. The prompt includes:
+When `GEMINI_API_KEY` is set, InfrAudit sends a structured prompt to Gemini for each finding. The prompt includes:
 
 - The finding type (drift, vulnerability, cost anomaly, compliance failure)
 - The severity and a description of what was detected
@@ -28,7 +28,7 @@ The model is configured with `temperature=0` to produce deterministic, factual o
 
 ## Rule-based fallback
 
-When `GEMINI_API_KEY` is not set, InfraAudit's internal rule engine runs instead. It matches the finding against a library of pre-written recommendation templates.
+When `GEMINI_API_KEY` is not set, InfrAudit's internal rule engine runs instead. It matches the finding against a library of pre-written recommendation templates.
 
 The rule engine covers:
 
@@ -53,7 +53,7 @@ The rule-based output is less context-specific than Gemini's but still actionabl
 
 Recommendations are generated:
 
-1. **Automatically:** After a drift detection scan, vulnerability scan, or compliance assessment, InfraAudit queues recommendation generation for any new findings above the severity threshold.
+1. **Automatically:** After a drift detection scan, vulnerability scan, or compliance assessment, InfrAudit queues recommendation generation for any new findings above the severity threshold.
 2. **On demand:** From the resource detail panel or CLI:
 
 ```bash
@@ -78,7 +78,7 @@ pending → applied / dismissed
 
 ## Rate limiting
 
-Gemini API calls are rate-limited by Google. InfraAudit uses an internal queue to batch recommendation requests and respects the `429 Too Many Requests` response by backing off exponentially. Large assessments (100+ findings) may take a few minutes to generate all recommendations.
+Gemini API calls are rate-limited by Google. InfrAudit uses an internal queue to batch recommendation requests and respects the `429 Too Many Requests` response by backing off exponentially. Large assessments (100+ findings) may take a few minutes to generate all recommendations.
 
 ## Cost of Gemini usage
 

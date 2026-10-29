@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "InfraAudit",
+  "name": "InfrAudit",
   "logo": {
     "dark": "/logo/dark.svg",
     "light": "/logo/light.svg",
@@ -311,7 +311,7 @@
     "raiseIssue": true
   },
   "search": {
-    "prompt": "Search InfraAudit docs..."
+    "prompt": "Search InfrAudit docs..."
   },
   "footer": {
     "socials": {
@@ -373,7 +373,7 @@
     "indexHiddenPages": false
   },
   "metadata": {
-    "og:site_name": "InfraAudit Docs",
+    "og:site_name": "InfrAudit Docs",
     "og:type": "website",
     "twitter:card": "summary_large_image"
   }

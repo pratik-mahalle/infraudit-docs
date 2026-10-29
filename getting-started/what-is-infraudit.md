@@ -1,11 +1,11 @@
 ---
-title: "What is InfraAudit?"
+title: "What is InfrAudit?"
 description: "A multi-cloud operations platform combining security scanning, cost management, and compliance assessment."
 icon: "shield-halved"
 ---
 
 
-InfraAudit is a multi-cloud operations platform that combines three things most teams currently buy separately: a security posture scanner, a cost management tool, and a compliance assessor. It connects to your AWS, GCP, Azure, and Kubernetes accounts, pulls inventory and billing data, then runs scheduled scans to surface drift, vulnerabilities, overspend, and control failures in one place.
+InfrAudit is a multi-cloud operations platform that combines three things most teams currently buy separately: a security posture scanner, a cost management tool, and a compliance assessor. It connects to your AWS, GCP, Azure, and Kubernetes accounts, pulls inventory and billing data, then runs scheduled scans to surface drift, vulnerabilities, overspend, and control failures in one place.
 
 ## The problem it solves
 
@@ -16,7 +16,7 @@ Cloud teams juggle several tools to answer basic questions:
 - "Which of our EC2 instances fail CIS Benchmark 1.4?"
 - "Does this Terraform plan actually match what's running?"
 
-Each question lives in a different dashboard. InfraAudit pulls the signals into one backend, correlates them per resource, and gives you one API, one CLI, and one UI to ask them from.
+Each question lives in a different dashboard. InfrAudit pulls the signals into one backend, correlates them per resource, and gives you one API, one CLI, and one UI to ask them from.
 
 ## How it works
 

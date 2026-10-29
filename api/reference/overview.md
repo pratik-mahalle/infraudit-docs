@@ -1,6 +1,6 @@
 ---
 title: "Endpoint Reference"
-description: "All InfraAudit REST API endpoints grouped by feature area."
+description: "All InfrAudit REST API endpoints grouped by feature area."
 icon: "list"
 ---
 

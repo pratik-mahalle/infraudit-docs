@@ -1,11 +1,11 @@
 ---
 title: "Monitoring"
-description: "Set up Prometheus metrics and Grafana dashboards for your InfraAudit deployment."
+description: "Set up Prometheus metrics and Grafana dashboards for your InfrAudit deployment."
 icon: "chart-bar"
 ---
 
 
-InfraAudit exposes a Prometheus-compatible `/metrics` endpoint. The Docker Compose monitoring profile includes a pre-configured Prometheus scraper and Grafana dashboards.
+InfrAudit exposes a Prometheus-compatible `/metrics` endpoint. The Docker Compose monitoring profile includes a pre-configured Prometheus scraper and Grafana dashboards.
 
 ## Enabling the monitoring profile
 
@@ -24,7 +24,7 @@ Grafana default credentials: `admin` / `admin`. Change the password on first log
 
 ## Available metrics
 
-InfraAudit exposes metrics under the `infraudit_` prefix:
+InfrAudit exposes metrics under the `infraudit_` prefix:
 
 ### HTTP
 
@@ -98,7 +98,7 @@ Set up Grafana alerts for:
 - **High drift count:** `infraudit_drifts_total{severity="critical"} > 0`
 - **API errors:** `rate(infraudit_http_requests_total{status=~"5.."}[5m]) > 0.01`
 
-Route Grafana alerts to the same Slack channel or PagerDuty as your InfraAudit alerts.
+Route Grafana alerts to the same Slack channel or PagerDuty as your InfrAudit alerts.
 
 ## Prometheus configuration (external)
 

@@ -1,11 +1,11 @@
 ---
 title: "Architecture"
-description: "The components that make up InfraAudit: backend, frontend, database, auth, and how they fit together."
+description: "The components that make up InfrAudit: backend, frontend, database, auth, and how they fit together."
 icon: "sitemap"
 ---
 
 
-InfraAudit is a multi-service application. The components interact as shown below.
+InfrAudit is a multi-service application. The components interact as shown below.
 
 ## Components
 
@@ -91,7 +91,7 @@ ComplianceFramework
 
 ## Authentication flow
 
-1. User signs in through the InfraAudit frontend (or directly via Supabase client).
+1. User signs in through the InfrAudit frontend (or directly via Supabase client).
 2. Supabase issues a JWT signed with `SUPABASE_JWT_SECRET`.
 3. The JWT is sent as `Authorization: Bearer <token>` on every API request.
 4. The auth middleware in the Go API verifies the signature and expiry.

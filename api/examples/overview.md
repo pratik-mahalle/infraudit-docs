@@ -1,11 +1,11 @@
 ---
 title: "API Examples"
-description: "End-to-end code examples for common InfraAudit API workflows."
+description: "End-to-end code examples for common InfrAudit API workflows."
 icon: "play"
 ---
 
 
-Worked examples showing how to complete common tasks with the InfraAudit REST API. Each example includes the full request sequence with curl and a brief explanation.
+Worked examples showing how to complete common tasks with the InfrAudit REST API. Each example includes the full request sequence with curl and a brief explanation.
 
 - [Connect an AWS account](/api/examples/connect-aws)
 - [Run a drift scan](/api/examples/run-drift-scan)

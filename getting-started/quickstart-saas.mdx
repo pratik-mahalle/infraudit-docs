@@ -1,11 +1,11 @@
 ---
 title: "Quickstart: SaaS"
-description: "Sign up for InfraAudit, connect your first cloud account, and run your first scan in about five minutes."
+description: "Sign up for InfrAudit, connect your first cloud account, and run your first scan in about five minutes."
 icon: "cloud"
 ---
 
 
-This guide gets you from zero to a working InfraAudit account with one connected AWS account and a completed drift scan. It takes about five minutes.
+This guide gets you from zero to a working InfrAudit account with one connected AWS account and a completed drift scan. It takes about five minutes.
 
 <Steps>
 <Step title="Sign up">
@@ -17,7 +17,7 @@ This guide gets you from zero to a working InfraAudit account with one connected
 </Step>
 <Step title="Connect a cloud account">
 
-Cloud accounts are called **providers** in InfraAudit. You connect one on the Cloud Providers page.
+Cloud accounts are called **providers** in InfrAudit. You connect one on the Cloud Providers page.
 
 **AWS (fastest path)**
 
@@ -30,9 +30,9 @@ Cloud accounts are called **providers** in InfraAudit. You connect one on the Cl
    - **Display name** — anything you like (e.g. "Production")
 4. Click **Connect**.
 
-InfraAudit validates the credentials and kicks off an initial resource sync. This usually finishes in under a minute for accounts with fewer than a few hundred resources.
+InfrAudit validates the credentials and kicks off an initial resource sync. This usually finishes in under a minute for accounts with fewer than a few hundred resources.
 
-**What permissions does InfraAudit need?**
+**What permissions does InfrAudit need?**
 
 Read-only is enough to get started. The minimum IAM policy:
 
@@ -58,7 +58,7 @@ Read-only is enough to get started. The minimum IAM policy:
 }
 ```
 
-For vulnerability scanning and IaC drift, no additional permissions are needed — those run against data already pulled into InfraAudit.
+For vulnerability scanning and IaC drift, no additional permissions are needed — those run against data already pulled into InfrAudit.
 
 **GCP and Azure**
 
@@ -80,7 +80,7 @@ On a fresh account the first scan often returns no drift — that's expected, si
 
 ## What to do next
 
-- **Review your resources.** Click **Resources** in the sidebar to browse everything InfraAudit discovered.
+- **Review your resources.** Click **Resources** in the sidebar to browse everything InfrAudit discovered.
 - **Enable a compliance framework.** Go to **Compliance** and enable CIS AWS Benchmark to get a scored assessment.
 - **Set up alerts.** Go to **Settings → Notifications** and connect a Slack channel or email address.
 - **Review cost data.** Billing data syncs daily by default. The **Cost** section shows historical spend, trends, and savings recommendations.

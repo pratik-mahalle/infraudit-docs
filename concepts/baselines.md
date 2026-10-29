@@ -19,10 +19,10 @@ Baselines are stored in the `baselines` table. Each row references a `resource_i
 
 A baseline is created in one of four ways:
 
-1. **Initial sync:** When a provider is connected and InfraAudit runs its first resource sync, a baseline is automatically captured for every discovered resource.
-2. **Post-resolve:** When a drift finding is resolved, InfraAudit can optionally capture a new baseline from the current live state.
+1. **Initial sync:** When a provider is connected and InfrAudit runs its first resource sync, a baseline is automatically captured for every discovered resource.
+2. **Post-resolve:** When a drift finding is resolved, InfrAudit can optionally capture a new baseline from the current live state.
 3. **Manual capture:** A user explicitly captures a baseline via the UI, CLI, or API.
-4. **Scheduled capture:** If configured, InfraAudit can capture new baselines on a schedule (useful for resources that intentionally change — you want to track drift from the "last known good state" rather than from initial setup).
+4. **Scheduled capture:** If configured, InfrAudit can capture new baselines on a schedule (useful for resources that intentionally change — you want to track drift from the "last known good state" rather than from initial setup).
 
 ### Multiple baselines per resource
 

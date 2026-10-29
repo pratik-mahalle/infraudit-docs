@@ -1,15 +1,15 @@
 ---
 title: "Retries and Delivery"
-description: "How InfraAudit retries failed webhook deliveries and what to expect from delivery guarantees."
+description: "How InfrAudit retries failed webhook deliveries and what to expect from delivery guarantees."
 icon: "clock-rotate-left"
 ---
 
 
-InfraAudit delivers webhook events with at-least-once semantics and retries failed deliveries using exponential backoff.
+InfrAudit delivers webhook events with at-least-once semantics and retries failed deliveries using exponential backoff.
 
 ## Delivery guarantees
 
-- **At-least-once:** InfraAudit may deliver the same event more than once (e.g. if your endpoint acknowledges after a network timeout). Design your handler to be idempotent — use `delivery_id` to deduplicate.
+- **At-least-once:** InfrAudit may deliver the same event more than once (e.g. if your endpoint acknowledges after a network timeout). Design your handler to be idempotent — use `delivery_id` to deduplicate.
 - **No ordering guarantees:** Events may arrive out of order if retries from one delivery overlap with a later successful delivery.
 
 ## Success and failure
@@ -21,7 +21,7 @@ A delivery fails if:
 - The endpoint does not respond within **10 seconds** (timeout)
 - The connection is refused or the DNS lookup fails
 
-InfraAudit does not inspect the response body — only the status code matters.
+InfrAudit does not inspect the response body — only the status code matters.
 
 ## Retry schedule
 
@@ -56,11 +56,11 @@ If deliveries are consistently failing:
 
 1. Check the delivery history for the HTTP status code — a `401` means your endpoint is rejecting the signature, a `500` means your application is erroring.
 2. Fix the issue on your receiver side within the retry window (2.5 hours).
-3. For events that exhausted all retries: re-fetch the data from InfraAudit's API directly if you need to process the missed event.
+3. For events that exhausted all retries: re-fetch the data from InfrAudit's API directly if you need to process the missed event.
 
 ## Manually retrying a failed delivery
 
-Not yet available in the UI or API. To reprocess a failed event, query the corresponding data from the InfraAudit API (e.g. `GET /api/v1/drifts/:id` for a missed `drift.detected` event).
+Not yet available in the UI or API. To reprocess a failed event, query the corresponding data from the InfrAudit API (e.g. `GET /api/v1/drifts/:id` for a missed `drift.detected` event).
 
 ## Disabling a webhook during maintenance
 

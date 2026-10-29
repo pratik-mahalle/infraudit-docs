@@ -1,11 +1,11 @@
 ---
 title: "Compliance Frameworks"
-description: "How InfraAudit's compliance engine works, and what CIS, SOC2, NIST, PCI-DSS, and HIPAA controls look like."
+description: "How InfrAudit's compliance engine works, and what CIS, SOC2, NIST, PCI-DSS, and HIPAA controls look like."
 icon: "shield-check"
 ---
 
 
-InfraAudit's compliance engine evaluates your infrastructure against a library of controls from well-known frameworks. Each control is a rule that checks a specific attribute of a specific resource type.
+InfrAudit's compliance engine evaluates your infrastructure against a library of controls from well-known frameworks. Each control is a rule that checks a specific attribute of a specific resource type.
 
 ## Supported frameworks
 
@@ -59,11 +59,11 @@ Failed controls map directly to the resources that caused the failure. For a lar
 
 ## Remediation guidance
 
-Each control includes a remediation field with instructions. This text is displayed in the assessment UI alongside the failure. For controls with automated remediation support, InfraAudit can create a remediation action directly from the compliance finding.
+Each control includes a remediation field with instructions. This text is displayed in the assessment UI alongside the failure. For controls with automated remediation support, InfrAudit can create a remediation action directly from the compliance finding.
 
 ## Multi-account scoring
 
-When multiple providers are in scope, InfraAudit shows:
+When multiple providers are in scope, InfrAudit shows:
 
 - **Per-provider score** — percentage passed for each account
 - **Aggregate score** — weighted average across all providers

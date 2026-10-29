@@ -1,6 +1,6 @@
 ---
 title: "Dashboard"
-description: "Understand the InfraAudit dashboard: summary metrics, recent findings, and quick actions."
+description: "Understand the InfrAudit dashboard: summary metrics, recent findings, and quick actions."
 icon: "chart-line"
 ---
 

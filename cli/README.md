@@ -1,13 +1,13 @@
 # CLI overview
 
-The `infraudit` CLI is a command-line client for the InfraAudit API. It covers every feature the web UI does: cloud account management, drift detection, vulnerability scans, cost analysis, compliance assessments, remediation, and more.
+The `infraudit` CLI is a command-line client for the InfrAudit API. It covers every feature the web UI does: cloud account management, drift detection, vulnerability scans, cost analysis, compliance assessments, remediation, and more.
 
 ## What you can do with it
 
 - Log in once; scripts use the stored token for subsequent runs
 - Trigger scans and fetch results with JSON, YAML, or table output
 - Wire cloud security checks into CI/CD pipelines (the JSON output works with `jq`)
-- Manage multiple InfraAudit instances by pointing `--server` at each one
+- Manage multiple InfrAudit instances by pointing `--server` at each one
 
 ## Command groups
 

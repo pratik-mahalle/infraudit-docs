@@ -26,7 +26,7 @@ The Compliance section runs automated assessments of your infrastructure against
 3. Select the framework and (optionally) the providers to scope it to.
 4. Click **Enable**.
 
-InfraAudit runs the first assessment automatically after enabling. Subsequent assessments run on a daily schedule by default.
+InfrAudit runs the first assessment automatically after enabling. Subsequent assessments run on a daily schedule by default.
 
 Via CLI:
 
@@ -71,11 +71,11 @@ infraudit compliance export --assessment <assessment-id> --format pdf --output r
 
 ## Multi-account assessments
 
-When multiple providers are in scope, InfraAudit runs the assessment across all of them and shows per-account scores alongside the aggregate. This is useful for organizations running multiple AWS accounts under a single compliance program.
+When multiple providers are in scope, InfrAudit runs the assessment across all of them and shows per-account scores alongside the aggregate. This is useful for organizations running multiple AWS accounts under a single compliance program.
 
 ## Control-to-resource mapping
 
-For each failed control, InfraAudit links the control to the exact resources that caused the failure. For example, a CIS AWS control requiring S3 bucket server-side encryption will list every bucket where encryption is disabled.
+For each failed control, InfrAudit links the control to the exact resources that caused the failure. For example, a CIS AWS control requiring S3 bucket server-side encryption will list every bucket where encryption is disabled.
 
 ## CLI
 

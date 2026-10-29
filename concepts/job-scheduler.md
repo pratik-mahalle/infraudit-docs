@@ -1,11 +1,11 @@
 ---
 title: "Job Scheduler"
-description: "How InfraAudit's cron-based job scheduler works, and what each job type does."
+description: "How InfrAudit's cron-based job scheduler works, and what each job type does."
 icon: "clock"
 ---
 
 
-InfraAudit's background jobs — resource sync, drift detection, vulnerability scan, cost sync, and compliance checks — run on a cron schedule powered by `robfig/cron/v3`. The scheduler starts embedded in the API process.
+InfrAudit's background jobs — resource sync, drift detection, vulnerability scan, cost sync, and compliance checks — run on a cron schedule powered by `robfig/cron/v3`. The scheduler starts embedded in the API process.
 
 ## How it works
 
@@ -84,7 +84,7 @@ When a job fires:
 
 ## Leader election
 
-When running multiple API instances, only one instance should run the scheduled jobs (to avoid duplicate scans). InfraAudit implements leader election via a database lock (`scheduled_jobs_leader` row in the `jobs` table). Each instance tries to acquire the lock at startup; only the leader runs the scheduler. If the leader goes down, another instance acquires the lock within 60 seconds.
+When running multiple API instances, only one instance should run the scheduled jobs (to avoid duplicate scans). InfrAudit implements leader election via a database lock (`scheduled_jobs_leader` row in the `jobs` table). Each instance tries to acquire the lock at startup; only the leader runs the scheduler. If the leader goes down, another instance acquires the lock within 60 seconds.
 
 ## Job execution history
 

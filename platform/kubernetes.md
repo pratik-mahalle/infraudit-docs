@@ -5,7 +5,7 @@ icon: "dharmachakra"
 ---
 
 
-InfraAudit treats Kubernetes clusters as a first-class provider type. Connect a cluster to browse deployments, pods, services, and namespaces — and run drift detection against your Kubernetes manifests.
+InfrAudit treats Kubernetes clusters as a first-class provider type. Connect a cluster to browse deployments, pods, services, and namespaces — and run drift detection against your Kubernetes manifests.
 
 ## Connecting a cluster
 
@@ -15,7 +15,7 @@ InfraAudit treats Kubernetes clusters as a first-class provider type. Connect a 
 4. Give the cluster a display name.
 5. Click **Connect**.
 
-InfraAudit reads the active context in the kubeconfig and connects to that cluster. If you have multiple clusters to register, connect each one separately.
+InfrAudit reads the active context in the kubeconfig and connects to that cluster. If you have multiple clusters to register, connect each one separately.
 
 **Minimum RBAC permissions:**
 
@@ -51,10 +51,10 @@ After connecting, the Kubernetes section shows:
 
 ## Drift detection for Kubernetes
 
-InfraAudit can detect drift between live cluster state and:
+InfrAudit can detect drift between live cluster state and:
 
-1. **Manifest uploads** — upload a Kubernetes YAML manifest via the IaC section. InfraAudit parses it and compares declared vs actual resource configuration.
-2. **Baseline snapshots** — InfraAudit captures a baseline of your workloads on first sync. Subsequent scans detect configuration changes.
+1. **Manifest uploads** — upload a Kubernetes YAML manifest via the IaC section. InfrAudit parses it and compares declared vs actual resource configuration.
+2. **Baseline snapshots** — InfrAudit captures a baseline of your workloads on first sync. Subsequent scans detect configuration changes.
 
 Common Kubernetes drift findings:
 - Image tag changed (e.g. `nginx:1.24` → `nginx:latest`)
@@ -72,7 +72,7 @@ infraudit vuln scan --provider <kubernetes-cluster-id>
 
 ## Multi-cluster management
 
-InfraAudit shows a unified view across all registered Kubernetes clusters. Filter the workload views by cluster using the **Cluster** dropdown at the top of the page.
+InfrAudit shows a unified view across all registered Kubernetes clusters. Filter the workload views by cluster using the **Cluster** dropdown at the top of the page.
 
 ## CLI
 

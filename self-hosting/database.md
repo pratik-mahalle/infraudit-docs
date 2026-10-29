@@ -1,11 +1,11 @@
 ---
 title: "Database"
-description: "InfraAudit supports PostgreSQL and SQLite. Learn how to run migrations and manage the database."
+description: "InfrAudit supports PostgreSQL and SQLite. Learn how to run migrations and manage the database."
 icon: "database"
 ---
 
 
-InfraAudit supports two database backends: **PostgreSQL** (recommended for production) and **SQLite** (suitable for local development and single-node evaluations).
+InfrAudit supports two database backends: **PostgreSQL** (recommended for production) and **SQLite** (suitable for local development and single-node evaluations).
 
 ## PostgreSQL
 
@@ -31,7 +31,7 @@ For a production database, set `DB_SSLMODE=require` or `verify-full` to enforce 
 
 ### Creating the database
 
-If you're using an external managed Postgres instance, create the database manually before starting InfraAudit:
+If you're using an external managed Postgres instance, create the database manually before starting InfrAudit:
 
 ```sql
 CREATE DATABASE infraudit;
@@ -39,7 +39,7 @@ CREATE USER infraudit WITH PASSWORD 'your-password';
 GRANT ALL PRIVILEGES ON DATABASE infraudit TO infraudit;
 ```
 
-InfraAudit creates all tables on startup via the migration system.
+InfrAudit creates all tables on startup via the migration system.
 
 ## SQLite
 
@@ -57,7 +57,7 @@ SQLite limitations:
 
 ## Migrations
 
-InfraAudit uses [golang-migrate](https://github.com/golang-migrate/migrate) for schema migrations. Migrations run automatically at startup.
+InfrAudit uses [golang-migrate](https://github.com/golang-migrate/migrate) for schema migrations. Migrations run automatically at startup.
 
 Migration files live in `internal/database/migrations/`. They follow the `NNNN_description.up.sql` / `NNNN_description.down.sql` naming convention.
 

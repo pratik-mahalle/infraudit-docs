@@ -1,11 +1,11 @@
 ---
 title: "Remediation Workflow"
-description: "How InfraAudit manages the full remediation lifecycle from suggestion to rollback."
+description: "How InfrAudit manages the full remediation lifecycle from suggestion to rollback."
 icon: "wrench"
 ---
 
 
-InfraAudit's remediation system takes a finding (drift, vulnerability, compliance failure) and provides a structured path to fix it — with optional approval gates and a rollback window.
+InfrAudit's remediation system takes a finding (drift, vulnerability, compliance failure) and provides a structured path to fix it — with optional approval gates and a rollback window.
 
 ## Lifecycle states
 
@@ -73,7 +73,7 @@ After approval (or immediately if approval is disabled), the action can be execu
 infraudit remediation execute <action-id>
 ```
 
-InfraAudit calls the cloud provider API to apply the change. The action moves to `executing` and then to `completed` or `failed`.
+InfrAudit calls the cloud provider API to apply the change. The action moves to `executing` and then to `completed` or `failed`.
 
 **What executed changes look like:**
 
@@ -92,7 +92,7 @@ Within the rollback window (default: 30 minutes), a completed action can be reve
 infraudit remediation rollback <action-id>
 ```
 
-InfraAudit uses the pre-execution snapshot to reconstruct and apply the original configuration. Not all actions support rollback — the detail panel shows whether rollback is available.
+InfrAudit uses the pre-execution snapshot to reconstruct and apply the original configuration. Not all actions support rollback — the detail panel shows whether rollback is available.
 
 After the rollback window expires, manual reversal in the cloud console is required.
 

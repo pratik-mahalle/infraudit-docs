@@ -1,11 +1,11 @@
 ---
 title: "Drift Detection"
-description: "How InfraAudit captures baselines, runs comparisons, and classifies drift findings."
+description: "How InfrAudit captures baselines, runs comparisons, and classifies drift findings."
 icon: "radar"
 ---
 
 
-Drift detection is the process of comparing a cloud resource's current configuration against a known baseline and surfacing the differences. This page explains how InfraAudit implements it.
+Drift detection is the process of comparing a cloud resource's current configuration against a known baseline and surfacing the differences. This page explains how InfrAudit implements it.
 
 ## Baseline capture
 
@@ -13,7 +13,7 @@ A **baseline** is a JSON snapshot of a resource's configuration at a point in ti
 
 Baselines are captured in two ways:
 
-1. **Automatic:** During the initial resource sync after connecting a provider, InfraAudit captures a baseline for every discovered resource.
+1. **Automatic:** During the initial resource sync after connecting a provider, InfrAudit captures a baseline for every discovered resource.
 2. **Manual:** A user can capture a new baseline at any time from the resource detail panel or CLI.
 
 ```bash
@@ -98,6 +98,6 @@ This closes any existing drift findings for the resource and sets the new config
 
 ## False positive rate
 
-InfraAudit's comparison logic excludes fields that change frequently without operational significance (timestamps, lease durations, generated resource IDs). Provider-specific exclusion lists live in `internal/providers/<provider>/exclude.go`.
+InfrAudit's comparison logic excludes fields that change frequently without operational significance (timestamps, lease durations, generated resource IDs). Provider-specific exclusion lists live in `internal/providers/<provider>/exclude.go`.
 
 If you find that a specific attribute is producing unwanted drift findings, open an issue on GitHub to have it added to the exclusion list, or suppress it with a drift rule in the UI.

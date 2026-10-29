@@ -5,11 +5,11 @@ icon: "aws"
 ---
 
 
-This example uses `curl` to connect an AWS account via the InfraAudit API, wait for the initial sync, and list the discovered resources.
+This example uses `curl` to connect an AWS account via the InfrAudit API, wait for the initial sync, and list the discovered resources.
 
 ## Prerequisites
 
-- InfraAudit running and accessible
+- InfrAudit running and accessible
 - A Bearer token (see [Authentication](/api/authentication))
 - An AWS IAM access key pair with the required permissions (see [Integrations: AWS](/integrations/aws))
 

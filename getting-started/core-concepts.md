@@ -9,7 +9,7 @@ This page defines the vocabulary used across the UI, CLI, and API. If you've rea
 
 ## Provider
 
-A **provider** is a connected cloud account. Each provider record stores encrypted credentials, a display name, a sync status, and the provider type (`aws`, `gcp`, `azure`, or `kubernetes`). One InfraAudit account can connect many providers at once — for example, three AWS accounts, one GCP project, and two Kubernetes clusters.
+A **provider** is a connected cloud account. Each provider record stores encrypted credentials, a display name, a sync status, and the provider type (`aws`, `gcp`, `azure`, or `kubernetes`). One InfrAudit account can connect many providers at once — for example, three AWS accounts, one GCP project, and two Kubernetes clusters.
 
 Providers are created through `POST /api/v1/providers/{provider}/connect` or from the CLI with `infraudit provider connect aws`. Disconnecting a provider removes its credentials but keeps the historical scan data.
 
@@ -19,7 +19,7 @@ See also: [Connecting cloud accounts](/platform/connecting-cloud-accounts), [Int
 
 A **resource** is a single item discovered by a provider sync: an EC2 instance, an S3 bucket, a GCS bucket, an Azure VM, a Kubernetes deployment. Every resource has:
 
-- A `resource_id` (InfraAudit's internal ID) and an `external_id` (the cloud provider's ARN, URI, or name)
+- A `resource_id` (InfrAudit's internal ID) and an `external_id` (the cloud provider's ARN, URI, or name)
 - A `provider_id` pointing to the cloud account it belongs to
 - A `resource_type` (e.g. `ec2_instance`, `s3_bucket`, `rds_instance`)
 - A `region`
@@ -50,7 +50,7 @@ See also: [Concepts: Drift detection](/concepts/drift-detection).
 
 ## IaC definition
 
-An **IaC definition** is an Infrastructure-as-Code file uploaded to InfraAudit: a Terraform `.tf` file, a CloudFormation YAML template, or a Kubernetes manifest. Once uploaded, InfraAudit parses the file, identifies the resources it declares, and can compare them against live resources to detect IaC drift: cases where the live state no longer matches the declared state.
+An **IaC definition** is an Infrastructure-as-Code file uploaded to InfrAudit: a Terraform `.tf` file, a CloudFormation YAML template, or a Kubernetes manifest. Once uploaded, InfrAudit parses the file, identifies the resources it declares, and can compare them against live resources to detect IaC drift: cases where the live state no longer matches the declared state.
 
 See also: [Integrations: Terraform](/integrations/terraform).
 
@@ -105,13 +105,13 @@ A **job** is a scheduled unit of background work defined by a cron expression. J
 - `cost_sync` — pull billing data from cloud providers
 - `compliance_check` — run one or more compliance frameworks
 
-Each time a job runs, InfraAudit records a **job execution** with a start time, end time, status (`running`, `succeeded`, `failed`), and a log snippet. Default schedules live in `.env.example` and can be overridden per job.
+Each time a job runs, InfrAudit records a **job execution** with a start time, end time, status (`running`, `succeeded`, `failed`), and a log snippet. Default schedules live in `.env.example` and can be overridden per job.
 
 See also: [Concepts: Job scheduler](/concepts/job-scheduler).
 
 ## Remediation action
 
-A **remediation action** is a proposed or approved fix that InfraAudit can apply on your behalf. Remediations are generated from drifts and vulnerabilities, go through an optional approval step, and then execute against the cloud provider API. Every action has a rollback path so you can revert if the fix causes a regression.
+A **remediation action** is a proposed or approved fix that InfrAudit can apply on your behalf. Remediations are generated from drifts and vulnerabilities, go through an optional approval step, and then execute against the cloud provider API. Every action has a rollback path so you can revert if the fix causes a regression.
 
 Remediation actions have a status: `suggested`, `pending_approval`, `approved`, `executing`, `completed`, `failed`, or `rolled_back`.
 
@@ -119,7 +119,7 @@ See also: [Concepts: Remediation workflow](/concepts/remediation-workflow).
 
 ## Webhook
 
-A **webhook** is an outbound HTTP endpoint that InfraAudit POSTs to when a subscribed event fires. Events include `drift.detected`, `cost.anomaly`, `compliance.violation`, `alert.created`, and more. Each webhook is signed with an HMAC-SHA256 signature using a per-webhook secret so the receiver can verify authenticity.
+A **webhook** is an outbound HTTP endpoint that InfrAudit POSTs to when a subscribed event fires. Events include `drift.detected`, `cost.anomaly`, `compliance.violation`, `alert.created`, and more. Each webhook is signed with an HMAC-SHA256 signature using a per-webhook secret so the receiver can verify authenticity.
 
 See also: [API: Webhooks](/api/webhooks/overview).
 

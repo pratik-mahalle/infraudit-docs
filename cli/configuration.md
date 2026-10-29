@@ -1,6 +1,6 @@
 ---
 title: "Configuration"
-description: "Configure the InfraAudit CLI with server URL, output format, and credentials."
+description: "Configure the InfrAudit CLI with server URL, output format, and credentials."
 icon: "sliders"
 ---
 
@@ -32,7 +32,7 @@ auth:
 
 | Key | Type | Description |
 |---|---|---|
-| `server_url` | string | InfraAudit API base URL |
+| `server_url` | string | InfrAudit API base URL |
 | `output` | enum | Default output format: `table`, `json`, or `yaml` |
 | `auth.token` | string | Access token returned by the server at login |
 | `auth.refresh_token` | string | Refresh token used to get new access tokens |
@@ -74,7 +74,7 @@ INFRAUDIT_SERVER_URL=https://staging.infraudit.dev infraudit status
 
 ## Managing multiple instances
 
-If you work against more than one InfraAudit server (local dev, staging, production), keep a separate config file per environment and point `--config` at the right one:
+If you work against more than one InfrAudit server (local dev, staging, production), keep a separate config file per environment and point `--config` at the right one:
 
 ```bash
 # Create a staging config

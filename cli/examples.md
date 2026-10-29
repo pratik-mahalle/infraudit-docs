@@ -1,6 +1,6 @@
 ---
 title: "Examples"
-description: "Ready-to-use CLI examples for common InfraAudit workflows."
+description: "Ready-to-use CLI examples for common InfrAudit workflows."
 icon: "code"
 ---
 

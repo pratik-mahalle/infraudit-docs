@@ -1,11 +1,11 @@
 ---
 title: "Concepts"
-description: "How InfraAudit works under the hood: drift detection, compliance, AI, cost forecasting, and more."
+description: "How InfrAudit works under the hood: drift detection, compliance, AI, cost forecasting, and more."
 icon: "book-open"
 ---
 
 
-Deep-dives into how the major systems in InfraAudit work.
+Deep-dives into how the major systems in InfrAudit work.
 
 - [Architecture](/concepts/architecture) — system components, request flow, data model
 - [Drift detection](/concepts/drift-detection) — how baselines are captured and compared

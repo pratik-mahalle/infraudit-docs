@@ -1,11 +1,11 @@
 ---
 title: "Upgrades"
-description: "How to update InfraAudit to a new release without losing data."
+description: "How to update InfrAudit to a new release without losing data."
 icon: "arrow-up"
 ---
 
 
-InfraAudit uses semantic versioning. Minor and patch releases are backward compatible. Major releases may include breaking changes documented in the [Changelog](/resources/changelog).
+InfrAudit uses semantic versioning. Minor and patch releases are backward compatible. Major releases may include breaking changes documented in the [Changelog](/resources/changelog).
 
 ## Before upgrading
 
@@ -15,7 +15,7 @@ InfraAudit uses semantic versioning. Minor and patch releases are backward compa
 
 ```bash
 docker compose exec api ./infraudit-api --version
-# InfraAudit v1.2.3
+# InfrAudit v1.2.3
 ```
 
 ## Docker Compose upgrade
@@ -42,7 +42,7 @@ Expected output:
 api_1  | Running database migrations...
 api_1  | Migration 0012_add_anomaly_table.up.sql applied
 api_1  | All migrations applied successfully
-api_1  | InfraAudit API starting on :8080
+api_1  | InfrAudit API starting on :8080
 ```
 
 If migrations fail, the API will exit with a non-zero code. Check the log for the SQL error and consult the relevant migration file in `internal/database/migrations/`.
@@ -93,4 +93,4 @@ This gives you control over when to upgrade and prevents unexpected changes from
 
 ## Upgrade schedule
 
-There is no forced upgrade schedule. InfraAudit does not phone home or require license renewals. Upgrade at your own pace, but staying within one major version of the latest release is recommended to keep security patches current.
+There is no forced upgrade schedule. InfrAudit does not phone home or require license renewals. Upgrade at your own pace, but staying within one major version of the latest release is recommended to keep security patches current.

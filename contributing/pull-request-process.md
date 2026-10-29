@@ -1,6 +1,6 @@
 ---
 title: "Pull Request Process"
-description: "How to submit a pull request to InfraAudit: branching, commit conventions, and review."
+description: "How to submit a pull request to InfrAudit: branching, commit conventions, and review."
 icon: "git-pull-request"
 ---
 
@@ -85,7 +85,7 @@ Your change will be included in the next release. Check the [Changelog](/resourc
 
 Open an issue at [github.com/pratik-mahalle/infraudit-go/issues](https://github.com/pratik-mahalle/infraudit-go/issues) with:
 
-- InfraAudit version
+- InfrAudit version
 - Steps to reproduce
 - Expected vs actual behavior
 - Logs if relevant

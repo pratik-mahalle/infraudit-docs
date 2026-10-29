@@ -5,7 +5,7 @@ icon: "file-code"
 ---
 
 
-InfraAudit uses [swaggo/swag](https://github.com/swaggo/swag) to generate an OpenAPI 3.0 spec from Go code annotations. After adding or modifying an endpoint, regenerate the spec.
+InfrAudit uses [swaggo/swag](https://github.com/swaggo/swag) to generate an OpenAPI 3.0 spec from Go code annotations. After adding or modifying an endpoint, regenerate the spec.
 
 ## Install swag
 

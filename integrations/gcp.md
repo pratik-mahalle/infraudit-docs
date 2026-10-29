@@ -1,11 +1,11 @@
 ---
 title: "GCP"
-description: "Connect a Google Cloud project to InfraAudit using a service account."
+description: "Connect a Google Cloud project to InfrAudit using a service account."
 icon: "google"
 ---
 
 
-InfraAudit connects to Google Cloud using a service account JSON key. It discovers Compute Engine instances, Cloud Storage buckets, BigQuery datasets, and GKE clusters, and ingests billing data from BigQuery billing export.
+InfrAudit connects to Google Cloud using a service account JSON key. It discovers Compute Engine instances, Cloud Storage buckets, BigQuery datasets, and GKE clusters, and ingests billing data from BigQuery billing export.
 
 ## Prerequisites
 
@@ -18,7 +18,7 @@ InfraAudit connects to Google Cloud using a service account JSON key. It discove
 ```bash
 # Create the service account
 gcloud iam service-accounts create infraudit-reader \
-  --display-name="InfraAudit Reader" \
+  --display-name="InfrAudit Reader" \
   --project=your-project-id
 
 # Grant required roles
@@ -99,5 +99,5 @@ Billing data is synced daily from BigQuery.
 ## Security notes
 
 - The service account JSON key is encrypted at rest with AES-GCM.
-- InfraAudit never writes to your GCP project. All API calls are read-only.
-- The `roles/viewer` role grants read access across all GCP services in the project. If you want a narrower scope, you can replace it with a custom role that includes only the specific APIs InfraAudit needs.
+- InfrAudit never writes to your GCP project. All API calls are read-only.
+- The `roles/viewer` role grants read access across all GCP services in the project. If you want a narrower scope, you can replace it with a custom role that includes only the specific APIs InfrAudit needs.

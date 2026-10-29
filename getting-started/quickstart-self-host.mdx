@@ -1,19 +1,19 @@
 ---
 title: "Quickstart: Self-Host"
-description: "Run InfraAudit on your own infrastructure using Docker Compose."
+description: "Run InfrAudit on your own infrastructure using Docker Compose."
 icon: "server"
 ---
 
 
-This guide gets InfraAudit running on your own machine using Docker Compose. Expected time: 15 to 30 minutes, most of which is the Supabase setup.
+This guide gets InfrAudit running on your own machine using Docker Compose. Expected time: 15 to 30 minutes, most of which is the Supabase setup.
 
-The end result: a working InfraAudit backend on `http://localhost:8080`, a frontend on `http://localhost:5173`, one connected AWS account, and one completed drift scan.
+The end result: a working InfrAudit backend on `http://localhost:8080`, a frontend on `http://localhost:5173`, one connected AWS account, and one completed drift scan.
 
 ## Before you start
 
 ### 1. Supabase project (required)
 
-InfraAudit's auth layer is backed by Supabase. The backend will not start without a Supabase project and its JWT secret. This is the biggest prerequisite and the most common place new self-hosters get stuck.
+InfrAudit's auth layer is backed by Supabase. The backend will not start without a Supabase project and its JWT secret. This is the biggest prerequisite and the most common place new self-hosters get stuck.
 
 1. Create a free account at [supabase.com](https://supabase.com).
 2. Create a new project. Pick any region; the smallest tier is enough for development.
@@ -30,7 +30,7 @@ Keep these four values handy. You'll paste them into `.env` in a moment.
 - Docker 24+ and Docker Compose v2
 - 4 GB free RAM (8 GB if you also enable the Prometheus/Grafana monitoring profile)
 - 10 GB free disk (mostly for Postgres and scan results)
-- An AWS, GCP, or Azure account you're willing to point InfraAudit at (read-only credentials are fine and recommended for a first run)
+- An AWS, GCP, or Azure account you're willing to point InfrAudit at (read-only credentials are fine and recommended for a first run)
 
 ### 3. Gemini API key (optional)
 
@@ -105,7 +105,7 @@ This brings up four containers:
 
 | Service | Port | Purpose |
 |---|---|---|
-| `api` | 8080 | InfraAudit Go backend |
+| `api` | 8080 | InfrAudit Go backend |
 | `postgres` | 5432 | Primary database |
 | `redis` | 6379 | Cache (optional but enabled by default) |
 | `frontend` | 5173 | React web UI |
@@ -149,7 +149,7 @@ The fastest path is AWS with read-only credentials.
 1. Click **Cloud Providers** in the sidebar.
 2. Click **Connect AWS**.
 3. Paste your AWS access key ID, secret access key, and pick a region (e.g. `us-east-1`).
-4. Click **Connect**. InfraAudit encrypts the credentials using `ENCRYPTION_KEY` and kicks off an initial resource sync.
+4. Click **Connect**. InfrAudit encrypts the credentials using `ENCRYPTION_KEY` and kicks off an initial resource sync.
 
 </Tab>
 <Tab title="CLI">

@@ -1,11 +1,11 @@
 ---
 title: "Kubernetes"
-description: "Deploy InfraAudit on Kubernetes using the manifests under deployments/kubernetes/."
+description: "Deploy InfrAudit on Kubernetes using the manifests under deployments/kubernetes/."
 icon: "dharmachakra"
 ---
 
 
-InfraAudit ships Kubernetes manifests under `deployments/kubernetes/` in the main repo. This page walks through a production-grade deployment.
+InfrAudit ships Kubernetes manifests under `deployments/kubernetes/` in the main repo. This page walks through a production-grade deployment.
 
 ## Prerequisites
 

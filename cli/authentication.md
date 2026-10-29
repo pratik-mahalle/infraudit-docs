@@ -1,6 +1,6 @@
 ---
 title: "Authentication"
-description: "Log in to InfraAudit from the CLI and manage your session token."
+description: "Log in to InfrAudit from the CLI and manage your session token."
 icon: "key"
 ---
 

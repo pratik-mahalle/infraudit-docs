@@ -5,13 +5,13 @@ icon: "shield-exclamation"
 ---
 
 
-The Vulnerabilities section shows CVEs matched against your cloud resources. InfraAudit uses [Trivy](https://trivy.dev) for scanning and enriches findings with metadata from the [NVD](https://nvd.nist.gov/) database.
+The Vulnerabilities section shows CVEs matched against your cloud resources. InfrAudit uses [Trivy](https://trivy.dev) for scanning and enriches findings with metadata from the [NVD](https://nvd.nist.gov/) database.
 
 ## How scanning works
 
 The vulnerability scanner runs as a scheduled job (default: daily):
 
-1. For each active resource, InfraAudit identifies scannable artifacts — primarily container images for Kubernetes workloads and EC2 instances with known AMIs.
+1. For each active resource, InfrAudit identifies scannable artifacts — primarily container images for Kubernetes workloads and EC2 instances with known AMIs.
 2. Trivy scans the artifacts for known CVEs across OS packages, language runtime dependencies (Go, Python, Node.js, etc.), and application libraries.
 3. Findings are matched against the NVD feed to pull in CVSS scores, descriptions, and fix information.
 4. New findings are stored with a status of `open` and, if alert rules exist, trigger notifications.
@@ -48,7 +48,7 @@ Click a CVE row to open the detail panel:
 
 ### Mark as fixed
 
-When you've patched the package and re-deployed, run a new vulnerability scan. InfraAudit re-scans and moves the finding to `fixed` if the package version is no longer present.
+When you've patched the package and re-deployed, run a new vulnerability scan. InfrAudit re-scans and moves the finding to `fixed` if the package version is no longer present.
 
 ```bash
 infraudit vuln scan
@@ -87,7 +87,7 @@ Vulnerability findings can trigger alerts via Slack, email, or webhooks. Configu
 
 ## Integration with recommendations
 
-For each critical or high vulnerability with a known fix, InfraAudit generates an AI-assisted recommendation that includes:
+For each critical or high vulnerability with a known fix, InfrAudit generates an AI-assisted recommendation that includes:
 
 - The affected resource and package
 - The fix version and upgrade command

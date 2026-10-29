@@ -1,11 +1,11 @@
 ---
 title: "Slack"
-description: "Send InfraAudit alerts to Slack channels via incoming webhooks."
+description: "Send InfrAudit alerts to Slack channels via incoming webhooks."
 icon: "slack"
 ---
 
 
-InfraAudit delivers alerts to Slack using incoming webhooks. When a drift, vulnerability, cost anomaly, or compliance failure is detected, InfraAudit posts a formatted message to the configured channel.
+InfrAudit delivers alerts to Slack using incoming webhooks. When a drift, vulnerability, cost anomaly, or compliance failure is detected, InfrAudit posts a formatted message to the configured channel.
 
 ## Setting up the Slack webhook
 
@@ -17,7 +17,7 @@ InfraAudit delivers alerts to Slack using incoming webhooks. When a drift, vulne
 4. Click **Add New Webhook to Workspace** and pick a channel.
 5. Copy the webhook URL (format: `https://hooks.slack.com/services/T.../B.../...`).
 
-### Step 2: Configure InfraAudit
+### Step 2: Configure InfrAudit
 
 **For self-hosted deployments:**
 
@@ -69,7 +69,7 @@ Each alert message contains:
 - Severity badge
 - Resource name and provider
 - Short description of what was detected
-- A link to the full alert in the InfraAudit UI
+- A link to the full alert in the InfrAudit UI
 
 ## Testing the integration
 
@@ -83,4 +83,4 @@ Or from the UI, go to **Settings → Notifications → Slack** and click **Send 
 
 ## Multiple channels
 
-InfraAudit supports multiple Slack webhook configurations through routing rules. Each rule can point to a different webhook URL (i.e. a different Slack app or channel).
+InfrAudit supports multiple Slack webhook configurations through routing rules. Each rule can point to a different webhook URL (i.e. a different Slack app or channel).

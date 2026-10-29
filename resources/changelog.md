@@ -1,15 +1,15 @@
 ---
 title: "Changelog"
-description: "Version history and release notes for InfraAudit."
+description: "Version history and release notes for InfrAudit."
 icon: "list-check"
 ---
 
 
-All notable changes to InfraAudit are recorded here. Dates are in UTC.
+All notable changes to InfrAudit are recorded here. Dates are in UTC.
 
 ## v1.0.0 — 2024-01-15
 
-Initial public release of InfraAudit Community edition.
+Initial public release of InfrAudit Community edition.
 
 ### Features
 

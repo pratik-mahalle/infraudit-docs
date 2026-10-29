@@ -1,18 +1,18 @@
 ---
 title: "Connecting Cloud Accounts"
-description: "Connect your AWS, GCP, Azure, or Kubernetes accounts to InfraAudit from the Cloud Providers page."
+description: "Connect your AWS, GCP, Azure, or Kubernetes accounts to InfrAudit from the Cloud Providers page."
 icon: "plug"
 ---
 
 
-Cloud accounts in InfraAudit are called **providers**. Each provider stores encrypted credentials, a display name, and sync metadata. One InfraAudit account can run multiple providers simultaneously.
+Cloud accounts in InfrAudit are called **providers**. Each provider stores encrypted credentials, a display name, and sync metadata. One InfrAudit account can run multiple providers simultaneously.
 
 ## Adding a provider
 
 1. In the sidebar, click **Cloud Providers**.
 2. Click **Connect provider** and choose your cloud.
 3. Fill in the credential form (details per cloud below).
-4. Click **Connect**. InfraAudit validates the credentials and starts the initial resource sync.
+4. Click **Connect**. InfrAudit validates the credentials and starts the initial resource sync.
 
 ## AWS
 
@@ -62,7 +62,7 @@ You need a service account with the following roles:
 1. In the GCP console, go to **IAM & Admin → Service Accounts**.
 2. Create a service account and assign the roles above.
 3. Download the JSON key file.
-4. Paste the JSON contents into the **Service Account JSON** field in InfraAudit.
+4. Paste the JSON contents into the **Service Account JSON** field in InfrAudit.
 
 **Credential form fields:**
 - Service Account JSON (the full key file content)

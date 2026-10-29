@@ -1,6 +1,6 @@
 ---
 title: "Pagination"
-description: "How list endpoints handle pagination in the InfraAudit API."
+description: "How list endpoints handle pagination in the InfrAudit API."
 icon: "list-ordered"
 ---
 

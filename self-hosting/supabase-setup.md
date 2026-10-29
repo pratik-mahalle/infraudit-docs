@@ -1,11 +1,11 @@
 ---
 title: "Supabase Setup"
-description: "Create and configure the Supabase project that InfraAudit uses for authentication."
+description: "Create and configure the Supabase project that InfrAudit uses for authentication."
 icon: "database"
 ---
 
 
-InfraAudit uses Supabase for authentication, OAuth flows, and JWT signing. This page walks through the project setup, OAuth configuration, and the values you need for the `.env` file.
+InfrAudit uses Supabase for authentication, OAuth flows, and JWT signing. This page walks through the project setup, OAuth configuration, and the values you need for the `.env` file.
 
 ## Create the project
 
@@ -29,7 +29,7 @@ From the project dashboard, go to **Settings → API**:
 
 ## Configure OAuth providers (optional)
 
-InfraAudit's frontend supports Google and GitHub OAuth login. To enable them:
+InfrAudit's frontend supports Google and GitHub OAuth login. To enable them:
 
 ### Google OAuth
 
@@ -47,7 +47,7 @@ InfraAudit's frontend supports Google and GitHub OAuth login. To enable them:
 
 ## Email auth (default)
 
-Email + password login is enabled by default. No additional Supabase configuration is required. Users sign up directly through the InfraAudit frontend.
+Email + password login is enabled by default. No additional Supabase configuration is required. Users sign up directly through the InfrAudit frontend.
 
 ## Site URL
 
@@ -58,7 +58,7 @@ Set the Supabase **Site URL** to your frontend URL so the auth redirects work:
 
 ## Row Level Security
 
-InfraAudit uses Supabase only for authentication (not for data storage — the backend uses its own Postgres instance). You don't need to configure any RLS policies in Supabase.
+InfrAudit uses Supabase only for authentication (not for data storage — the backend uses its own Postgres instance). You don't need to configure any RLS policies in Supabase.
 
 ## Summary: values to copy into `.env`
 

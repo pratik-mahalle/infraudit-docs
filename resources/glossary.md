@@ -1,11 +1,11 @@
 ---
 title: "Glossary"
-description: "Definitions for terms used across InfraAudit documentation, CLI, and API."
+description: "Definitions for terms used across InfrAudit documentation, CLI, and API."
 icon: "book"
 ---
 
 
-Reference definitions for terms used across the InfraAudit UI, CLI, and API.
+Reference definitions for terms used across the InfrAudit UI, CLI, and API.
 
 | Term | Definition |
 |---|---|
@@ -30,6 +30,6 @@ Reference definitions for terms used across the InfraAudit UI, CLI, and API.
 | **Resource** | A single cloud resource discovered by a provider sync (e.g. EC2 instance, S3 bucket, GCS bucket). |
 | **Resource type** | The category of a resource (e.g. `ec2_instance`, `s3_bucket`, `rds_instance`). |
 | **Severity** | A classification of a finding's risk: critical, high, medium, or low. |
-| **Supabase** | The authentication backend InfraAudit uses for user accounts, JWT signing, and OAuth. |
-| **Trivy** | The open-source vulnerability scanner used by InfraAudit to find CVEs in container images and OS packages. |
-| **Webhook** | An outbound HTTP endpoint that InfraAudit POSTs to when subscribed events fire. |
+| **Supabase** | The authentication backend InfrAudit uses for user accounts, JWT signing, and OAuth. |
+| **Trivy** | The open-source vulnerability scanner used by InfrAudit to find CVEs in container images and OS packages. |
+| **Webhook** | An outbound HTTP endpoint that InfrAudit POSTs to when subscribed events fire. |

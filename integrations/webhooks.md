@@ -1,11 +1,11 @@
 ---
 title: "Webhooks"
-description: "Subscribe to InfraAudit events via outbound webhooks with HMAC-SHA256 signature verification."
+description: "Subscribe to InfrAudit events via outbound webhooks with HMAC-SHA256 signature verification."
 icon: "webhook"
 ---
 
 
-InfraAudit POSTs a JSON payload to your registered HTTP endpoints when subscribed events fire. Webhooks work for any event InfraAudit generates — drifts, alerts, compliance failures, job completions, and more.
+InfrAudit POSTs a JSON payload to your registered HTTP endpoints when subscribed events fire. Webhooks work for any event InfrAudit generates — drifts, alerts, compliance failures, job completions, and more.
 
 ## Creating a webhook
 
@@ -15,7 +15,7 @@ InfraAudit POSTs a JSON payload to your registered HTTP endpoints when subscribe
 2. Click **Add webhook**.
 3. Enter the endpoint URL.
 4. Select the event types to subscribe to.
-5. Click **Save**. InfraAudit generates a signing secret for this webhook.
+5. Click **Save**. InfrAudit generates a signing secret for this webhook.
 
 ### From the CLI
 
@@ -39,7 +39,7 @@ curl -X POST http://localhost:8080/api/v1/webhooks \
   }'
 ```
 
-The response includes the webhook `secret` — store it securely. InfraAudit shows it only once.
+The response includes the webhook `secret` — store it securely. InfrAudit shows it only once.
 
 ## Event payload
 
@@ -97,7 +97,7 @@ See [Signature verification](/api/webhooks/signing) for more detail.
 
 ## Retries
 
-If your endpoint returns a non-2xx status or times out (10-second timeout), InfraAudit retries with exponential backoff — 3 attempts over 30 minutes. After all retries are exhausted, the delivery is marked as failed. See [Retries and delivery](/api/webhooks/retries).
+If your endpoint returns a non-2xx status or times out (10-second timeout), InfrAudit retries with exponential backoff — 3 attempts over 30 minutes. After all retries are exhausted, the delivery is marked as failed. See [Retries and delivery](/api/webhooks/retries).
 
 ## Supported event types
 
@@ -118,7 +118,7 @@ If your endpoint returns a non-2xx status or times out (10-second timeout), Infr
 infraudit webhook test <webhook-id>
 ```
 
-InfraAudit sends a `ping` event to your endpoint. The delivery shows up in the webhook delivery history.
+InfrAudit sends a `ping` event to your endpoint. The delivery shows up in the webhook delivery history.
 
 ## Delivery history
 

@@ -1,11 +1,11 @@
 ---
 title: "Repo Structure"
-description: "How the InfraAudit Go backend, React frontend, and CLI are organized."
+description: "How the InfrAudit Go backend, React frontend, and CLI are organized."
 icon: "folder-open"
 ---
 
 
-InfraAudit has three source repositories. This page describes how the main backend repo (`infraudit-go`) is laid out.
+InfrAudit has three source repositories. This page describes how the main backend repo (`infraudit-go`) is laid out.
 
 ## Repositories
 

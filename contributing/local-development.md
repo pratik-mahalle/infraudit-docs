@@ -1,6 +1,6 @@
 ---
 title: "Local Development"
-description: "Set up a local InfraAudit development environment for the Go backend and React frontend."
+description: "Set up a local InfrAudit development environment for the Go backend and React frontend."
 icon: "laptop"
 ---
 
@@ -65,7 +65,7 @@ curl http://localhost:8080/healthz
 
 ```bash
 git clone https://github.com/pratik-mahalle/InfraAudit.git
-cd InfraAudit
+cd InfrAudit
 npm install
 ```
 

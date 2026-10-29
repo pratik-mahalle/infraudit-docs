@@ -5,7 +5,7 @@ icon: "bell"
 ---
 
 
-Alerts are user-facing notifications about findings that need attention. InfraAudit creates them automatically from drift detections, vulnerability scans, cost anomalies, and compliance failures. You can also create manual alerts.
+Alerts are user-facing notifications about findings that need attention. InfrAudit creates them automatically from drift detections, vulnerability scans, cost anomalies, and compliance failures. You can also create manual alerts.
 
 ## Alert types and sources
 
@@ -67,7 +67,7 @@ Alerts are delivered to the notification channels configured under **Settings �
 |---|---|
 | **Slack** | Set `SLACK_WEBHOOK_URL` in `.env` (self-hosted) or under Settings (SaaS), then pick which alert types to send |
 | **Email** | Add email addresses under Settings → Notifications → Email |
-| **Webhook** | Add HTTP endpoints under Settings → Webhooks; InfraAudit POSTs a signed JSON payload for each event |
+| **Webhook** | Add HTTP endpoints under Settings → Webhooks; InfrAudit POSTs a signed JSON payload for each event |
 
 ### Alert routing rules
 

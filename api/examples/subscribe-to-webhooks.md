@@ -124,4 +124,4 @@ ngrok http 3000
 # Forwarding: https://abc123.ngrok.io -> http://localhost:3000
 ```
 
-Use the ngrok URL when creating the webhook. InfraAudit can reach local endpoints through the ngrok tunnel.
+Use the ngrok URL when creating the webhook. InfrAudit can reach local endpoints through the ngrok tunnel.

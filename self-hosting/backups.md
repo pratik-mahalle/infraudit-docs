@@ -1,19 +1,19 @@
 ---
 title: "Backups"
-description: "Backup and restore strategies for your InfraAudit PostgreSQL database."
+description: "Backup and restore strategies for your InfrAudit PostgreSQL database."
 icon: "hard-drive"
 ---
 
 
-InfraAudit's data lives in PostgreSQL. All historical scans, drift findings, costs, and recommendations are stored there. The Supabase project holds user accounts — back that up separately through the Supabase dashboard.
+InfrAudit's data lives in PostgreSQL. All historical scans, drift findings, costs, and recommendations are stored there. The Supabase project holds user accounts — back that up separately through the Supabase dashboard.
 
 ## What to back up
 
 | Data | Location | Backup method |
 |---|---|---|
-| Scan data, resources, findings | InfraAudit Postgres | `pg_dump` |
+| Scan data, resources, findings | InfrAudit Postgres | `pg_dump` |
 | User accounts, OAuth sessions | Supabase Postgres | Supabase dashboard export |
-| Cloud credentials (encrypted) | InfraAudit Postgres | Included in `pg_dump` |
+| Cloud credentials (encrypted) | InfrAudit Postgres | Included in `pg_dump` |
 | ENCRYPTION_KEY | `.env` / secrets manager | Back up separately — see [Secrets](/self-hosting/secrets-and-encryption) |
 
 ## Manual backup with pg_dump

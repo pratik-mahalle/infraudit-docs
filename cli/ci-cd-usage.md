@@ -1,6 +1,6 @@
 ---
 title: "CI/CD Usage"
-description: "Integrate InfraAudit CLI into GitHub Actions, GitLab CI, and other pipelines."
+description: "Integrate InfrAudit CLI into GitHub Actions, GitLab CI, and other pipelines."
 icon: "arrows-rotate"
 ---
 
@@ -10,7 +10,7 @@ The CLI works well as a security gate in CI. Use `--output json` with `jq` to pa
 ## GitHub Actions example
 
 ```yaml
-name: InfraAudit security check
+name: InfrAudit security check
 
 on:
   push:

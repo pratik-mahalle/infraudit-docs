@@ -1,15 +1,15 @@
 ---
 title: "Anomaly Detection"
-description: "How InfraAudit detects unexpected cost spikes and flags them as anomalies."
+description: "How InfrAudit detects unexpected cost spikes and flags them as anomalies."
 icon: "triangle-alert"
 ---
 
 
-InfraAudit flags cost anomalies — days where actual spend significantly exceeds the expected range based on recent historical patterns. Anomalies are shown on the Cost trend chart and can trigger alerts.
+InfrAudit flags cost anomalies — days where actual spend significantly exceeds the expected range based on recent historical patterns. Anomalies are shown on the Cost trend chart and can trigger alerts.
 
 ## Detection method
 
-After each daily billing sync, InfraAudit runs an anomaly check on the new data point:
+After each daily billing sync, InfrAudit runs an anomaly check on the new data point:
 
 1. Compute the **expected range** for that calendar day using a rolling baseline of the previous 14 days:
    - **Expected value:** 7-day exponentially weighted moving average (EWMA)
@@ -25,7 +25,7 @@ Simple moving averages treat all past days equally. EWMA weights recent days mor
 
 ## Day-of-week effect
 
-Cloud billing often varies by day of week (lower spend on weekends for bursty compute). InfraAudit's model compares each day against the same day of week from previous weeks to reduce false positives from predictable weekly patterns.
+Cloud billing often varies by day of week (lower spend on weekends for bursty compute). InfrAudit's model compares each day against the same day of week from previous weeks to reduce false positives from predictable weekly patterns.
 
 ## What triggers an anomaly
 

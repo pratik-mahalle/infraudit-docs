@@ -1,11 +1,11 @@
 ---
 title: "Automation and Jobs"
-description: "Manage the scheduled jobs that power InfraAudit's continuous scans and syncs."
+description: "Manage the scheduled jobs that power InfrAudit's continuous scans and syncs."
 icon: "clock"
 ---
 
 
-InfraAudit runs background jobs on a cron schedule to keep your infrastructure data current. The **Jobs** section lets you view job history, trigger manual runs, and adjust schedules.
+InfrAudit runs background jobs on a cron schedule to keep your infrastructure data current. The **Jobs** section lets you view job history, trigger manual runs, and adjust schedules.
 
 ## Job types
 

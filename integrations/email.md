@@ -1,11 +1,11 @@
 ---
 title: "Email"
-description: "Configure email notifications for InfraAudit alerts using SMTP or SendGrid."
+description: "Configure email notifications for InfrAudit alerts using SMTP or SendGrid."
 icon: "envelope"
 ---
 
 
-InfraAudit can send alert notifications by email using SMTP or SendGrid.
+InfrAudit can send alert notifications by email using SMTP or SendGrid.
 
 ## Configuration
 
@@ -18,7 +18,7 @@ SMTP_HOST=smtp.example.com
 SMTP_PORT=587
 SMTP_USER=alerts@example.com
 SMTP_PASSWORD=your-smtp-password
-SMTP_FROM=InfraAudit <alerts@example.com>
+SMTP_FROM=InfrAudit <alerts@example.com>
 EMAIL_ENABLED=true
 ```
 
@@ -67,11 +67,11 @@ curl -X POST http://localhost:8080/api/v1/notifications/preferences \
 
 ## What an email alert includes
 
-- Subject: `[InfraAudit] <severity>: <alert title>`
+- Subject: `[InfrAudit] <severity>: <alert title>`
 - Alert type and severity
 - Affected resource name and provider
 - Description of the finding
-- Link to the alert in the InfraAudit UI
+- Link to the alert in the InfrAudit UI
 - Timestamp
 
 ## Testing email delivery

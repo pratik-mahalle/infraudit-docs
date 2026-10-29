@@ -1,11 +1,11 @@
 ---
 title: "Cost Forecasting"
-description: "How InfraAudit ingests billing data and generates cost forecasts."
+description: "How InfrAudit ingests billing data and generates cost forecasts."
 icon: "chart-line"
 ---
 
 
-InfraAudit ingests billing data from each connected cloud provider and generates forecasts for the next 30, 60, or 90 days. This page explains how ingest and forecasting work.
+InfrAudit ingests billing data from each connected cloud provider and generates forecasts for the next 30, 60, or 90 days. This page explains how ingest and forecasting work.
 
 ## Billing data ingest
 
@@ -42,7 +42,7 @@ Resource-level attribution is available for AWS via tag-based Cost Allocation Ta
 
 ## Forecasting methodology
 
-InfraAudit uses two layers of forecasting:
+InfrAudit uses two layers of forecasting:
 
 ### Layer 1: Provider-native forecast
 
@@ -50,11 +50,11 @@ For AWS and Azure, the forecast is sourced from the provider's own forecasting A
 - **AWS:** `GetCostForecast` with a 90-day horizon and daily granularity
 - **Azure:** Cost Management forecast API
 
-These forecasts use the provider's proprietary models trained on your account's historical data. InfraAudit caches the results and displays them as the primary forecast.
+These forecasts use the provider's proprietary models trained on your account's historical data. InfrAudit caches the results and displays them as the primary forecast.
 
-### Layer 2: InfraAudit trend model
+### Layer 2: InfrAudit trend model
 
-For GCP (which doesn't have a native forecasting API) and as a secondary validation for AWS/Azure, InfraAudit runs a simple linear trend model over the last 30 days of billing data. The trend model:
+For GCP (which doesn't have a native forecasting API) and as a secondary validation for AWS/Azure, InfrAudit runs a simple linear trend model over the last 30 days of billing data. The trend model:
 
 1. Computes the 7-day rolling average to smooth day-of-week effects.
 2. Fits a linear regression to the last 30 days.
@@ -75,8 +75,8 @@ The Cost section displays:
 
 Forecast accuracy improves with more billing history. Expect rough estimates for the first 2 weeks, reasonable estimates after 4 weeks, and reliable forecasts after 8+ weeks.
 
-For AWS, applying **Cost Allocation Tags** improves resource-level attribution. InfraAudit can break down forecasts by tag when tags are available.
+For AWS, applying **Cost Allocation Tags** improves resource-level attribution. InfrAudit can break down forecasts by tag when tags are available.
 
 ## Anomaly detection
 
-See [Anomaly detection](/concepts/anomaly-detection) for how InfraAudit identifies unexpected cost spikes against the forecast baseline.
+See [Anomaly detection](/concepts/anomaly-detection) for how InfrAudit identifies unexpected cost spikes against the forecast baseline.

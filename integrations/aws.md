@@ -1,11 +1,11 @@
 ---
 title: "AWS"
-description: "Connect an AWS account to InfraAudit: IAM policy, credentials, and what gets synced."
+description: "Connect an AWS account to InfrAudit: IAM policy, credentials, and what gets synced."
 icon: "aws"
 ---
 
 
-InfraAudit connects to AWS using IAM credentials. It discovers and monitors EC2 instances, S3 buckets, RDS instances, Lambda functions, CloudFront distributions, VPCs, security groups, and billing data.
+InfrAudit connects to AWS using IAM credentials. It discovers and monitors EC2 instances, S3 buckets, RDS instances, Lambda functions, CloudFront distributions, VPCs, security groups, and billing data.
 
 ## Credential options
 
@@ -14,21 +14,21 @@ InfraAudit connects to AWS using IAM credentials. It discovers and monitors EC2 
 Create an IAM user with read-only permissions and generate an access key pair.
 
 1. In the AWS console, go to **IAM → Users → Create user**.
-2. Attach the InfraAudit policy (see below).
+2. Attach the InfrAudit policy (see below).
 3. Go to **Security credentials → Create access key**.
 4. Copy the Access Key ID and Secret Access Key.
 
 ### Option 2: Assumed role (recommended for production)
 
-Create an IAM role that InfraAudit can assume. This avoids long-lived user credentials.
+Create an IAM role that InfrAudit can assume. This avoids long-lived user credentials.
 
-1. Create an IAM role with a Trust Policy that allows the InfraAudit service account or your IAM user to assume it.
-2. Attach the InfraAudit policy to the role.
+1. Create an IAM role with a Trust Policy that allows the InfrAudit service account or your IAM user to assume it.
+2. Attach the InfrAudit policy to the role.
 3. Pass the role ARN when connecting.
 
 ### Option 3: IAM Identity Center (SSO)
 
-For organizations using AWS IAM Identity Center (formerly SSO), use the SSO portal to create temporary credentials and pass them to InfraAudit.
+For organizations using AWS IAM Identity Center (formerly SSO), use the SSO portal to create temporary credentials and pass them to InfrAudit.
 
 ## Required IAM policy
 
@@ -37,7 +37,7 @@ For organizations using AWS IAM Identity Center (formerly SSO), use the SSO port
   "Version": "2012-10-17",
   "Statement": [
     {
-      "Sid": "InfraAuditReadOnly",
+      "Sid": "InfrAuditReadOnly",
       "Effect": "Allow",
       "Action": [
         "ec2:DescribeInstances",
@@ -132,7 +132,7 @@ Billing data comes from Cost Explorer and is synced daily.
 
 ## Multi-region support
 
-InfraAudit discovers resources across all enabled regions in your AWS account. The `region` field in the connect form sets the primary region for API calls, but the sync job iterates all accessible regions automatically.
+InfrAudit discovers resources across all enabled regions in your AWS account. The `region` field in the connect form sets the primary region for API calls, but the sync job iterates all accessible regions automatically.
 
 ## Multi-account support
 
@@ -141,5 +141,5 @@ Connect each AWS account as a separate provider. You can connect as many as your
 ## Security notes
 
 - Credentials are encrypted at rest with AES-GCM using the server's `ENCRYPTION_KEY`.
-- InfraAudit never writes to your AWS account. All API calls are read-only.
+- InfrAudit never writes to your AWS account. All API calls are read-only.
 - For extra security, scope the IAM policy to specific regions or resource ARN prefixes.

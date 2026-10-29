@@ -1,22 +1,22 @@
-# InfraAudit Documentation
+# InfrAudit Documentation
 
-InfraAudit is a cloud infrastructure monitoring, cost optimization, and security platform for AWS, GCP, Azure, and Kubernetes. It detects configuration drift, scans for vulnerabilities, forecasts costs, enforces compliance frameworks, and generates AI-assisted remediation recommendations.
+InfrAudit is a cloud infrastructure monitoring, cost optimization, and security platform for AWS, GCP, Azure, and Kubernetes. It detects configuration drift, scans for vulnerabilities, forecasts costs, enforces compliance frameworks, and generates AI-assisted remediation recommendations.
 
 These docs cover the product end to end: the web platform, the CLI, the HTTP API, and the self-hosted OSS Community edition.
 
 ## Pick your path
 
-**I want to use the web app.** Start with [What is InfraAudit?](getting-started/what-is-infraudit.md), then follow the [Platform guide](platform/README.md) to connect a cloud account and run your first scan.
+**I want to use the web app.** Start with [What is InfrAudit?](getting-started/what-is-infraudit.md), then follow the [Platform guide](platform/README.md) to connect a cloud account and run your first scan.
 
 **I want to automate from the terminal.** Read the [CLI overview](cli/README.md) and [install the `infraudit` binary](cli/installation.md). The CLI covers every feature the web app does.
 
 **I want to call the API from my own code.** Go to the [API overview](api/README.md) for auth, base URL, versioning, and error handling. The full endpoint list lives under [Endpoint reference](api/reference/README.md), backed by the auto-generated OpenAPI spec.
 
-**I want to run InfraAudit on my own infrastructure.** Read [Prerequisites](self-hosting/prerequisites.md) first — a Supabase project is required. Then follow [Docker Compose](self-hosting/docker-compose.md) or [Kubernetes](self-hosting/kubernetes.md).
+**I want to run InfrAudit on my own infrastructure.** Read [Prerequisites](self-hosting/prerequisites.md) first — a Supabase project is required. Then follow [Docker Compose](self-hosting/docker-compose.md) or [Kubernetes](self-hosting/kubernetes.md).
 
 **I want to contribute.** Start with [Repo structure](contributing/repo-structure.md) and [Local development](contributing/local-development.md).
 
-## What InfraAudit does
+## What InfrAudit does
 
 | Area | What you get |
 |---|---|

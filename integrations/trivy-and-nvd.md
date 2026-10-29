@@ -1,21 +1,21 @@
 ---
 title: "Trivy and NVD"
-description: "How InfraAudit uses Trivy for vulnerability scanning and NVD for CVE enrichment."
+description: "How InfrAudit uses Trivy for vulnerability scanning and NVD for CVE enrichment."
 icon: "shield-check"
 ---
 
 
-InfraAudit uses [Trivy](https://trivy.dev) as its vulnerability scanner and enriches findings with data from the [National Vulnerability Database (NVD)](https://nvd.nist.gov/).
+InfrAudit uses [Trivy](https://trivy.dev) as its vulnerability scanner and enriches findings with data from the [National Vulnerability Database (NVD)](https://nvd.nist.gov/).
 
 ## Trivy
 
-Trivy is an open-source vulnerability scanner by Aqua Security. InfraAudit runs it as an embedded component of the API container to scan:
+Trivy is an open-source vulnerability scanner by Aqua Security. InfrAudit runs it as an embedded component of the API container to scan:
 
 - Container images referenced in Kubernetes deployments and pods
 - OS packages (Alpine, Debian, Ubuntu, CentOS, etc.)
 - Application dependencies (Go modules, Python pip/conda, Node.js npm/yarn, Ruby gems, Java Maven/Gradle, .NET NuGet)
 
-InfraAudit bundles Trivy inside the Docker image, so no separate installation is needed. The Trivy database is updated on container restart.
+InfrAudit bundles Trivy inside the Docker image, so no separate installation is needed. The Trivy database is updated on container restart.
 
 ### Updating the Trivy database
 
@@ -29,7 +29,7 @@ For self-hosted setups with no internet access, mirror the Trivy database and co
 
 ## NVD
 
-The NVD provides CVSS scores, severity ratings, and CVE descriptions for each finding Trivy reports. InfraAudit enriches Trivy output with NVD data to give each finding:
+The NVD provides CVSS scores, severity ratings, and CVE descriptions for each finding Trivy reports. InfrAudit enriches Trivy output with NVD data to give each finding:
 
 - CVSS v3 base score and vector string
 - Severity (Critical, High, Medium, Low) based on CVSS score
@@ -50,9 +50,9 @@ NVD_API_KEY=your-nvd-api-key
 
 ## Scan flow
 
-1. For each scannable resource, InfraAudit identifies the artifact to scan (e.g. container image `nginx:1.24`).
+1. For each scannable resource, InfrAudit identifies the artifact to scan (e.g. container image `nginx:1.24`).
 2. Trivy scans the image, producing a list of CVE matches with package names and versions.
-3. InfraAudit queries the NVD API for each unique CVE ID to fetch the CVSS score and description.
+3. InfrAudit queries the NVD API for each unique CVE ID to fetch the CVSS score and description.
 4. The enriched findings are stored in the database with severity, status, and fix information.
 5. Findings above the configured threshold trigger alerts.
 
@@ -82,7 +82,7 @@ For deployments without internet access:
 
 ## False positives
 
-If a vulnerability doesn't apply to your environment (e.g. the vulnerable code path is not reachable), mark it as ignored in InfraAudit with a reason:
+If a vulnerability doesn't apply to your environment (e.g. the vulnerable code path is not reachable), mark it as ignored in InfrAudit with a reason:
 
 ```bash
 infraudit vulnerability update <vuln-id> --status ignored --reason "not exploitable in this deployment"

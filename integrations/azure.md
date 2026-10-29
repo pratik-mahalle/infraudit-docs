@@ -1,11 +1,11 @@
 ---
 title: "Azure"
-description: "Connect an Azure subscription to InfraAudit using a service principal."
+description: "Connect an Azure subscription to InfrAudit using a service principal."
 icon: "microsoft"
 ---
 
 
-InfraAudit connects to Azure using a service principal. It discovers Virtual Machines, Storage Accounts, SQL Servers, and resource groups, and ingests billing data from the Azure Cost Management API.
+InfrAudit connects to Azure using a service principal. It discovers Virtual Machines, Storage Accounts, SQL Servers, and resource groups, and ingests billing data from the Azure Cost Management API.
 
 ## Prerequisites
 
@@ -105,5 +105,5 @@ Billing data is synced daily from the Azure Cost Management API.
 ## Security notes
 
 - Credentials are encrypted at rest with AES-GCM.
-- InfraAudit never writes to your Azure subscription. All API calls are read-only.
-- Client secrets expire (by default, in 2 years for Azure AD app registrations). Set a reminder to rotate the secret before it expires, then update the provider credentials in InfraAudit.
+- InfrAudit never writes to your Azure subscription. All API calls are read-only.
+- Client secrets expire (by default, in 2 years for Azure AD app registrations). Set a reminder to rotate the secret before it expires, then update the provider credentials in InfrAudit.

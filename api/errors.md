@@ -1,6 +1,6 @@
 ---
 title: "Errors"
-description: "HTTP status codes and error response format for the InfraAudit API."
+description: "HTTP status codes and error response format for the InfrAudit API."
 icon: "triangle-alert"
 ---
 

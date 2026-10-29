@@ -1,11 +1,11 @@
 ---
 title: "Docker Compose"
-description: "Deploy InfraAudit locally or on a server using Docker Compose."
+description: "Deploy InfrAudit locally or on a server using Docker Compose."
 icon: "docker"
 ---
 
 
-Docker Compose is the fastest way to get InfraAudit running. It brings up the API, database, Redis, and frontend in four containers with a single command.
+Docker Compose is the fastest way to get InfrAudit running. It brings up the API, database, Redis, and frontend in four containers with a single command.
 
 ## Clone the repo
 
@@ -70,7 +70,7 @@ This starts four containers:
 
 | Container | Port | Purpose |
 |---|---|---|
-| `api` | 8080 | InfraAudit Go backend |
+| `api` | 8080 | InfrAudit Go backend |
 | `postgres` | 5432 | Primary database |
 | `redis` | 6379 | Cache |
 | `frontend` | 5173 | React web UI |
@@ -84,7 +84,7 @@ docker compose logs -f api
 Expected output:
 
 ```
-api_1  | InfraAudit API starting on :8080
+api_1  | InfrAudit API starting on :8080
 api_1  | Database connected (postgres)
 api_1  | Redis connected
 api_1  | Supabase auth configured
@@ -117,7 +117,7 @@ docker compose --profile monitoring up -d
 | `prometheus` | 9090 | Metrics scraper |
 | `grafana` | 3000 | Dashboard UI |
 
-Grafana ships with a pre-built InfraAudit dashboard. Log in with `admin/admin` and change the password on first login.
+Grafana ships with a pre-built InfrAudit dashboard. Log in with `admin/admin` and change the password on first login.
 
 ## Stopping and restarting
 
