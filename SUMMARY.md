@@ -8,9 +8,9 @@
 * [Overview](getting-started/README.md)
 * [What is InfraAudit?](getting-started/what-is-infraudit.md)
 * [Core concepts](getting-started/core-concepts.md)
-* [Quickstart: SaaS](getting-started/quickstart-saas.md)
-* [Quickstart: CLI](getting-started/quickstart-cli.md)
-* [Quickstart: Self-host](getting-started/quickstart-self-host.md)
+* [Quickstart: SaaS](getting-started/quickstart-saas.mdx)
+* [Quickstart: CLI](getting-started/quickstart-cli.mdx)
+* [Quickstart: Self-host](getting-started/quickstart-self-host.mdx)
 
 ## Platform guide
 
