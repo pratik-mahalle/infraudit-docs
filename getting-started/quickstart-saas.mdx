@@ -7,17 +7,19 @@ icon: "cloud"
 
 This guide gets you from zero to a working InfraAudit account with one connected AWS account and a completed drift scan. It takes about five minutes.
 
-## Sign up
+<Steps>
+<Step title="Sign up">
 
 1. Go to [infraudit.com](https://infraudit.com) and click **Get started**.
 2. Sign up with Google, GitHub, or your email and a password.
 3. You land on the dashboard. It's empty — no providers are connected yet.
 
-## Connect a cloud account
+</Step>
+<Step title="Connect a cloud account">
 
 Cloud accounts are called **providers** in InfraAudit. You connect one on the Cloud Providers page.
 
-### AWS (fastest path)
+**AWS (fastest path)**
 
 1. In the sidebar, click **Cloud Providers**.
 2. Click **Connect AWS**.
@@ -30,7 +32,7 @@ Cloud accounts are called **providers** in InfraAudit. You connect one on the Cl
 
 InfraAudit validates the credentials and kicks off an initial resource sync. This usually finishes in under a minute for accounts with fewer than a few hundred resources.
 
-### What permissions does InfraAudit need?
+**What permissions does InfraAudit need?**
 
 Read-only is enough to get started. The minimum IAM policy:
 
@@ -58,11 +60,12 @@ Read-only is enough to get started. The minimum IAM policy:
 
 For vulnerability scanning and IaC drift, no additional permissions are needed — those run against data already pulled into InfraAudit.
 
-### GCP and Azure
+**GCP and Azure**
 
 The connection flow is similar. See [Integrations: GCP](/integrations/gcp) and [Integrations: Azure](/integrations/azure) for the service account and service principal setup.
 
-## Run your first scan
+</Step>
+<Step title="Run your first scan">
 
 Once the initial sync finishes, run a drift detection scan:
 
@@ -71,6 +74,9 @@ Once the initial sync finishes, run a drift detection scan:
 3. The scan compares your current infrastructure against the baseline captured during the initial sync.
 
 On a fresh account the first scan often returns no drift — that's expected, since the baseline was just captured. Make a change in your AWS account (add a tag, change a security group rule) and scan again to see drift appear.
+
+</Step>
+</Steps>
 
 ## What to do next
 

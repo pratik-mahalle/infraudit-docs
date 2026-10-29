@@ -7,30 +7,29 @@ icon: "terminal"
 
 Install the `infraudit` binary, log in, connect an AWS account, and run a drift scan — all from the terminal. Expected time: under five minutes if you already have AWS credentials to hand.
 
-## Install the CLI
+<Steps>
+<Step title="Install the CLI">
 
-### macOS (Homebrew)
+<CodeGroup>
 
-```bash
+```bash macOS
 brew install pratik-mahalle/tap/infraudit
 ```
 
-### Linux
-
-```bash
+```bash Linux
 curl -sSL https://infraudit.com/install.sh | bash
 ```
 
-The script installs the binary to `/usr/local/bin/infraudit`.
-
-### Build from source
-
-```bash
+```bash title="From source"
 git clone https://github.com/pratik-mahalle/infraudit-go.git
 cd infraudit-go
 go build -o infraudit ./cmd/cli
 sudo mv infraudit /usr/local/bin/
 ```
+
+</CodeGroup>
+
+On Linux, the script installs the binary to `/usr/local/bin/infraudit`.
 
 Verify the install:
 
@@ -38,23 +37,25 @@ Verify the install:
 infraudit version
 ```
 
-## Point the CLI at your server
+</Step>
+<Step title="Point the CLI at your server">
 
-For the **SaaS** version:
+<CodeGroup>
 
-```bash
+```bash SaaS
 infraudit config init
 # Server URL: https://api.infraudit.com
 ```
 
-For a **self-hosted** instance:
-
-```bash
+```bash Self-hosted
 infraudit config init
 # Server URL: http://localhost:8080
 ```
 
-## Log in
+</CodeGroup>
+
+</Step>
+<Step title="Log in">
 
 ```bash
 infraudit auth login
@@ -70,7 +71,8 @@ Check who you're logged in as:
 infraudit auth whoami
 ```
 
-## Connect a cloud account
+</Step>
+<Step title="Connect a cloud account">
 
 ```bash
 infraudit provider connect aws
@@ -88,7 +90,8 @@ infraudit provider list
 # 1   Production  aws   synced  247
 ```
 
-## Run a drift scan
+</Step>
+<Step title="Run a drift scan">
 
 ```bash
 infraudit drift detect
@@ -114,6 +117,9 @@ Get details on a specific drift:
 ```bash
 infraudit drift get 1
 ```
+
+</Step>
+</Steps>
 
 ## What to do next
 

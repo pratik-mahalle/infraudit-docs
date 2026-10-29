@@ -36,16 +36,18 @@ Keep these four values handy. You'll paste them into `.env` in a moment.
 
 If you want AI-generated recommendations instead of the rule-based fallback, grab a Gemini API key from [ai.google.dev](https://ai.google.dev). The key is not required to boot.
 
-## Install
+## Install and run
 
-### 1. Clone the backend repo
+<Steps>
+<Step title="Clone the backend repo">
 
 ```bash
 git clone https://github.com/pratik-mahalle/infraudit-go.git
 cd infraudit-go
 ```
 
-### 2. Create your `.env` file
+</Step>
+<Step title="Create your .env file">
 
 ```bash
 cp .env.example .env
@@ -92,7 +94,8 @@ Two values you must change before anything beyond a toy deployment:
 
 For the full environment variable reference, see [Configuration reference](/self-hosting/configuration).
 
-### 3. Start the stack
+</Step>
+<Step title="Start the stack">
 
 ```bash
 docker compose up -d
@@ -115,7 +118,8 @@ docker compose logs -f api
 
 If the API exits immediately with a Supabase error, double-check `SUPABASE_URL` and `SUPABASE_JWT_SECRET` — those two are validated at startup and the process will refuse to boot without them.
 
-### 4. Verify the health endpoints
+</Step>
+<Step title="Verify the health endpoints">
 
 ```bash
 curl http://localhost:8080/healthz
@@ -127,24 +131,28 @@ curl http://localhost:8080/readyz
 
 If `database` reports `error`, the Postgres container is still warming up. Wait 10 seconds and try again.
 
-## First login
+</Step>
+<Step title="Log in for the first time">
 
 1. Open `http://localhost:5173` in your browser.
 2. Click **Sign up** and create an account with any email and password. Supabase stores the credentials; the Go backend resolves the Supabase UUID to an internal user ID on first login.
 3. You land on the dashboard. It's empty because no providers are connected yet.
 
-## Connect your first cloud account
+</Step>
+<Step title="Connect your first cloud account">
 
 The fastest path is AWS with read-only credentials.
 
-### Option A: Web UI
+<Tabs>
+<Tab title="Web UI">
 
 1. Click **Cloud Providers** in the sidebar.
 2. Click **Connect AWS**.
 3. Paste your AWS access key ID, secret access key, and pick a region (e.g. `us-east-1`).
 4. Click **Connect**. InfraAudit encrypts the credentials using `ENCRYPTION_KEY` and kicks off an initial resource sync.
 
-### Option B: CLI
+</Tab>
+<Tab title="CLI">
 
 If you prefer the command line, install the CLI first ([CLI installation](/cli/installation)), then:
 
@@ -159,7 +167,8 @@ infraudit provider connect aws
 # Interactive prompts for Access Key, Secret, Region
 ```
 
-### Option C: API
+</Tab>
+<Tab title="API">
 
 ```bash
 curl -X POST http://localhost:8080/api/v1/providers/aws/connect \
@@ -175,7 +184,11 @@ curl -X POST http://localhost:8080/api/v1/providers/aws/connect \
 
 The Bearer token is the Supabase `access_token` you get from signing in. See [API: Authentication](/api/authentication) for details.
 
-## Run your first scan
+</Tab>
+</Tabs>
+
+</Step>
+<Step title="Run your first scan">
 
 Once the initial resource sync finishes (typically under a minute for a small account), trigger a drift detection scan:
 
@@ -196,6 +209,9 @@ infraudit drift summary
 ```
 
 Or open **Drift Detection** in the web UI.
+
+</Step>
+</Steps>
 
 ## What to do next
 

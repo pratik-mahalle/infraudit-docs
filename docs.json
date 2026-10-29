@@ -82,14 +82,24 @@
               "platform/dashboard",
               "platform/connecting-cloud-accounts",
               "platform/resources-and-inventory",
-              "platform/drift-detection",
-              "platform/vulnerabilities",
+              {
+                "group": "Security",
+                "pages": [
+                  "platform/drift-detection",
+                  "platform/vulnerabilities",
+                  "platform/compliance"
+                ]
+              },
               "platform/cost-optimization",
-              "platform/compliance",
               "platform/recommendations",
-              "platform/alerts",
-              "platform/remediation",
-              "platform/automation-and-jobs",
+              {
+                "group": "Automation",
+                "pages": [
+                  "platform/alerts",
+                  "platform/remediation",
+                  "platform/automation-and-jobs"
+                ]
+              },
               "platform/kubernetes"
             ]
           },
@@ -97,15 +107,30 @@
             "group": "Integrations",
             "pages": [
               "integrations/overview",
-              "integrations/aws",
-              "integrations/gcp",
-              "integrations/azure",
-              "integrations/kubernetes",
-              "integrations/terraform",
-              "integrations/cloudformation",
-              "integrations/slack",
-              "integrations/email",
-              "integrations/webhooks",
+              {
+                "group": "Cloud providers",
+                "pages": [
+                  "integrations/aws",
+                  "integrations/gcp",
+                  "integrations/azure",
+                  "integrations/kubernetes"
+                ]
+              },
+              {
+                "group": "Infrastructure as code",
+                "pages": [
+                  "integrations/terraform",
+                  "integrations/cloudformation"
+                ]
+              },
+              {
+                "group": "Notifications",
+                "pages": [
+                  "integrations/slack",
+                  "integrations/email",
+                  "integrations/webhooks"
+                ]
+              },
               "integrations/trivy-and-nvd"
             ]
           },
@@ -113,17 +138,32 @@
             "group": "Self-Hosting",
             "pages": [
               "self-hosting/overview",
-              "self-hosting/prerequisites",
-              "self-hosting/supabase-setup",
-              "self-hosting/docker-compose",
-              "self-hosting/kubernetes",
-              "self-hosting/configuration",
-              "self-hosting/database",
-              "self-hosting/secrets-and-encryption",
-              "self-hosting/monitoring",
-              "self-hosting/backups",
-              "self-hosting/upgrades",
-              "self-hosting/troubleshooting"
+              {
+                "group": "Install",
+                "pages": [
+                  "self-hosting/prerequisites",
+                  "self-hosting/supabase-setup",
+                  "self-hosting/docker-compose",
+                  "self-hosting/kubernetes"
+                ]
+              },
+              {
+                "group": "Configure",
+                "pages": [
+                  "self-hosting/configuration",
+                  "self-hosting/database",
+                  "self-hosting/secrets-and-encryption"
+                ]
+              },
+              {
+                "group": "Operate",
+                "pages": [
+                  "self-hosting/monitoring",
+                  "self-hosting/backups",
+                  "self-hosting/upgrades",
+                  "self-hosting/troubleshooting"
+                ]
+              }
             ]
           },
           {
@@ -281,18 +321,31 @@
     },
     "links": [
       {
-        "title": "Company",
+        "title": "Product",
         "items": [
           {
             "label": "Pricing",
             "href": "https://infraudit.com/pricing"
           },
           {
-            "label": "About Us",
+            "label": "API",
+            "href": "/api/overview"
+          },
+          {
+            "label": "Changelog",
+            "href": "/resources/changelog"
+          }
+        ]
+      },
+      {
+        "title": "Company",
+        "items": [
+          {
+            "label": "About us",
             "href": "https://infraudit.com/about"
           },
           {
-            "label": "Contact Us",
+            "label": "Contact us",
             "href": "https://infraudit.com/contact"
           },
           {
@@ -302,29 +355,8 @@
         ]
       },
       {
-        "title": "Social",
+        "title": "Legal",
         "items": [
-          {
-            "label": "Twitter",
-            "href": "https://x.com/infraudit"
-          },
-          {
-            "label": "GitHub",
-            "href": "https://github.com/pratik-mahalle/infraudit-go"
-          },
-          {
-            "label": "LinkedIn",
-            "href": "https://linkedin.com/company/infraudit"
-          }
-        ]
-      },
-      {
-        "title": "Resources",
-        "items": [
-          {
-            "label": "Documentation",
-            "href": "/introduction"
-          },
           {
             "label": "Privacy policy",
             "href": "https://infraudit.com/privacy"
@@ -332,10 +364,6 @@
           {
             "label": "Terms of service",
             "href": "https://infraudit.com/terms"
-          },
-          {
-            "label": "API",
-            "href": "/api/overview"
           }
         ]
       }

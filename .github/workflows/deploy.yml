@@ -25,6 +25,8 @@ jobs:
         with:
           path: content
           persist-credentials: false
+          # Full history: each page's "Updated …" date is its last commit.
+          fetch-depth: 0
 
       # Specly (private) is the engine that turns this content into the site.
       - name: Checkout Specly
