@@ -18,7 +18,7 @@ http://localhost:8080
 For SaaS:
 
 ```
-https://api.infraaudit.dev
+https://api.infraudit.com
 ```
 
 ## API versioning

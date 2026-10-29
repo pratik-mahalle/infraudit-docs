@@ -48,7 +48,7 @@ jobs:
 
 ```bash
 #!/bin/bash
-export INFRAUDIT_SERVER_URL=https://api.infraaudit.dev
+export INFRAUDIT_SERVER_URL=https://api.infraudit.com
 
 infraudit auth login --email "$CI_EMAIL" --password "$CI_PASSWORD"
 

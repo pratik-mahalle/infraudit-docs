@@ -47,7 +47,7 @@ The CLI refreshes `auth.token` automatically when it expires, as long as `refres
 infraudit config init
 
 # Set an individual value
-infraudit config set server_url https://api.infraudit.dev
+infraudit config set server_url https://api.infraudit.com
 infraudit config set output json
 
 # Read a value

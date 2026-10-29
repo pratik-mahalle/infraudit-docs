@@ -9,7 +9,7 @@ This guide gets you from zero to a working InfraAudit account with one connected
 
 ## Sign up
 
-1. Go to [infraaudit.dev](https://infraaudit.dev) and click **Get started**.
+1. Go to [infraudit.com](https://infraudit.com) and click **Get started**.
 2. Sign up with Google, GitHub, or your email and a password.
 3. You land on the dashboard. It's empty — no providers are connected yet.
 

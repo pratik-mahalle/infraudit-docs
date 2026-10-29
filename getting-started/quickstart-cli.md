@@ -18,7 +18,7 @@ brew install pratik-mahalle/tap/infraudit
 ### Linux
 
 ```bash
-curl -sSL https://infraaudit.dev/install.sh | bash
+curl -sSL https://infraudit.com/install.sh | bash
 ```
 
 The script installs the binary to `/usr/local/bin/infraudit`.
@@ -44,7 +44,7 @@ For the **SaaS** version:
 
 ```bash
 infraudit config init
-# Server URL: https://api.infraaudit.dev
+# Server URL: https://api.infraudit.com
 ```
 
 For a **self-hosted** instance:

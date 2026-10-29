@@ -35,11 +35,11 @@ You're reading it. If something is missing, unclear, or wrong, the docs are in [
 
 ### Starter plan
 
-Email support with a 2 business day response time. Email: support@infraaudit.dev
+Email support with a 2 business day response time. Email: support@infraudit.com
 
 ### Professional plan
 
-Priority email support with a 1 business day response time. Email: support@infraaudit.dev (mark subject line with "Professional").
+Priority email support with a 1 business day response time. Email: support@infraudit.com (mark subject line with "Professional").
 
 ### Enterprise plan
 
@@ -47,7 +47,7 @@ Dedicated support with a 4-hour SLA for P1 issues. Includes a dedicated Slack ch
 
 ## Security vulnerabilities
 
-Do not report security vulnerabilities in public GitHub issues. Email security@infraaudit.dev with:
+Do not report security vulnerabilities in public GitHub issues. Email security@infraudit.com with:
 
 - Description of the vulnerability
 - Steps to reproduce

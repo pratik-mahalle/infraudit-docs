@@ -25,7 +25,7 @@
   ],
   "topbarCtaButton": {
     "name": "Get Started Free",
-    "url": "https://infraaudit.dev"
+    "url": "https://infraudit.com/signup"
   },
   "tabs": [
     {
@@ -271,7 +271,7 @@
     "raiseIssue": true
   },
   "search": {
-    "prompt": "Search InfrAudit docs..."
+    "prompt": "Search InfraAudit docs..."
   },
   "footer": {
     "socials": {
@@ -345,7 +345,7 @@
     "indexHiddenPages": false
   },
   "metadata": {
-    "og:site_name": "InfrAudit Docs",
+    "og:site_name": "InfraAudit Docs",
     "og:type": "website",
     "twitter:card": "summary_large_image"
   }
