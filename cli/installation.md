@@ -5,40 +5,25 @@ icon: "download"
 ---
 
 
-The CLI is distributed as a single static Go binary with no runtime dependencies. Install it from source or via `go install`.
+The CLI is distributed as a single static Go binary with no runtime dependencies.
 
-## From source
-
-Requires Go 1.24 or newer.
+## macOS (Homebrew)
 
 ```bash
-# Clone the backend repo (the CLI lives under cmd/cli)
-git clone https://github.com/pratik-mahalle/infraudit-go.git
-cd infraudit-go
-
-# Build the CLI binary
-make build-cli
-
-# Binary lands at ./bin/infraudit
-./bin/infraudit --help
+brew install pratik-mahalle/tap/infraudit
 ```
 
-Move the binary into your `PATH` if you want to call it from anywhere:
+## Linux
 
 ```bash
-sudo mv ./bin/infraudit /usr/local/bin/
-infraudit --help
+curl -sSL https://infraudit.com/install.sh | bash
 ```
 
-## Go install
+The script installs the binary to `/usr/local/bin/infraudit`.
 
-If you have a Go toolchain already, `go install` pulls and builds the latest CLI in one step:
+## Windows
 
-```bash
-go install github.com/pratik-mahalle/infraudit/cmd/cli@latest
-```
-
-The binary lands in `$GOPATH/bin/` (or `$HOME/go/bin/` by default). Make sure that directory is in your `PATH`.
+Download the latest `infraudit-windows-amd64.exe` from the release bundle provided by your account manager, rename it to `infraudit.exe`, and place it in a directory on your `PATH`.
 
 ## Verify the installation
 
@@ -50,11 +35,11 @@ You should see the top-level command list. If you get `command not found`, your 
 
 ```bash
 # bash
-echo 'export PATH="$HOME/go/bin:$PATH"' >> ~/.bashrc
+echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
 
 # zsh
-echo 'export PATH="$HOME/go/bin:$PATH"' >> ~/.zshrc
+echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.zshrc
 source ~/.zshrc
 ```
 

@@ -7,7 +7,7 @@ icon: "credit-card"
 
 Base path: `/api/v1/billing`
 
-These endpoints are available on SaaS editions only. Self-hosted Community deployments skip billing management entirely.
+These endpoints are available on SaaS editions only. Enterprise self-hosted deployments skip billing management entirely.
 
 ## Get current plan
 

@@ -9,11 +9,11 @@ icon: "circle-question"
 
 **Is there a free version?**
 
-Yes. The Community edition is free, MIT-licensed, and self-hosted. It includes every feature documented here — unlimited resources, all cloud providers, all compliance frameworks, AI recommendations (with a Gemini API key), and all CLI and API access.
+Every plan includes a 14-day free trial. After the trial, choose Starter ($49/mo), Professional ($99/mo), or Enterprise ($249/mo). See [pricing](https://infraudit.com/pricing).
 
-**What's the difference between Community and SaaS editions?**
+**What's the difference between the editions?**
 
-The features are identical. SaaS editions (Starter, Professional, Enterprise) add managed hosting, longer data retention, priority support, enterprise SSO, and resource limits that scale with the plan.
+The features are identical. Plans differ in resource limits, data retention, support level, and enterprise SSO. Enterprise can also be [self-hosted](/self-hosting/overview) on your own infrastructure.
 
 **Does InfrAudit write to my cloud accounts?**
 
@@ -27,7 +27,7 @@ Supabase handles authentication — JWT signing, OAuth with Google/GitHub, and u
 
 **Can I use InfrAudit without Supabase?**
 
-Not in the current release. A community PR to add an alternative auth backend (e.g. Keycloak, native user table) would be welcome.
+Not in the current release. Contact [support](/resources/support) if you need an alternative auth backend.
 
 **Can I use SQLite instead of PostgreSQL?**
 
@@ -41,11 +41,11 @@ AWS, Google Cloud Platform, Microsoft Azure, and Kubernetes. See the [Integratio
 
 **Does InfrAudit support multiple AWS accounts?**
 
-Yes. Connect each account as a separate provider. There's no limit on the number of connected accounts (Community edition), or limits vary by plan (SaaS editions).
+Yes. Connect each account as a separate provider. The number of connected accounts is unlimited; resource limits vary by plan.
 
 **How does InfrAudit handle drift on resources that change frequently?**
 
-Some resource attributes change on every API call (timestamps, lease tokens, internal IDs). InfrAudit maintains per-resource-type exclusion lists for these fields to avoid false positives. If a specific attribute is causing false drift findings, open a GitHub issue to have it added to the exclusion list.
+Some resource attributes change on every API call (timestamps, lease tokens, internal IDs). InfrAudit maintains per-resource-type exclusion lists for these fields to avoid false positives. If a specific attribute is causing false drift findings, contact [support](/resources/support) to have it added to the exclusion list.
 
 **Does the AI recommendation feature require an internet connection?**
 

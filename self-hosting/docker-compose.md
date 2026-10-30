@@ -7,11 +7,14 @@ icon: "docker"
 
 Docker Compose is the fastest way to get InfrAudit running. It brings up the API, database, Redis, and frontend in four containers with a single command.
 
-## Clone the repo
+## Get the bundle
+
+Self-hosting is available on the Enterprise plan. [Contact sales](https://infraudit.com/contact) for access to the Enterprise self-hosted bundle, then unpack it:
 
 ```bash
-git clone https://github.com/pratik-mahalle/infraudit-go.git
-cd infraudit-go
+# Unpack the Enterprise self-hosted bundle
+tar -xzf infraudit-enterprise-<version>.tar.gz
+cd infraudit-enterprise
 ```
 
 ## Create `.env`

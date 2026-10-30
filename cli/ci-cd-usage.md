@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install infraudit CLI
-        run: go install github.com/pratik-mahalle/infraudit/cmd/cli@latest
+        run: curl -sSL https://infraudit.com/install.sh | bash
 
       - name: Login
         run: infraudit auth login --email "${{ secrets.INFRAUDIT_EMAIL }}" --password "${{ secrets.INFRAUDIT_PASSWORD }}"

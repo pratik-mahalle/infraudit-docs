@@ -82,7 +82,7 @@ Each question lives in a different dashboard. InfrAudit pulls the signals into o
 
 ## Editions
 
-The Community edition is MIT-licensed and self-hosted. It includes every feature documented here. The SaaS editions (Starter, Professional, Enterprise) add managed hosting, priority support, longer data retention, and enterprise SSO. The API, CLI, and feature set are identical across editions.
+InfrAudit is available as Starter ($49/mo), Professional ($99/mo), and Enterprise ($249/mo) plans, each with a 14-day free trial. Plans differ in resource limits, data retention, support level, and enterprise SSO. Enterprise can run as SaaS or [self-hosted](/self-hosting/overview) on your own infrastructure. The API, CLI, and feature set are identical across editions.
 
 ## Next steps
 

@@ -5,7 +5,7 @@ icon: "dharmachakra"
 ---
 
 
-InfrAudit ships Kubernetes manifests under `deployments/kubernetes/` in the main repo. This page walks through a production-grade deployment.
+InfrAudit ships Kubernetes manifests under `deployments/kubernetes/` in the Enterprise self-hosted bundle ([contact sales](https://infraudit.com/contact) for access). This page walks through a production-grade deployment.
 
 ## Prerequisites
 

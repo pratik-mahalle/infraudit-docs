@@ -9,7 +9,7 @@ All notable changes to InfrAudit are recorded here. Dates are in UTC.
 
 ## v1.0.0 — 2024-01-15
 
-Initial public release of InfrAudit Community edition.
+Initial public release of InfrAudit.
 
 ### Features
 
@@ -32,7 +32,3 @@ Initial public release of InfrAudit Community edition.
 - **GCP:** Compute instances, Cloud Storage buckets, BigQuery datasets, GKE clusters
 - **Azure:** Virtual machines, Storage accounts, SQL servers, resource groups
 - **Kubernetes:** Deployments, pods, services, namespaces, jobs, ingresses
-
----
-
-For older versions (pre-release), see the GitHub [releases page](https://github.com/pratik-mahalle/infraudit-go/releases).

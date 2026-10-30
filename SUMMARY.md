@@ -134,17 +134,6 @@
 * [Remediation workflow](concepts/remediation-workflow.md)
 * [Job scheduler](concepts/job-scheduler.md)
 
-## Contributing
-
-* [Overview](contributing/README.md)
-* [Repo structure](contributing/repo-structure.md)
-* [Local development](contributing/local-development.md)
-* [Testing](contributing/testing.md)
-* [Adding a cloud provider](contributing/adding-a-cloud-provider.md)
-* [Adding a compliance framework](contributing/adding-a-compliance-framework.md)
-* [Updating Swagger docs](contributing/updating-swagger.md)
-* [Pull request process](contributing/pull-request-process.md)
-
 ## Resources
 
 * [Glossary](resources/glossary.md)

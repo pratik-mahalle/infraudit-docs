@@ -120,7 +120,7 @@ Set `LOG_LEVEL=debug` in `.env` for verbose output during troubleshooting. Remem
 
 ## Getting help
 
-If you can't resolve an issue with this page, open an issue on [GitHub](https://github.com/pratik-mahalle/infraudit-go/issues) with:
+If you can't resolve an issue with this page, email [support@infraudit.com](mailto:support@infraudit.com) with:
 
 1. InfrAudit version (`docker compose exec api ./infraudit-api --version`)
 2. The full error log output

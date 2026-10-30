@@ -73,8 +73,6 @@ When multiple providers are in scope, InfrAudit shows:
 
 Custom controls are not yet supported in the UI. To add a custom control, add a JSON file to `internal/compliance/controls/custom/` following the control schema and restart the API.
 
-See [Contributing: Adding a compliance framework](/contributing/adding-a-compliance-framework) for the full schema and engine documentation.
-
 ## Exporting for auditors
 
 Assessment results export as:

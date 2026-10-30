@@ -2,7 +2,7 @@
 
 InfrAudit is a cloud infrastructure monitoring, cost optimization, and security platform for AWS, GCP, Azure, and Kubernetes. It detects configuration drift, scans for vulnerabilities, forecasts costs, enforces compliance frameworks, and generates AI-assisted remediation recommendations.
 
-These docs cover the product end to end: the web platform, the CLI, the HTTP API, and the self-hosted OSS Community edition.
+These docs cover the product end to end: the web platform, the CLI, the HTTP API, and the Enterprise self-hosted deployment.
 
 ## Pick your path
 
@@ -12,9 +12,8 @@ These docs cover the product end to end: the web platform, the CLI, the HTTP API
 
 **I want to call the API from my own code.** Go to the [API overview](api/README.md) for auth, base URL, versioning, and error handling. The full endpoint list lives under [Endpoint reference](api/reference/README.md), backed by the auto-generated OpenAPI spec.
 
-**I want to run InfrAudit on my own infrastructure.** Read [Prerequisites](self-hosting/prerequisites.md) first — a Supabase project is required. Then follow [Docker Compose](self-hosting/docker-compose.md) or [Kubernetes](self-hosting/kubernetes.md).
+**I want to run InfrAudit on my own infrastructure (Enterprise).** Read [Prerequisites](self-hosting/prerequisites.md) first — a Supabase project is required. Then follow [Docker Compose](self-hosting/docker-compose.md) or [Kubernetes](self-hosting/kubernetes.md).
 
-**I want to contribute.** Start with [Repo structure](contributing/repo-structure.md) and [Local development](contributing/local-development.md).
 
 ## What InfrAudit does
 
@@ -35,24 +34,19 @@ These docs cover the product end to end: the web platform, the CLI, the HTTP API
 
 ## Editions
 
-| Edition | Deployment | License | Resources | Support |
+| Edition | Price | Deployment | Resources | Support |
 |---|---|---|---|---|
-| Community (OSS) | Self-hosted | MIT | Unlimited | Community (GitHub issues) |
-| Starter | SaaS | Commercial | Up to 50 | Email |
-| Professional | SaaS | Commercial | Up to 200 | Priority |
-| Enterprise | SaaS or self-hosted | Commercial | Unlimited | Dedicated |
+| Starter | $49/mo | SaaS | Up to 50 | Email |
+| Professional | $99/mo | SaaS | Up to 200 | Priority |
+| Enterprise | $249/mo | SaaS or self-hosted | Unlimited | Dedicated |
 
-This documentation applies to both the SaaS editions and the Community OSS edition. Where behavior differs, the page is labeled.
+Every plan starts with a 14-day free trial. See [pricing](https://infraudit.com/pricing) for details.
 
-## Source repositories
-
-- Backend (Go): [pratik-mahalle/infraudit-go](https://github.com/pratik-mahalle/infraudit-go)
-- Frontend (React): [pratik-mahalle/InfraAudit](https://github.com/pratik-mahalle/InfraAudit)
-- Documentation (this repo): [pratik-mahalle/infraudit-docs](https://github.com/pratik-mahalle/infraudit-docs)
+This documentation applies to all editions. Where behavior differs between SaaS and Enterprise self-hosted deployments, the page is labeled.
 
 ## Working on these docs
 
-This repo holds only content. The site at [docs.infraudit.com](https://docs.infraudit.com) is built by [Specly](https://github.com/pratik-mahalle/specly), our private docs engine, with its "Editorial" look. Pushing to `main` fetches Specly, builds, checks every page and link, and deploys (`.github/workflows/deploy.yml`).
+This repo holds only content. The site at [docs.infraudit.com](https://docs.infraudit.com) is built by Specly, our private docs engine, with its "Editorial" look. Pushing to `main` fetches Specly, builds, checks every page and link, and deploys (`.github/workflows/deploy.yml`).
 
 ### Preview locally
 

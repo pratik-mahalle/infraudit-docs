@@ -5,7 +5,7 @@ icon: "arrow-up"
 ---
 
 
-InfrAudit uses semantic versioning. Minor and patch releases are backward compatible. Major releases may include breaking changes documented in the [Changelog](/resources/changelog).
+New releases are delivered as updated container images and bundles to Enterprise customers; the registry path and pull credentials are in your bundle. InfrAudit uses semantic versioning. Minor and patch releases are backward compatible. Major releases may include breaking changes documented in the [Changelog](/resources/changelog).
 
 ## Before upgrading
 
@@ -56,7 +56,7 @@ Update the image tag in your deployment manifest:
 spec:
   containers:
     - name: api
-      image: ghcr.io/pratik-mahalle/infraudit-go:v1.3.0  # update this
+      image: <registry>/infraudit-api:v1.3.0  # update this
 ```
 
 Apply and wait for rollout:
@@ -86,11 +86,11 @@ docker compose exec api go run ./cmd/migrate down 1  # one migration at a time
 For production deployments, pin to a specific image tag rather than `latest`:
 
 ```yaml
-image: ghcr.io/pratik-mahalle/infraudit-go:v1.3.0
+image: <registry>/infraudit-api:v1.3.0
 ```
 
 This gives you control over when to upgrade and prevents unexpected changes from automatic image pulls.
 
 ## Upgrade schedule
 
-There is no forced upgrade schedule. InfrAudit does not phone home or require license renewals. Upgrade at your own pace, but staying within one major version of the latest release is recommended to keep security patches current.
+There is no forced upgrade schedule. Upgrade at your own pace, but staying within one major version of the latest release is recommended to keep security patches current.

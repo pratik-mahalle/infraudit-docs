@@ -1,23 +1,16 @@
 ---
 title: "Support"
-description: "How to get help with InfrAudit: GitHub issues, documentation, and commercial support."
+description: "How to get help with InfrAudit: documentation, email support, and Enterprise SLAs."
 icon: "headset"
 ---
 
 
-## Community support (all editions)
+## Before contacting support
 
-The primary support channel for the Community edition is GitHub Issues.
+1. Check the [Troubleshooting](/self-hosting/troubleshooting) page.
+2. Check the [FAQ](/resources/faq).
 
-**Before opening an issue:**
-
-1. Search [existing issues](https://github.com/pratik-mahalle/infraudit-go/issues) and [closed issues](https://github.com/pratik-mahalle/infraudit-go/issues?q=is%3Aissue+is%3Aclosed) — your issue may already have an answer or fix.
-2. Check the [Troubleshooting](/self-hosting/troubleshooting) page.
-3. Check the [FAQ](/resources/faq).
-
-**Opening an issue:**
-
-Include the following:
+**When you write in, include:**
 
 - InfrAudit version (`infraudit version` or `docker compose exec api ./infraudit-api --version`)
 - Operating system and deployment method (Docker Compose, Kubernetes, binary)
@@ -25,13 +18,11 @@ Include the following:
 - Expected behavior vs. actual behavior
 - Relevant log output (with secrets redacted)
 
-→ [Open an issue](https://github.com/pratik-mahalle/infraudit-go/issues/new)
-
 ## Documentation
 
-You're reading it. If something is missing, unclear, or wrong, the docs are in [pratik-mahalle/infraudit-docs](https://github.com/pratik-mahalle/infraudit-docs). Open a PR or issue there.
+You're reading it. If something is missing, unclear, or wrong, email docs@infraudit.com.
 
-## Commercial support (SaaS editions)
+## Support by plan
 
 ### Starter plan
 
@@ -47,7 +38,7 @@ Dedicated support with a 4-hour SLA for P1 issues. Includes a dedicated Slack ch
 
 ## Security vulnerabilities
 
-Do not report security vulnerabilities in public GitHub issues. Email security@infraudit.com with:
+Do not report security vulnerabilities through regular support channels. Email security@infraudit.com with:
 
 - Description of the vulnerability
 - Steps to reproduce
@@ -57,4 +48,4 @@ We acknowledge security reports within 48 hours and aim to release a patch withi
 
 ## Feature requests
 
-Open a feature request on [GitHub Discussions](https://github.com/pratik-mahalle/infraudit-go/discussions) or upvote existing ones. Feature requests with community upvotes are prioritized in the roadmap.
+Send feature requests to support@infraudit.com or raise them with your account manager. Requests from multiple customers are prioritized in the roadmap.

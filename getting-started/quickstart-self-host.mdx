@@ -5,7 +5,7 @@ icon: "server"
 ---
 
 
-This guide gets InfrAudit running on your own machine using Docker Compose. Expected time: 15 to 30 minutes, most of which is the Supabase setup.
+This guide gets InfrAudit running on your own machine using Docker Compose. Self-hosting is available on the Enterprise plan: [contact sales](https://infraudit.com/contact) for access to the Enterprise self-hosted bundle (container images, Compose files, Kubernetes manifests). Expected time: 15 to 30 minutes, most of which is the Supabase setup.
 
 The end result: a working InfrAudit backend on `http://localhost:8080`, a frontend on `http://localhost:5173`, one connected AWS account, and one completed drift scan.
 
@@ -32,18 +32,23 @@ Keep these four values handy. You'll paste them into `.env` in a moment.
 - 10 GB free disk (mostly for Postgres and scan results)
 - An AWS, GCP, or Azure account you're willing to point InfrAudit at (read-only credentials are fine and recommended for a first run)
 
-### 3. Gemini API key (optional)
+### 3. Enterprise self-hosted bundle
+
+The bundle is delivered by your account manager and contains `docker-compose.yml`, `.env.example`, and the Kubernetes manifests. It pulls the InfrAudit container images from our private registry using the credentials included with it.
+
+### 4. Gemini API key (optional)
 
 If you want AI-generated recommendations instead of the rule-based fallback, grab a Gemini API key from [ai.google.dev](https://ai.google.dev). The key is not required to boot.
 
 ## Install and run
 
 <Steps>
-<Step title="Clone the backend repo">
+<Step title="Unpack the bundle">
 
 ```bash
-git clone https://github.com/pratik-mahalle/infraudit-go.git
-cd infraudit-go
+# Unpack the Enterprise self-hosted bundle
+tar -xzf infraudit-enterprise-<version>.tar.gz
+cd infraudit-enterprise
 ```
 
 </Step>
