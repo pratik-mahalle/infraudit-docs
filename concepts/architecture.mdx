@@ -7,17 +7,56 @@ icon: "sitemap"
 
 InfrAudit is a multi-service application. The components interact as shown below.
 
+```mermaid
+flowchart TB
+  Web["Web app and CLI"]
+  K8s["Kubernetes agent<br/>in your cluster"]
+  Auth["Supabase Auth"]
+
+  subgraph Platform["InfrAudit"]
+    API["API"]
+    Scheduler["Scheduler"]
+    Queue[("Job queue<br/>River on PostgreSQL")]
+    Workers["Workers<br/>sync, drift, scans, cost, compliance"]
+    DB[("PostgreSQL")]
+    AI["AI gateway"]
+  end
+
+  subgraph Clouds["Your cloud accounts"]
+    direction LR
+    AWS["AWS<br/>read-only IAM role"]
+    GCP["GCP<br/>service account"]
+    Azure["Azure<br/>service principal"]
+  end
+  Notify["Slack, email, webhooks"]
+
+  Web -.->|"sign in"| Auth
+  Web -->|"Bearer JWT"| API
+  API -.->|"verify JWT"| Auth
+  K8s -->|"push inventory"| API
+  API --> DB
+  API -->|"enqueue"| Queue
+  Scheduler -->|"enqueue on cron"| Queue
+  Queue --> Workers
+  Workers --> DB
+  API --> AI
+  Workers --> AI
+  Workers -->|"read-only API calls"| Clouds
+  Workers --> Notify
+```
+
 ## Components
 
 | Component | Technology | Purpose |
 |---|---|---|
-| **API** | Go 1.24+, Chi router | HTTP API, job scheduler, background workers |
+| **API** | Go 1.25+, Chi router | HTTP API for the web app, CLI and Kubernetes agent |
+| **Workers** | Go, River | Run queued jobs: resource sync, drift detection, scans, cost sync, compliance |
+| **Scheduler** | Go | Enqueues recurring jobs on cron schedules |
 | **Frontend** | React 18, TypeScript, Vite, Radix UI | Web UI |
-| **Database** | PostgreSQL 14+ (or SQLite) | Primary data store |
-| **Cache** | Redis | Session cache, API response cache |
+| **Database** | PostgreSQL 14+ | Primary data store and job queue |
 | **Auth** | Supabase Auth | JWT signing, OAuth, user management |
-| **AI** | Google Gemini API | AI-powered recommendations |
-| **Scanning** | Trivy (embedded) | Vulnerability scanning |
+| **AI** | AI gateway (Claude, Gemini, OpenAI, Azure AI Foundry, Kimi) | Recommendations and Scout investigations |
+| **Scanning** | Trivy, NVD | Vulnerability scanning |
 
 ## Request flow
 
@@ -99,16 +138,19 @@ ComplianceFramework
 
 ## Job scheduler
 
-Background jobs run via `robfig/cron/v3`. The scheduler starts with the API and runs five job types on configurable cron expressions:
+Background jobs go through a [River](https://riverqueue.com) job queue stored in PostgreSQL. The scheduler enqueues recurring jobs on configurable cron expressions, the API enqueues jobs you start by hand, and workers run them. Job types:
 
 - `resource_sync` — pulls inventory from cloud provider APIs
 - `drift_detection` — compares current state against baselines
 - `vulnerability_scan` — runs Trivy against scannable artifacts
 - `cost_sync` — fetches billing data
-- `compliance_check` — runs compliance frameworks
+- `compliance_assessment` — runs compliance frameworks
+- `anomaly_detection` — flags unusual cost changes
+- `recommendation` — generates cost and security recommendations
+- `iac_scan` — scans infrastructure-as-code for drift and misconfigurations
 
 Jobs write execution history (start time, duration, status, log) to the `job_executions` table.
 
 ## Scaling
 
-The API scales horizontally — it is stateless (no in-memory session state). The database and Redis are the shared state layer. The job scheduler is leader-elected: only one API instance runs scheduled jobs at a time (via a database lock). Additional instances handle only HTTP traffic.
+The API is stateless (no in-memory session state), so API and worker instances scale horizontally. PostgreSQL is the shared state layer and also holds the job queue, so adding workers runs more jobs in parallel.

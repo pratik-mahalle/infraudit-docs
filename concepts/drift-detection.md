@@ -100,4 +100,4 @@ This closes any existing drift findings for the resource and sets the new config
 
 InfrAudit's comparison logic excludes fields that change frequently without operational significance (timestamps, lease durations, generated resource IDs). Provider-specific exclusion lists live in `internal/providers/<provider>/exclude.go`.
 
-If you find that a specific attribute is producing unwanted drift findings, open an issue on GitHub to have it added to the exclusion list, or suppress it with a drift rule in the UI.
+If you find that a specific attribute is producing unwanted drift findings, [contact support](/resources/support) to have it added to the exclusion list, or suppress it with a drift rule in the UI.

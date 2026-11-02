@@ -283,8 +283,8 @@
   },
   "feedback": {
     "thumbsRating": true,
-    "suggestEdit": true,
-    "raiseIssue": true
+    "suggestEdit": false,
+    "raiseIssue": false
   },
   "search": {
     "prompt": "Search InfrAudit docs..."

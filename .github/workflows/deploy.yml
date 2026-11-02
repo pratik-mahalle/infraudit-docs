@@ -53,12 +53,16 @@ jobs:
         working-directory: specly
         env:
           DOCS_DIR: ${{ github.workspace }}/content
+          # Code repos are private: no edit, issue or history links to GitHub on the pages.
+          SPECLY_DOCS_PUBLIC: "false"
         run: npm run build
 
       - name: Check built site (pages, links, theme)
         working-directory: specly
         env:
           DOCS_DIR: ${{ github.workspace }}/content
+          # Code repos are private: no edit, issue or history links to GitHub on the pages.
+          SPECLY_DOCS_PUBLIC: "false"
         run: npm run test:site
 
       - name: Upload Pages artifact

@@ -124,7 +124,7 @@
 ## Concepts
 
 * [Overview](concepts/README.md)
-* [Architecture](concepts/architecture.md)
+* [Architecture](concepts/architecture.mdx)
 * [Drift detection](concepts/drift-detection.md)
 * [Baselines](concepts/baselines.md)
 * [Compliance frameworks](concepts/compliance-frameworks.md)
