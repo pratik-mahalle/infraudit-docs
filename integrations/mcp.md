@@ -47,7 +47,7 @@ For self-hosted deployments, replace the host with your API host.
 
 | Area | Tools |
 |---|---|
-| Findings | `list_findings`, `get_findings_summary`, `get_finding`, `get_finding_change_events`, `list_finding_dispositions` |
+| Findings | `list_findings`, `get_findings_summary`, `get_finding`, `list_finding_dispositions` |
 | Alerts | `list_alerts`, `get_alerts_summary`, `get_alert` |
 | Drift | `list_drifts`, `get_drift_summary`, `get_drift_coverage`, `get_drift`, `get_drift_explanation`, `list_drift_scans` |
 | Vulnerabilities | `list_vulnerabilities`, `get_vulnerability_summary`, `get_top_vulnerabilities`, `get_vulnerability`, `list_vulnerability_scans` |
@@ -73,5 +73,5 @@ Nothing can be deleted through MCP, and no tool changes anything in your cloud a
 
 ## Limits
 
-- 10 requests per second per key.
+- 10 tool calls per second per key.
 - Results larger than 128 KB are cut off. Narrow the request with filters or a smaller page size.
