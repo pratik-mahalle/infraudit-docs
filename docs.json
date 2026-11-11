@@ -120,7 +120,8 @@
                   "integrations/webhooks"
                 ]
               },
-              "integrations/trivy-and-nvd"
+              "integrations/trivy-and-nvd",
+              "integrations/mcp"
             ]
           },
           {
