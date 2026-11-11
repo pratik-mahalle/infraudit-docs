@@ -62,7 +62,7 @@ These tools only appear for **Read and write** keys, and each still needs the ma
 
 | Tool | What it does |
 |---|---|
-| `update_finding_status` | Resolve, reopen, ignore or accept a finding, with a reason |
+| `update_finding_status` | Resolve or reopen a finding, with a reason. Ignoring, accepting or marking a false positive is only possible in the app |
 | `create_jira_issue` | Create a Jira issue for an alert |
 | `start_drift_scan` | Queue a drift scan |
 | `start_vulnerability_scan` | Queue a vulnerability scan |
