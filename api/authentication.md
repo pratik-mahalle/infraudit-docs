@@ -68,7 +68,9 @@ curl http://localhost:8080/api/v1/resources \
 
 ## API keys
 
-Long-lived API keys can be created under **Settings → API Keys** or via `POST /api/v1/settings/api-keys`. API keys authenticate using the same `Authorization: Bearer` header.
+API keys (`ia_...`) are created under **Settings → API access** or via `POST /api/v1/settings/api-keys`, as read-only or read and write.
+
+API keys authenticate the [MCP server](../integrations/mcp.md) only, at `/api/mcp`, using the same `Authorization: Bearer` header. They are not accepted on the REST endpoints, which require a session token.
 
 ## Token format
 
