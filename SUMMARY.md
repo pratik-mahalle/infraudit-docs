@@ -105,6 +105,7 @@
 * [Email](integrations/email.md)
 * [Webhooks](integrations/webhooks.md)
 * [Trivy and NVD](integrations/trivy-and-nvd.md)
+* [MCP server](integrations/mcp.md)
 
 ## Self-hosting
 
