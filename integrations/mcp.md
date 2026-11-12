@@ -19,12 +19,12 @@ Use a read-only key unless you want the AI tool to make changes.
 
 ## Step 2: Add the server to your tool
 
-The server URL is `https://api.infraudit.com/mcp`. It uses streamable HTTP and a bearer token.
+The server URL is `https://api.infraudit.com/api/mcp`. It uses streamable HTTP and a bearer token.
 
 **Claude Code**
 
 ```bash
-claude mcp add --transport http infraudit https://api.infraudit.com/mcp \
+claude mcp add --transport http infraudit https://api.infraudit.com/api/mcp \
   --header "Authorization: Bearer ia_your_key"
 ```
 
@@ -34,7 +34,7 @@ claude mcp add --transport http infraudit https://api.infraudit.com/mcp \
 {
   "mcpServers": {
     "infraudit": {
-      "url": "https://api.infraudit.com/mcp",
+      "url": "https://api.infraudit.com/api/mcp",
       "headers": { "Authorization": "Bearer ia_your_key" }
     }
   }
